@@ -1,4 +1,4 @@
-Template.body.onCreated(function() {
+Template.body.onRendered(function() {
 
 var setContentHeight = function() {
             // reset height

@@ -1,0 +1,45 @@
+[[[[[ /mnt/i/WebApps/smartBuilding ]]]]]
+
+=> Started proxy.
+
+Your development database is using mmapv1, the old, pre-MongoDB 3.0 database
+engine. You should consider upgrading to Wired Tiger, the new engine. The
+easiest way to do so in development is to run meteor reset. If you'd like to
+migrate your database, please consult
+https://docs.mongodb.org/v3.0/release-notes/3.0-upgrade/
+
+=> Started MongoDB.
+[34mI20170508-16:36:48.794(3)? [39mStarting server...
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+[34mW20170508-16:36:48.892(3)? (STDERR) [39m[35mNote: you are using a pure-JavaScript implementation of bcrypt.[39m
+[34mW20170508-16:36:48.893(3)? (STDERR) [39m[35mWhile this implementation will work correctly, it is known to be[39m
+[34mW20170508-16:36:48.895(3)? (STDERR) [39m[35mapproximately three times slower than the native implementation.[39m
+[34mW20170508-16:36:48.896(3)? (STDERR) [39m[35mIn order to use the native implementation instead, run[39m
+[34mW20170508-16:36:48.897(3)? (STDERR) [39m[35m[39m
+[34mW20170508-16:36:48.898(3)? (STDERR) [39m[35m  meteor npm install --save bcrypt[39m
+[34mW20170508-16:36:48.899(3)? (STDERR) [39m[35m[39m
+[34mW20170508-16:36:48.901(3)? (STDERR) [39m[35min the root directory of your application.[39m
+Unexpected mongo exit code null. Restarting.
+
+Your development database is using mmapv1, the old, pre-MongoDB 3.0 database
+engine. You should consider upgrading to Wired Tiger, the new engine. The
+easiest way to do so in development is to run meteor reset. If you'd like to
+migrate your database, please consult
+https://docs.mongodb.org/v3.0/release-notes/3.0-upgrade/
+
+Unexpected mongo exit code 100. Restarting.
+
+Your development database is using mmapv1, the old, pre-MongoDB 3.0 database
+engine. You should consider upgrading to Wired Tiger, the new engine. The
+easiest way to do so in development is to run meteor reset. If you'd like to
+migrate your database, please consult
+https://docs.mongodb.org/v3.0/release-notes/3.0-upgrade/
+
+Unexpected mongo exit code 100. Restarting.
+Can't start Mongo server.
+MongoDB had an unspecified uncaught exception.
+This can be caused by MongoDB being unable to write to a local database.
+Check that you have permissions to write to .meteor/local. MongoDB does
+not support filesystems like NFS that do not allow file locking.

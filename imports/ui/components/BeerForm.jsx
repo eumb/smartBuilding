@@ -6,12 +6,9 @@ import Beers from '../../collections/collections.js';
 export default class BeerForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
-componentDidMount = () => {
-  console.log(this.refs);
-}
-//console.log(this.refs);
-		var numBeers = this.refs.numBeers;
-		var beerDate = this.refs.beerDate;
+		var form = e.target;
+		var numBeers = form.elements['numBeers'];
+		var beerDate = form.elements['beerDate'];
 		
 
 		Meteor.call("insertBeer", numBeers.value, moment(beerDate.value).toDate(), function(e, r) {
@@ -33,12 +30,12 @@ componentDidMount = () => {
 				  <div className="form-group">				    
 				    <div className="col-sm-10">
 				      <input type="number" className="form-control" 
-				      		placeholder="How many beers?" ref='numBeers' />
+				      		placeholder="How many beers?" name="numBeers"  />
 				    </div>
 				  </div>
 				  <div className="form-group">				    
 				    <div className="col-sm-10">
-				      <input type="date" className="form-control" ref='beerDate'/>
+				      <input type="date" className="form-control" name="beerDate" />
 				    </div>
 				  </div>
 				  
