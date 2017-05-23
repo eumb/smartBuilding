@@ -7,7 +7,7 @@ export default class Sidebar extends React.Component {
     return(
 
 
-   <div id="sidebar-menu" className="main_menu_side hidden-print main_menu">
+   <div id="sidebar-menu" className="active-sm main_menu_side hidden-print main_menu">
               <div className="menu_section">
             
                 <ul className="nav side-menu">
@@ -36,7 +36,6 @@ export default class Sidebar extends React.Component {
               </div>
               
             </div>
-  
 
     );
   }

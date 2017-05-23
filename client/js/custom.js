@@ -1,5 +1,3 @@
-Template.body.onRendered(function() {
-
 var setContentHeight = function() {
             // reset height
             $(".right_col").css("min-height", $(window).height());
@@ -21,6 +19,10 @@ var setContentHeight = function() {
             $(".right_col").css("min-height", contentHeight);
  
 };
+
+Template.body.onRendered(function() {
+
+
         $("#sidebar-menu").find('a').on('click', function(ev) {
      
         var $li = $(this).parent();

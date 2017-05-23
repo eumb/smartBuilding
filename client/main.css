@@ -14,3 +14,18 @@ Header a, #login-buttons a {
 #canv1{
 	z-index: -1
 } */
+    .prettyprint, code.prettyprint {
+        	background-color: #272822;
+        	font-family: consolas, menlo, courier, monospace;
+        }
+
+        .prettyprint {
+            overflow: auto;
+        	width: 120px!important;
+        	height: 50%!important;
+        	margin: 1rem auto;
+        	padding: 0 1rem;
+            border: 0;
+        	white-space: pre-wrap;
+            font-size: 13px;
+        }

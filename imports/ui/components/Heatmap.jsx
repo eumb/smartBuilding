@@ -7,17 +7,48 @@ export default class Heatmap extends React.Component {
 
 	
   	drawMap(props){
-  		var svg = d3.select("svg")
+  		var svg = d3.select("#svgmap")
                 .append("g");
 /*      var scaling=d3.scale.linear()
             .domain([0,1200])
             .range([0,900]);
 */
-      var roomLimit=[400,600]
+      var roomLimit=[2,4,6];
+      var XstartTopLeft=10;
+      var YstartTopLeft=10;
+      var MapWith=800;
+      var MapHeight=300;
+      var yOffset=50;
+      var xOffset=210;
+   
+      svg.selectAll("line")
+          .data(roomLimit)
+          .enter()
+          .append("line")
+          .attr("y1",YstartTopLeft)
+        .attr("y2",MapHeight)
+        .attr("x1",function(d){
+          return d*100;
+        })
+        .attr("x2",function(d){
+          return d*100;
+        })
+        .attr("stroke-width",3)
+        .attr("stroke", "gray");
+
+       svg.append("rect")
+             .attr("x", XstartTopLeft)
+             .attr("y", YstartTopLeft)
+             .attr("width", MapWith-10)
+             .attr("height", MapHeight-10)
+             .attr("fill","none")
+             .attr("stroke-width",3)
+             .attr("stroke", "gray");
+
 
   	  
 
-      var XstartTopLeft=10;
+      /*var XstartTopLeft=10;
   	  var YstartTopLeft=10;
   	   	var MapWith=800;
   	   	var MapHeight=300;
@@ -139,32 +170,28 @@ export default class Heatmap extends React.Component {
   			.attr("x1",XstartTopLeft+xOffset+270)
   			.attr("x2",MapWith+XstartTopLeft)
   			.attr("stroke-width",3)
-  			.attr("stroke", "gray");		
+  			.attr("stroke", "gray");		*/
  
 
   	
-
+    
 
   	}
 
-    drawHeatmap(){
+    drawHeatmap(color1,color2,color3,color4,color5,x1,y1,x2,y2,data){
 
     var colOrigDomain = [10, 20, 25, 32, 40];
-    var colorDomain = [10, 20, 25, 32, 60];
+    var colorDomain = [10, 20, 25, 32, 40];
       var heatColors = d3.scale.linear()
                 .domain(colorDomain)
-                .range(['#00ccff', '#ccff00', '#fffc00', '#ff6c00', '#ff0000']);
+                .range([color1,color2,color3,color4,color5]);
 
       //var c = d3.rgb(heatColors(1));
       
       //console.log(c);
       var width=100;
       var height=100;
-      heatmap={
-
-        "L01":[[21.6, 25, 27.1, 25.6, 25.3],
-        [24.4, 24.8, 24.9, 25.6, 22.4]]
-       }
+      heatmap=data;
       //console.log(heatmap)
       dx = heatmap["L01"][0].length;
       dy = heatmap["L01"].length;
@@ -223,39 +250,46 @@ export default class Heatmap extends React.Component {
 
 	context.putImageData(image, 0,0);
 
-	this.draw(this.refs.canvas1, 202,12,197,136)
+	this.draw(this.refs.canvas1, x1,y1,x2,y2)
 	
-
-
-
-}    
-	
-	componentDidMount() {		
-  		
-      var el = ReactDOM.findDOMNode(this) // This is de div we are rendering
- 				var svg = d3.select(el)
-          .append("svg")
-  				.attr("width",900)
-  				.attr("height", 350);
-
-      this.drawMap();
-      this.drawHeatmap();
-
-   
-
 }
 
- 	draw(can1, x, y, w, h) {
+  draw(can1, x, y, w, h) {
                  var can = this.refs.canvas2;
                  var ctx = this.refs.canvas2.getContext('2d');
                  ctx.drawImage(can1, x, y, w, h);
-            }	  		
+            }       
    
 
-	
-  	componentWillUpdate() {  		
-    		 this.drawHeatmap();
-        this.drawMap();
+
+  	componentDidMount() {  		
+          var el = ReactDOM.findDOMNode(this.refs.svgmap) // This is the div we are rendering
+        var svg = d3.select(el)
+          .append("svg")
+          .attr("id","svgmap")
+          .attr("width",900)
+          .attr("height", 350);
+
+      console.log(el);
+      console.log(this);
+      this.drawMap();
+      heatmap={
+
+        "L01":[[21.6, 25, 27.1, 25.6, 25.3],
+        [20.4, 24.8, 24.9, 25.6, 22.4]]
+       }
+
+        noise={
+
+        "L01":[[29, 28, 21, 33, 25.3],
+        [29, 24, 24, 26, 24]]
+       }
+
+      this.drawHeatmap('#00ccff', '#ccff00', '#fffc00', '#ff6c00', '#ff0000',12,12,186,286,heatmap);//temp
+      this.drawHeatmap('#D1EDF9', '#76BCE6', '#22519B', '#4387C5', '#22519B',202,12,196,286,heatmap);//humid
+      this.drawHeatmap('#A1D890', '#70B45A', '#224C00', '#70B45A', '#114800',402,12,196,286,heatmap);//light
+      this.drawHeatmap('#A0BCBF', '#6B7E7F', '#D5FBFF', '#C0E2E5', '#C0E2E5',602,12,196,286,noise);//noise
+   
     	}
     	
 
@@ -264,9 +298,10 @@ export default class Heatmap extends React.Component {
 	render() {
 		
 		return (
-				<div className="chart">
-				<canvas id="canv1" ref="canvas1" width={5} height={2}/>
-				<canvas id="canv2" ref="canvas2" width={800} height={300}/>
+				<div ref="svgmap" className="chart">
+  				<canvas id="canv1" ref="canvas1" width={5} height={2}/>
+  				<canvas id="canv2" ref="canvas2" width={800} height={300}/>
+
 				</div>
 			
 	

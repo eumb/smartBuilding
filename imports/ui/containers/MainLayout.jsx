@@ -19,7 +19,7 @@ export default class MainLayout extends React.Component {
     return (
      
         <Router>
-              <div id="main_body" className="nav-md">
+              <div id="main_body" className="nav-sm">
                 <div className="container body">
                   <div className="main_container">
                       <Header />
