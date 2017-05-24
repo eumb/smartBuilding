@@ -57,7 +57,7 @@
 .nav-sm ul.nav.child_menu ul,
 .nav-sm .nav.side-menu li.active-sm ul ul {
   position: static;
-  width: 200px;
+  width: 240px;
   background: none; }
 
 .nav-sm > .nav.side-menu > li.active-sm > a {
@@ -225,7 +225,9 @@ body .container.body .right_col {
     padding-right: 0; }
 
   .right_col {
-    padding: 10px !important; } }
+    padding: 10px !important; }
+  .sparklines {
+    display: none; } }
 @media (max-width: 1200px) {
   .x_title h2 {
     width: 62%;
@@ -1478,8 +1480,8 @@ span.right {
 
 /** top tiles  */
 .tile_count {
-  margin-bottom: 20px;
-  margin-top: 20px; }
+  /* margin-bottom: 20px; */
+ /*  margin-top: 20px; */ }
 
 .tile_count .tile_stats_count {
   border-bottom: 1px solid #D9DEE4;
@@ -1528,10 +1530,11 @@ span.right {
 /** /top tiles **/
 .dashboard_graph {
   background: #fff;
-  padding: 7px 10px; }
+  padding: 10px 10px; }
 
 .dashboard_graph .col-md-9, .dashboard_graph .col-md-3 {
-  padding: 0; }
+  padding: 0;
+  background: white; }
 
 a.user-profile {
   color: #5E6974 !important; }
@@ -1566,7 +1569,7 @@ ul.top_profiles li:nth-child(odd) {
 
 .media .date {
   background: #ccc;
-  width: 52px;
+  width: 48px;
   margin-right: 10px;
   border-radius: 10px;
   padding: 5px; }
@@ -1579,16 +1582,20 @@ ul.top_profiles li:nth-child(odd) {
 .media .date .day {
   text-align: center;
   color: #fff;
-  font-size: 27px;
+  font-size: 20px;
   margin: 0;
-  line-height: 27px;
+  line-height: 20px;
   font-weight: bold; }
 
 .event .media-body a.title {
-  font-weight: bold; }
+  font-weight: bold; 
+  }
 
 .event .media-body p {
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+padding-top: 10px;
+font-size: 13px;
+}
 
 h4.graph_title {
   margin: 7px;

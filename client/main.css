@@ -29,3 +29,21 @@ Header a, #login-buttons a {
         	white-space: pre-wrap;
             font-size: 13px;
         }
+
+.spaklines{
+	padding-top: 10px;
+	padding-right: 10px;	
+	
+}
+
+#canv1{
+	display: none;
+}
+#canv2{
+	opacity: 0.8;
+}
+
+.align_right{
+	text-align: left;
+}
+

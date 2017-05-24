@@ -22,7 +22,7 @@ export default class MainLayout extends React.Component {
               <div id="main_body" className="nav-sm">
                 <div className="container body">
                   <div className="main_container">
-                      <Header />
+                     <Header />
                        <div className="col-md-3 left_col">
                           <div className="left_col scroll-view">
                             <div className="navbar nav_title">
@@ -41,7 +41,7 @@ export default class MainLayout extends React.Component {
                       </div>
                       <div className="right_col" role="main">
                 
-                  <div className="row tile_count">
+                 
                     
                      <Switch>
                       <Route exact path='/' component={Home} />
@@ -51,7 +51,7 @@ export default class MainLayout extends React.Component {
                     </Switch>
 
 
-                    </div>
+                   
                   </div>
                     <Footer />
                   </div>
