@@ -1,6 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 
 export const Beers = new Meteor.Collection("Beers");
+export const ServerRoom = new Meteor.Collection("SR");
  
 Meteor.methods({
 	"insertBeer": function(numBeers, date) {
@@ -17,3 +18,13 @@ Meteor.methods({
 		return Beers.remove(id);
 	}
 })
+
+
+if (Meteor.isServer) {
+
+ Meteor.publish('SR', function eventsPublication() {
+      console.log("subscribed to server room data");
+      return ServerRoom.find({}	,{ sort: { _id: -1 },limit:1});
+   });
+
+}

@@ -3,12 +3,22 @@ import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import  { Sparklines } from 'react-sparklines';
 import SmallGraphs from '../components/SmallGraphs.jsx';
+import { createContainer } from 'meteor/react-meteor-data';
 
+import {ServerRoom} from '../../collections/collections.js';
+import AvgData from '../components/AvgData.jsx';
+import SensorValue from '../components/SensorValue.jsx';
 
-export default class TitleData extends React.Component {
+class TitleData extends React.Component {
 
+renderTasks(sensorval) {
+    return this.props.sr.map((sensorvalue) => (
+      <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
 
 render() {
+
 
 
   return (
@@ -18,7 +28,10 @@ render() {
               <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Temperature (C)</span>
-              <div className="count">25</div>
+               {this.renderTasks('temp')}
+
+            {/*  <AvgData data={this.props.sr}/>*/}
+  
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
                    </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -29,15 +42,15 @@ render() {
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                  <div className="col-md-6 col-sm-6 col-xs-6">
                     <span className="count_top"><i className="fa fa-clock-o"></i> Humidity (%)</span>
-                    <div className="count">54 </div>
+                    {this.renderTasks('humid')}
                     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>
                  </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                     <div  className=" count_top spaklines">  <SmallGraphs /></div> 
                  </div>
+                
               
-              
-            </div>
+            </div>  
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Light (lmn)</span>
@@ -52,7 +65,7 @@ render() {
           <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Noise level (dB) </span>
-              <div className="count">25</div>
+             {this.renderTasks('noise')}
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -89,4 +102,15 @@ render() {
   }
 }
 
- 
+ TitleData.propTypes = {
+  sr: PropTypes.array.isRequired,
+};
+
+
+export default createContainer(() => {
+  Meteor.subscribe('SR');
+  return { 
+    sr : ServerRoom.find({}).fetch(),
+   
+  };
+}, TitleData);
