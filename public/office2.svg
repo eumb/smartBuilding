@@ -14,7 +14,7 @@
    viewBox="0 0 105.83333 66.145837"
    version="1.1"
    id="svg4900"
-   inkscape:version="0.92.1 15371"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="office2.svg">
   <defs
      id="defs4894" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="136.24733"
-     inkscape:cy="52.36297"
+     inkscape:zoom="1.4"
+     inkscape:cx="-20.626284"
+     inkscape:cy="132.22183"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="998"
+     inkscape:window-height="1026"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      units="px"
      fit-margin-top="0"
@@ -608,5 +608,12 @@
        sodipodi:end="4.9626702"
        d="m -26.6117,-95.382997 a 0.39255211,0.5094825 0 0 1 -0.50614,0.175907 0.39255211,0.5094825 0 0 1 -0.189981,-0.633775 0.39255211,0.5094825 0 0 1 0.464659,-0.314288 l -0.09723,0.493608 z"
        transform="rotate(123.0757)" />
+    <rect
+       id="rect5001-9-5-5"
+       width="1.3363476"
+       height="2.271791"
+       x="84.673141"
+       y="6.331481"
+       style="fill:#1abb9c;fill-opacity:0.94117647;stroke-width:0.26458332" />
   </g>
 </svg>

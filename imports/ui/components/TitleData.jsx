@@ -4,10 +4,17 @@ import classNames from 'classnames';
 import  { Sparklines } from 'react-sparklines';
 import SmallGraphs from '../components/SmallGraphs.jsx';
 import { createContainer } from 'meteor/react-meteor-data';
-
 import {ServerRoom} from '../../collections/collections.js';
 import AvgData from '../components/AvgData.jsx';
 import SensorValue from '../components/SensorValue.jsx';
+
+
+
+SRHumidAverage = new Mongo.Collection("SRHumidAverage");
+SRTempAverage = new Mongo.Collection("SRTempAverage");
+SRNoiseAverage = new Mongo.Collection("SRNoiseAverage");
+
+
 
 class TitleData extends React.Component {
 
@@ -18,30 +25,10 @@ renderTasks(sensorval) {
   }
 
 
-
-/*renderSmallGraphs(snsorval){
-var data = [
-      { qty: 0, xLabel: "Mon" },
-      { qty: 0, xLabel: "Tue" },
-      { qty: 0, xLabel: "Wed" },
-      { qty: 0, xLabel: "Thu" },
-      { qty: 0, xLabel: "Fri" },
-      { qty: 0, xLabel: "Sat" }, 
-    ];
-    this.props.sr.map(function(d) {
-      data[moment(d.created_at).weekday()].qty += d.temp;
-      console.log(data.qty);
-    }); //modifica pentru fiecare props updates data
-    
-    <SmallGraphs key={data.qty}/>  
-   
-
-
-}*/
-
 render() {
 
-
+    temp="temp";
+    humid="humid";
 
   return (
        
@@ -58,8 +45,8 @@ render() {
                    </div>
                   <div className="col-md-6 tile">
                     <div  className=" count_top spaklines">  
-                   
-          <SmallGraphs type={"temp"}/>
+                  <SmallGraphs sensoraverage={this.props.srTempAverage} type={"temp"} />
+                
                     </div> 
                  </div>
             </div>
@@ -72,8 +59,8 @@ render() {
                  </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
-   <div  className=" count_top spaklines">  <SmallGraphs type={"humid"}/></div>
-
+   <div  className="count_top spaklines">  </div>
+     <SmallGraphs sensoraverage={this.props.srHumidAverage} type={"humid"} />
                  </div>
                 
               
@@ -96,7 +83,7 @@ render() {
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    {/*<div  className=" count_top spaklines">  <SmallGraphs /></div> */}
+                     <SmallGraphs sensoraverage={this.props.srNoiseAverage} type={"noise"} />
                  </div>
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -131,16 +118,26 @@ render() {
 
  TitleData.propTypes = {
   sr: PropTypes.array.isRequired,
+   srHumidAverage: PropTypes.array.isRequired,
+  srTempAverage: PropTypes.array.isRequired,
+  srNoiseAverage: PropTypes.array.isRequired,
 };
 
 
 export default createContainer(() => {
   Meteor.subscribe('SR');
 
+    Meteor.subscribe('SRHumidAverage');
+     Meteor.subscribe('SRTempAverage');
+      Meteor.subscribe('SRNoiseAverage');
 
 
   return { 
     sr : ServerRoom.find({}).fetch(),
+     srHumidAverage : SRHumidAverage.find().fetch(),
+     srTempAverage : SRTempAverage.find().fetch(),
+      srNoiseAverage : SRNoiseAverage.find().fetch(),
+   
    
   };
 }, TitleData);

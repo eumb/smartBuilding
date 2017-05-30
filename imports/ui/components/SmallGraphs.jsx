@@ -1,38 +1,48 @@
 import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
-import SensorValue from '../components/SensorValue.jsx';
-import { createContainer } from 'meteor/react-meteor-data';
-
-ServerRoomAverage = new Mongo.Collection("SRaverage");
 
 
+export default class SmallGraphs extends React.Component {
 
-
-
-class SmallGraphs extends React.Component {
-
+ 
  renderTasks() {
-  console.log(this.props.sraverage)
 
-   return data=this.props.sraverage.map(function(d){
-      console.log(Math.round(d.this.props.type))
-      return Math.round(d.this.props.type);
+  type=this.props.type
+  console.log(type)
+  console.log(this.props.sensoraverage)
+
+  if (type==="humid"){
+   return data=this.props.sensoraverage.map(function(d){
+      console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
     })
-
+    }
+   if (type==="temp"){
+   return data=this.props.sensoraverage.map(function(d){
+      console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
+    })
+    }
+     if (type==="noise"){
+   return data=this.props.sensoraverage.map(function(d){
+      console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
+    })
+    }
   }
+
+
 render() {
 
 
 
-//console.log(data)
-
 
 var style = {
-     	height:'80px'
+      height:'80px'
     };
   return (
-   	              <div className="sparkline22 graph" style={style}>
+                  <div className="sparkline22 graph" style={style}>
                  
               <Sparklines data={this.renderTasks()} width={140} height={80}>
                 <SparklinesLine color="#1ABB9C" />
@@ -45,13 +55,9 @@ var style = {
   }
 }
 
-export default createContainer(() => {
+SmallGraphs.propTypes = {
+  // This component gets the task to display through a React prop.
+  // We can use propTypes to indicate it is required
 
-  Meteor.subscribe('SRaverage',"humid");
-
-
-  return { 
-    sraverage : ServerRoomAverage.find().fetch(),
-   
-  };
-}, SmallGraphs);
+  type:PropTypes.string.isRequired,
+};
