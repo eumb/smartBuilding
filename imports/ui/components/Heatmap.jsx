@@ -65,7 +65,7 @@ export default class Heatmap extends React.Component {
    
  	componentDidMount() {  		
       var el = ReactDOM.findDOMNode(this.refs.svgmap) // This is the div we are rendering
-      d3.xml("office.svg").mimeType("image/svg+xml").get(function(error, xml) {
+      d3.xml("office2.svg").mimeType("image/svg+xml").get(function(error, xml) {
         if (error) throw error;
         
 el.appendChild(xml.documentElement);
@@ -74,16 +74,16 @@ el.appendChild(xml.documentElement);
 
 
 
-      this.drawHeatmap('#F4FFF5', '#DCE5DD', '#E7F1E8', '#3D403D', '#7A7F7B',50,4,228,250,this.props.data);
+      this.drawHeatmap('#F4FFF5', '#DCE5DD', '#E7F1E8', '#3D403D', '#7A7F7B',12,41,400,208,this.props.data);
 
    
     	}
  	render() {
 		
 		return (
-				<div ref="svgmap" className="chart" width={300} height={400}>
+				<div ref="svgmap" className="chart" width={300} height={200}>
   				<canvas id="canv1" ref="canvas1" width={5} height={2}/>
-  				<canvas id="canv2" ref="canvas2" width={300} height={400}/>
+  				<canvas id="canv2" ref="canvas2" width={400} height={300}/>
 
 				</div>
 			

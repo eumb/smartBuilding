@@ -22,14 +22,14 @@ export default class Sidebar extends React.Component {
                       </ul>
                     </li>
                     
-                    <li><a><i className="fa fa-desktop"></i> Power measurements  <span className="fa fa-chevron-down"></span></a>
+                    <li><a><i className="fa fa-desktop"></i>Power measurements<span className="fa fa-chevron-down"></span></a>
                       <ul className="nav child_menu">
                         <li><a href="general_elements.html">AC Current</a></li>
                         <li><a href="media_gallery.html">DC Current</a></li>
                       </ul>
                     </li>
                     
-                    <li><Link to='/administration'><i className="fa fa-table"></i> Administration </Link></li>
+                    <li><Link to='/administration'><i className="fa fa-table"></i>Administration</Link></li>
 
             
                 </ul>

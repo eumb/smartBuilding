@@ -37,3 +37,4 @@ d3js:d3
 momentjs:moment
 react-meteor-data
 benmgreene:jquery-sparklines
+meteorhacks:aggregate

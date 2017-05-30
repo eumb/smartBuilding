@@ -14,21 +14,7 @@ Header a, #login-buttons a {
 #canv1{
 	z-index: -1
 } */
-    .prettyprint, code.prettyprint {
-        	background-color: #272822;
-        	font-family: consolas, menlo, courier, monospace;
-        }
-
-        .prettyprint {
-            overflow: auto;
-        	width: 120px!important;
-        	height: 50%!important;
-        	margin: 1rem auto;
-        	padding: 0 1rem;
-            border: 0;
-        	white-space: pre-wrap;
-            font-size: 13px;
-        }
+   
 
 .spaklines{
 	padding-top: 10px;
@@ -45,5 +31,34 @@ Header a, #login-buttons a {
 
 .align_right{
 	text-align: left;
+}
+@font-face {
+    font-family: nokia; /*a name to be used later*/
+
+
+    src: url('/fonts/NokiaKokia.otf') format('opentype');
+   
+/*       url('public/fonts/nokiapureheadlinebd-webfont.ttf') format('truetype'),
+       url('public/fonts/NokiaKokia.woff2') format('woff'),
+       url('public/fonts/nokiapureheadlinebd-webfont.svg#icomoon') format('svg');*/
+}
+
+.title{
+	color: #124191!important;
+	font-size:2em!important;
+}
+.by{
+	color: #124191!important;
+	font-size:1vw!important;
+}
+.nokia_logo{
+	
+     font-family: nokia!important;
+	 font-size: 3em!important;
+	 padding-right:5%;
+	 margin-top: 20px!important%;
+	 color: #2A3F54!important;
+	
+	
 }
 

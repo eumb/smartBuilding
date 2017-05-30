@@ -9,26 +9,27 @@ export default class Home extends React.Component {
 
       heatmap={
 
-        "L01":[[21.6, 25, 27.1, 25.6, 25.3],
-        [20.4, 24.8, 24.9, 25.6, 22.4]]
+        "L01":[[29.6, 25, 24.1],
+        [20.4, 24.8, 29.9]],
+
        }
 
         noise={
 
-        "L01":[[29, 28, 21, 33, 25.3],
-        [29, 24, 24, 26, 24]]
+        "L01":[[29, 28, 21],
+        [29, 24, 24]]
        }
 
           humidity={
 
-        "L01":[[40, 33, 18, 33, 56],
-        [39, 34, 44, 46, 24]]
+        "L01":[[40, 33, 18],
+        [39, 34, 44]]
        }
 
             light={
 
-        "L01":[[40, 33, 18, 33, 56],
-        [39, 34, 44, 46, 24]]
+        "L01":[[40, 33, 18],
+        [39, 34, 44]]
        }
 
 
@@ -38,6 +39,7 @@ export default class Home extends React.Component {
 <div>
        
         <TitleData />
+     <br />
 
            <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
@@ -52,8 +54,8 @@ export default class Home extends React.Component {
                     </div>
                   </div>
 
-                  <div className="col-md-3 col-sm-4 col-xs-12">
-                    <div className="col-md-12 col-sm-12 col-xs-12">
+                  <div className="col-md-3 col-sm-4 col-xs-12 bg-white">
+                    <div className="row">
                       <div className="align_right">
                         <h2>Temperature </h2>
                                   
@@ -66,7 +68,7 @@ export default class Home extends React.Component {
                         <NodeInfo />
                   
                       </div>*/}
-                      <div className="col-md-12 col-sm-4 col-xs-12">
+                      <div className="row">
                         <Heatmap data={heatmap}/>
                       </div>
 
@@ -125,11 +127,12 @@ export default class Home extends React.Component {
                             <Heatmap data={noise}/>
                           </div>
                     </div>
+                     <div className="clearfix"></div>
           </div>
-                 
+         </div>
+        </div>
+             <br />
 
-              </div>
-            </div>
 </div>
 
     );
