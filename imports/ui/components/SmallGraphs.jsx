@@ -16,8 +16,8 @@ class SmallGraphs extends React.Component {
   console.log(this.props.sraverage)
 
    return data=this.props.sraverage.map(function(d){
-      
-      return d.temp;
+      console.log(Math.round(d.this.props.type))
+      return Math.round(d.this.props.type);
     })
 
   }
@@ -47,11 +47,11 @@ var style = {
 
 export default createContainer(() => {
 
-  Meteor.subscribe('SRaverage');
+  Meteor.subscribe('SRaverage',"humid");
 
 
   return { 
-    sraverage : ServerRoomAverage.find({}).fetch(),
+    sraverage : ServerRoomAverage.find().fetch(),
    
   };
 }, SmallGraphs);

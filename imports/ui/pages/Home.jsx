@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Heatmap from '../components/Heatmap.jsx';
 import TitleData from '../components/TitleData.jsx';
 import NodeInfo from '../components/NodeInfo.jsx';
-
+import Power from '../components/Power.jsx';
 export default class Home extends React.Component {
   render() {
 
@@ -132,6 +132,8 @@ export default class Home extends React.Component {
          </div>
         </div>
              <br />
+
+        <Power />
 
 </div>
 

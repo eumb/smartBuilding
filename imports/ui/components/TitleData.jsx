@@ -59,7 +59,7 @@ render() {
                   <div className="col-md-6 tile">
                     <div  className=" count_top spaklines">  
                    
-          <SmallGraphs />
+          <SmallGraphs type={"temp"}/>
                     </div> 
                  </div>
             </div>
@@ -71,7 +71,9 @@ render() {
                     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>
                  </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div  className=" count_top spaklines">  <SmallGraphs /></div> 
+                   
+   <div  className=" count_top spaklines">  <SmallGraphs type={"humid"}/></div>
+
                  </div>
                 
               
@@ -83,7 +85,7 @@ render() {
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
            </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div  className=" count_top spaklines">  <SmallGraphs /></div> 
+               {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
                  </div>
             </div>
 
@@ -94,7 +96,7 @@ render() {
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div  className=" count_top spaklines">  <SmallGraphs /></div> 
+                    {/*<div  className=" count_top spaklines">  <SmallGraphs /></div> */}
                  </div>
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -104,7 +106,7 @@ render() {
               <span className="count_bottom"><i className="red"><i className="fa fa-sort-desc"></i>12% </i> From last Week</span>
             </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div  className=" count_top spaklines">  <SmallGraphs /></div> 
+                   {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
                  </div>
             </div>
 
@@ -115,7 +117,7 @@ render() {
               <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                    <div  className=" count spaklines">  <SmallGraphs /></div> 
+                   {/* <div  className=" count spaklines">  <SmallGraphs /></div> */}
                  </div>
             </div>
     

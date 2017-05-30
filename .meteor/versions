@@ -7,7 +7,6 @@ autoupdate@1.3.12
 babel-compiler@6.18.2
 babel-runtime@1.0.1
 base64@1.0.10
-benmgreene:jquery-sparklines@1.1.0
 binary-heap@1.0.10
 blaze@2.3.2
 blaze-html-templates@1.1.2
@@ -17,7 +16,6 @@ caching-compiler@1.1.9
 caching-html-compiler@1.1.2
 callback-hook@1.0.10
 check@1.2.5
-coffeescript@1.0.17
 d3js:d3@3.5.8
 ddp@1.2.5
 ddp-client@1.3.4
