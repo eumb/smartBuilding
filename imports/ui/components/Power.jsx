@@ -23,14 +23,14 @@ render() {
   return (
   			<div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
-            		<div className="row x_title">
+            {/*		<div className="row x_title">
                     <div className="col-md-6">
                       <h3> Electromotor <small>Power metering</small></h3>
                     </div>
                     <div className="col-md-6">
                
                     </div>
-                  </div>
+                  </div>*/}
 
                   	<div className="col-md-4 col-sm-4 col-xs-12 bg-white">
                     <div className="row">

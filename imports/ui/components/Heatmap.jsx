@@ -5,10 +5,22 @@ import ReactDOM from "react-dom";
 
 export default class Heatmap extends React.Component {
 
-    drawHeatmap(color1,color2,color3,color4,color5,x1,y1,x2,y2,data){
+    drawHeatmap(color1,color2,color3,color4,color5,x1,y1,x2,y2,data,type){
 
-    var colOrigDomain = [10, 20, 25, 32, 40];
-    var colorDomain = [10, 20, 25, 32, 40];
+    if(type==="temp"){
+      var colOrigDomain = [20, 22, 25, 27, 29];
+      var colorDomain = [20, 22, 25, 27, 29];
+    }if (type==="humid"){
+      var colOrigDomain = [30, 40, 45, 50, 55];
+      var colorDomain = [30, 40, 45, 50, 55];
+    }if(type==="light"){
+      var colOrigDomain = [800, 900, 1000, 1100, 1200];
+      var colorDomain = [800, 900, 1000, 1100, 1200];
+    }if(type==="noise"){
+      var colOrigDomain = [70, 80, 90, 95, 100];
+      var colorDomain = [70, 80, 90, 95, 100];
+    }
+  
       var heatColors = d3.scale.linear()
                 .domain(colorDomain)
                 .range([color1,color2,color3,color4,color5]);
@@ -72,9 +84,26 @@ el.appendChild(xml.documentElement);
 
     });
 
+      if(this.props.type==="humid"){
 
 
-      this.drawHeatmap('#F4FFF5', '#DCE5DD', '#E7F1E8', '#3D403D', '#7A7F7B',12,41,400,208,this.props.data);
+      this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="temp"){
+
+
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="noise"){
+
+
+      this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="light"){
+
+
+      this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,430,208,this.props.data,this.props.type);
+      }
+      
+      
+      
 
    
     	}
