@@ -9,7 +9,7 @@ import PowerValue from '../components/PowerValue.jsx';
 class Power extends React.Component {
 
 renderTasks() {
-    return this.props.platformPower	.map((platformPower) => (
+    return this.props.platformPower.map((platformPower) => (
       <PowerValue key={platformPower._id} platformPower={platformPower} />
     ));
   }

@@ -11,15 +11,16 @@ import Footer from '../components/Footer.jsx';
 import Header from '../components/Header.jsx';
 import Sidebar from '../components/Sidebar.jsx';
 import Home from '../pages/Home.jsx';
-import Administration from '../components/Administration.jsx';
 
+import WS from '../pages/WS.jsx';
+import SR from '../pages/SR.jsx';
 
 export default class MainLayout extends React.Component {
   render() {
     return (
      
         <Router>
-              <div id="main_body" className="nav-sm">
+              <div id="main_body" className="nav-md">
                 <div className="container body">
                   <div className="main_container">
                      <Header />
@@ -46,7 +47,10 @@ export default class MainLayout extends React.Component {
                      <Switch>
                       <Route exact path='/' component={Home} />
                       <Route path = '/about' component={About} />
-                      <Route path = '/administration' component={Administration} />
+               {/*       <Route path = '/administration' component={Administration} />*/}
+                      <Route path = '/wsnodeinfo' component={WS} />
+          {/*            <Route path = '/usernodeinfo' component={UserNodeInfo} />*/}
+                      <Route path = '/srnodeinfo' component={SR} />
                       <Route component={NotFound} />
                     </Switch>
 

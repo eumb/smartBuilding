@@ -68,7 +68,7 @@ render() {
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Light (lmn)</span>
-              <div className="count green">2,500</div>
+              <div className="count green"> {this.renderTasks('light')}</div>
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
            </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -100,7 +100,7 @@ render() {
              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Dust level  (ppm) </span>
-              <div className="count">100</div>
+              <div className="count"> {this.renderTasks('dust')}</div>
               <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">

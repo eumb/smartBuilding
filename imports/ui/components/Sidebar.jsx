@@ -16,9 +16,9 @@ export default class Sidebar extends React.Component {
                     <li><a><i className="fa fa-edit"></i> Senzor Areas <span className="fa fa-chevron-down"></span></a>
                       <ul className="nav child_menu">
                        
-                        <li><a href="form_advanced.html">Office area</a></li>
-                        <li><a href="form_validation.html">Lab user area</a></li>
-                        <li><a href="form_wizards.html">Server room</a></li>
+                        <li><Link to='/wsnodeinfo'>Office area</Link></li>
+                        <li><Link to='/usernodeinfo'>Lab user area</Link></li>
+                        <li><Link to='/srnodeinfo'>Server room</Link></li>
                       </ul>
                     </li>
                     
@@ -29,7 +29,7 @@ export default class Sidebar extends React.Component {
                       </ul>
                     </li>
                     
-                    <li><Link to='/administration'><i className="fa fa-table"></i>Administration</Link></li>
+                   {/* <li><Link to='/administration'><i className="fa fa-table"></i>Administration</Link></li>*/}
 
             
                 </ul>

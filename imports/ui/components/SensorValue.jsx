@@ -27,7 +27,19 @@ export default class SensorValue extends Component {
       <div className="count">{this.props.sensorvalue.noise}</div>
     );
 	}
+    if (sensortype==="light"){
 
+    return (
+      <div className="count">{this.props.sensorvalue.light}</div>
+    );
+  }
+   if (sensortype==="dust"){
+
+    return (
+      <div className="count">{this.props.sensorvalue.dust}</div>
+    );
+  
+  }
 
   }
 }
