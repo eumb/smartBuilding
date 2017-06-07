@@ -5,7 +5,7 @@ export default class SRNodeValues extends Component {
   render() {
   	sensortype=this.props.sensor;
   	//console.log(sensortype)
-  	console.log(this.props.sensorvalue.noise)
+  	//console.log(this.props.sensorvalue.noise)
     
   	if (sensortype==="device"){
 

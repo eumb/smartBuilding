@@ -61,7 +61,7 @@ export default class Heatmap extends React.Component {
       }
 
 
-    console.log(image)
+    //console.log(image)
 
 	context.putImageData(image, 0,0);
 

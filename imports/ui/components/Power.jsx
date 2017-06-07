@@ -6,19 +6,79 @@ import { createContainer } from 'meteor/react-meteor-data';
 import {MASURA_TGV_ID1} from '../../collections/collections.js';
 import PowerValue from '../components/PowerValue.jsx';
 
+import {Line} from 'react-chartjs';
+
 class Power extends React.Component {
 
 renderTasks() {
-    return this.props.platformPower.map((platformPower) => (
+    return this.props.platformPowerlast.map((platformPower) => (
       <PowerValue key={platformPower._id} platformPower={platformPower} />
     ));
   }
 
+generateChartData() {
+  timeScale = [];
+  dataset=this.props.platformPower;
+  Active_Power_Sum_L1_L3=_.pluck(dataset, "Active_Power_Sum_L1_L3");
+  xScale=_.pluck(dataset, "created_at");
+
+
+
+for (i=0; i < xScale.length; i++){
+    timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
+  }
+
+  console.log(Active_Power_Sum_L1_L3);
+  console.log(timeScale);
+
+
+}
+
+mapData(){
+
+  this.generateChartData();
+   
+   var data = {
+    labels: timeScale,
+    datasets: [
+        {
+            label: "Active_Power_Sum_L1_L3",
+            fillColor: "rgba(250,195,168,0.5)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(250,195,168,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data:Active_Power_Sum_L1_L3,
+        }
+    ],
+
+};
+//console.log(data);
+    
+    return data;
+}
 
 
 render() {
 
+ var chartOptions= {
 
+
+        scales: {
+            xAxes: [{
+                time: {
+                    unit: 'hour'
+                }
+            }]
+        }
+  
+
+ }
+
+ widthChart ={
+   width:'100%'
+ }
 
   return (
   			<div className="row">
@@ -40,7 +100,10 @@ render() {
 		     
                       </div>  
                       <div className="divider"></div>
-                      {this.renderTasks()}
+                    
+                    </div>
+                    <div classsName="row">
+                      <Line data={this.mapData()} width="500" height="280"/>
                     </div>
             	</div>
             </div>
@@ -59,6 +122,7 @@ export default createContainer(() => {
 
 
   return { 
+    platformPowerlast : MASURA_TGV_ID1.find({},{limit:1}).fetch(),
     platformPower : MASURA_TGV_ID1.find({}).fetch(),
    
   };

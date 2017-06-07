@@ -38,3 +38,8 @@ momentjs:moment
 react-meteor-data
 
 meteorhacks:aggregate
+meteorhacks:npm
+
+
+npm-container
+cosmos:browserify

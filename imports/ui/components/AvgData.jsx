@@ -10,7 +10,7 @@ export default class AvgData extends React.Component {
 		this.props.data.map(function(d) {
       		temps=d.temp;
       		//console.log(temps);
-      		console.log(temps)
+      		//console.log(temps)
       		return temps
       		
     	}); //modifica pentru fiecare props updates data

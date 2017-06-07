@@ -4,8 +4,8 @@ import React, { Component, PropTypes } from 'react';
 export default class SensorValue extends Component {
   render() {
   	sensortype=this.props.sensor;
-  	console.log(sensortype)
-  	console.log(this.props.sensorvalue)
+  	//console.log(sensortype)
+  	//console.log(this.props.sensorvalue)
     
   	if (sensortype==="temp"){
 

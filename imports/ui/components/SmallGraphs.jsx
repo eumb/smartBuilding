@@ -9,24 +9,24 @@ export default class SmallGraphs extends React.Component {
  renderTasks() {
 
   type=this.props.type
-  console.log(type)
-  console.log(this.props.sensoraverage)
+  //console.log(type)
+  //console.log(this.props.sensoraverage)
 
   if (type==="humid"){
    return data=this.props.sensoraverage.map(function(d){
-      console.log(Math.round(d.averagevalue))
+      //console.log(Math.round(d.averagevalue))
       return Math.round(d.averagevalue);
     })
     }
    if (type==="temp"){
    return data=this.props.sensoraverage.map(function(d){
-      console.log(Math.round(d.averagevalue))
+      //console.log(Math.round(d.averagevalue))
       return Math.round(d.averagevalue);
     })
     }
      if (type==="noise"){
    return data=this.props.sensoraverage.map(function(d){
-      console.log(Math.round(d.averagevalue))
+      //console.log(Math.round(d.averagevalue))
       return Math.round(d.averagevalue);
     })
     }

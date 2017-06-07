@@ -56,7 +56,7 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({}	,{ sort: { created_at: -1 },limit:1});
+      return MASURA_TGV_ID1.find({}	,{ sort: { created_at: -1 },limit:10});
    });
 
  Meteor.publish('SR', function eventsPublication() {
