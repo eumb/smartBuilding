@@ -91,9 +91,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Active Power Sum (L1+L3) </p>
+            <p><i className="fa fa-square gray"></i>Active Power Sum (L1:L3) </p>
           </td>
-          <td> {Math.round(this.props.sensorvalue.Active_Power_Sum_L1_L3/1000)}<small> kW</small></td>
+          <td> {this.props.sensorvalue.Active_Power_Sum_L1_L3/1000}<small> kW</small></td>
         </tr>
     );
   }
@@ -103,9 +103,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Reactive power fundamental Sum (L1+L3) </p>
+            <p><i className="fa fa-square gray"></i>Reactive power fundamental Sum (L1:L3) </p>
           </td>
-          <td> {Math.round(this.props.sensorvalue.Reactive_power_fundamental_Sum_L1_L3)}<small> var</small></td>
+          <td> {this.props.sensorvalue.Reactive_power_fundamental_Sum_L1_L3/1000}<small> kvar</small></td>
         </tr>
     );
   }
@@ -115,9 +115,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Consumed Active Energy Sum (L1+L3) </p>
+            <p><i className="fa fa-square gray"></i>Consumed Active Energy Sum (L1:L3) </p>
           </td>
-          <td> {Math.round(this.props.sensorvalue.Consumed_Active_Energy_Sum_L1_L3/1000)}<small> kWh</small></td>
+          <td> {this.props.sensorvalue.Consumed_Active_Energy_Sum_L1_L3/1000}<small> kWh</small></td>
         </tr>
     );
   }
@@ -127,9 +127,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Reactive Energy Sum (L1+L3) </p>
+            <p><i className="fa fa-square gray"></i>Reactive Energy Sum (L1:L3) </p>
           </td>
-          <td> {Math.round(this.props.sensorvalue.Reactive_Energy_Sum_L1_L3)}<small> VArh</small></td>
+          <td> {this.props.sensorvalue.Reactive_Energy_Sum_L1_L3/1000}<small> kVArh</small></td>
         </tr>
     );
   }

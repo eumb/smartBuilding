@@ -12,9 +12,9 @@ export default class DCValues extends Component {
     return (
      <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>USys </p>
+            <p><i className="fa fa-square gray"></i>System Voltage </p>
           </td>
-          <td> {this.props.sensorvalue.USys}V</td>
+          <td> {this.props.sensorvalue.USys} <small> V</small></td>
         </tr> 
     );
   }
@@ -25,9 +25,9 @@ export default class DCValues extends Component {
 
          <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>PSys </p>
+            <p><i className="fa fa-square gray"></i>System Power </p>
           </td>
-          <td> {this.props.sensorvalue.PSys}Watt</td>
+          <td> {this.props.sensorvalue.PSys/1000} <small> kW</small></td>
         </tr> 
     
     );
@@ -38,9 +38,9 @@ export default class DCValues extends Component {
     return (
       <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>ILoad </p>
+            <p><i className="fa fa-square gray"></i>Load current</p>
           </td>
-          <td> {this.props.sensorvalue.ILoad}Amp</td>
+          <td> {this.props.sensorvalue.ILoad} <small> A</small></td>
         </tr>
      
      
@@ -52,9 +52,9 @@ export default class DCValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>IBatt </p>
+            <p><i className="fa fa-square gray"></i>Battery current </p>
           </td>
-          <td> {this.props.sensorvalue.IBatt}Amp</td>
+          <td> {this.props.sensorvalue.IBatt} <small> A</small></td>
         </tr>
     );
 	}
@@ -64,9 +64,9 @@ export default class DCValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>IRect </p>
+            <p><i className="fa fa-square gray"></i>Rectifier current</p>
           </td>
-          <td> {this.props.sensorvalue.IRect}Amp</td>
+          <td> {this.props.sensorvalue.IRect} <small> A</small></td>
         </tr>
     );
   }

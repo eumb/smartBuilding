@@ -89,94 +89,10 @@ render() {
     return (
         
         <div>
-            <div className="row">
-              <div className="col-md-6 col-sm-6 col-xs-12">
-                <div className="x_panel">
-                  
-                    <div className="x_content">
-                      <table className="" style={widthtable}>
-                     <tbody>
-                      <tr>
-                     
-                        <th>
-                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">MASURA TGV ID1</p>
-                          </div>
-                        
-                        </th>
-                      </tr>
-                      <tr>
-                      <td>
-                        <table className="tile_info">
-                         <tbody>
-                          {this.MASURA_TGV_ID1('Voltage_effective_L1')}
-                          {this.MASURA_TGV_ID1('Voltage_effective_L2')}
-                          {this.MASURA_TGV_ID1('Voltage_effective_L3')}
-                          {this.MASURA_TGV_ID1('Current_effective_L1')}
-                          {this.MASURA_TGV_ID1('Current_effective_L2')}
-                          {this.MASURA_TGV_ID1('Current_effective_L3')}
-                          {this.MASURA_TGV_ID1('Active_Power_Sum_L1_L3')}
-                          {this.MASURA_TGV_ID1('Reactive_power_fundamental_Sum_L1_L3')}
-                          {this.MASURA_TGV_ID1('Consumed_Active_Energy_Sum_L1_L3')}
-                          {this.MASURA_TGV_ID1('Reactive_Energy_Sum_L1_L3')}
-
-                        </tbody>
-                        </table>
-                      </td>
-                      </tr>
-                     </tbody>
-                    </table>
-                         </div>          
-                </div>
-              </div> 
-                        <div className="col-md-6 col-sm-6 col-xs-12">
-                <div className="x_panel">
-                  
-                    <div className="x_content">
-                      <table className="" style={widthtable}>
-                     <tbody>
-                      <tr>
-                     
-                        <th>
-                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">TGD BIROURI</p>
-                          </div>
-                      
-                        </th>
-                      </tr>
-                      <tr>
-                      <td>
-                        <table className="tile_info">
-                         <tbody>
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L1')}
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L2')}
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L3')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L1')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L2')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L3')}
-                          {this.TGD_BOROURI_ID52('Active_Power_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Reactive_power_fundamental_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Consumed_Active_Energy_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Reactive_Energy_Sum_L1_L3')}  
-
-                        </tbody>
-                        </table>
-                      </td>
-                      </tr>
-                     </tbody>
-                    </table>
-                         </div>          
-                </div>
-              </div> 
-
-                       
-          </div> 
-      
 
 
 
-
-             <div className="row">
+         <div className="row">
               <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
@@ -337,6 +253,94 @@ render() {
                        
           </div> 
 
+            <div className="row">
+              <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="x_content">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="">MASURA TGV </p>
+                          </div>
+                        
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="tile_info">
+                         <tbody>
+                          {this.MASURA_TGV_ID1('Voltage_effective_L1')}
+                          {this.MASURA_TGV_ID1('Voltage_effective_L2')}
+                          {this.MASURA_TGV_ID1('Voltage_effective_L3')}
+                          {this.MASURA_TGV_ID1('Current_effective_L1')}
+                          {this.MASURA_TGV_ID1('Current_effective_L2')}
+                          {this.MASURA_TGV_ID1('Current_effective_L3')}
+                          {this.MASURA_TGV_ID1('Active_Power_Sum_L1_L3')}
+                          {this.MASURA_TGV_ID1('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.MASURA_TGV_ID1('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.MASURA_TGV_ID1('Reactive_Energy_Sum_L1_L3')}
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+                        <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="x_content">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="">TGD BIROURI</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="tile_info">
+                         <tbody>
+                          {this.TGD_BOROURI_ID52('Voltage_effective_L1')}
+                          {this.TGD_BOROURI_ID52('Voltage_effective_L2')}
+                          {this.TGD_BOROURI_ID52('Voltage_effective_L3')}
+                          {this.TGD_BOROURI_ID52('Current_effective_L1')}
+                          {this.TGD_BOROURI_ID52('Current_effective_L2')}
+                          {this.TGD_BOROURI_ID52('Current_effective_L3')}
+                          {this.TGD_BOROURI_ID52('Active_Power_Sum_L1_L3')}
+                          {this.TGD_BOROURI_ID52('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.TGD_BOROURI_ID52('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.TGD_BOROURI_ID52('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+
+                       
+          </div> 
+      
+
+
+
+
+            
 
 
               <div className="row">
@@ -465,13 +469,13 @@ export default createContainer(() => {
 
   return { 
  
-    MASURA_TGV_ID1: MASURA_TGV_ID1.find({},{limit:1}).fetch(),
-    TGD_BOROURI_ID52: TGD_BOROURI_ID52.find({},{limit:1}).fetch(),
-    SOSIRE_TR4_ID56: SOSIRE_TR4_ID56.find({},{limit:1}).fetch(),
-    SOSIRE_TR3_ID55: SOSIRE_TR3_ID55.find({},{limit:1}).fetch(),
-    SOSIRE_TR2_ID54: SOSIRE_TR2_ID54.find({},{limit:1}).fetch(),
-    SOSIRE_TR1_ID53: SOSIRE_TR1_ID53.find({},{limit:1}).fetch(),
-    HVAC_CLIME_WIFI_ID73: HVAC_CLIME_WIFI_ID73.find({},{limit:1}).fetch(),
-    HVAC_CLIME_WIPRO_ID72: HVAC_CLIME_WIPRO_ID72.find({},{limit:1}).fetch(),
+    MASURA_TGV_ID1: MASURA_TGV_ID1.find({}).fetch(),
+    TGD_BOROURI_ID52: TGD_BOROURI_ID52.find({}).fetch(),
+    SOSIRE_TR4_ID56: SOSIRE_TR4_ID56.find({}).fetch(),
+    SOSIRE_TR3_ID55: SOSIRE_TR3_ID55.find({}).fetch(),
+    SOSIRE_TR2_ID54: SOSIRE_TR2_ID54.find({}).fetch(),
+    SOSIRE_TR1_ID53: SOSIRE_TR1_ID53.find({}).fetch(),
+    HVAC_CLIME_WIFI_ID73: HVAC_CLIME_WIFI_ID73.find({}).fetch(),
+    HVAC_CLIME_WIPRO_ID72: HVAC_CLIME_WIPRO_ID72.find({}).fetch(),
   };
 }, ACPower);

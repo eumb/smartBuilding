@@ -100,7 +100,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">PSC3_1</p>
+                            <p className="">Rectifier controller PSC3_1</p>
                           </div>
                         
                         </th>
@@ -145,7 +145,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">PSC3_2</p>
+                            <p className="">Rectifier controler PSC3_2</p>
                           </div>
                       
                         </th>

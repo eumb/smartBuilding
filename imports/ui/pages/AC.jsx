@@ -25,7 +25,7 @@ export default class SR extends React.Component {
               <div className="dashboard_graph">
                     <div className="row">
                       <div className="align_right">
-                        <h3>Alternative Currents <small> Realtime data measurements</small> </h3>
+                        <h3>Alternating Current <small> Realtime data measurements</small> </h3>
                                   
                       </div>  
                       <div className="divider"></div>
