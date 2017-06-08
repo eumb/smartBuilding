@@ -14,6 +14,8 @@ import Home from '../pages/Home.jsx';
 
 import WS from '../pages/WS.jsx';
 import SR from '../pages/SR.jsx';
+import AC from '../pages/AC.jsx';
+import DC from '../pages/DC.jsx';
 
 export default class MainLayout extends React.Component {
   render() {
@@ -49,8 +51,9 @@ export default class MainLayout extends React.Component {
                       <Route path = '/about' component={About} />
                {/*       <Route path = '/administration' component={Administration} />*/}
                       <Route path = '/wsnodeinfo' component={WS} />
-          {/*            <Route path = '/usernodeinfo' component={UserNodeInfo} />*/}
                       <Route path = '/srnodeinfo' component={SR} />
+                      <Route path = '/accurrent' component={AC} />
+                      <Route path = '/dccurrent' component={DC} />
                       <Route component={NotFound} />
                     </Switch>
 

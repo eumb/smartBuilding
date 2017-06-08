@@ -24,8 +24,8 @@ export default class Sidebar extends React.Component {
                     
                     <li><a><i className="fa fa-desktop"></i>Power measurements<span className="fa fa-chevron-down"></span></a>
                       <ul className="nav child_menu">
-                        <li><a href="general_elements.html">AC Current</a></li>
-                        <li><a href="media_gallery.html">DC Current</a></li>
+                        <li><Link to='/accurrent'>AC Currents</Link></li>
+                        <li><Link to='/dccurrent'>DC Currents</Link></li>
                       </ul>
                     </li>
                     

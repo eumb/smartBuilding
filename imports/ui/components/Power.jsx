@@ -24,7 +24,7 @@ generateChartData() {
 
 
 
-for (i=0; i < xScale.length; i++){
+for (i=0; i <xScale.length ;i++){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
@@ -42,7 +42,7 @@ mapData(){
     labels: timeScale,
     datasets: [
         {
-            label: "Active_Power_Sum_L1_L3",
+            label: 'Active_Power_Sum_L1_L3',
             fillColor: "rgba(250,195,168,0.5)",
             strokeColor: "rgba(220,220,220,1)",
             pointColor: "rgba(250,195,168,1)",
@@ -102,12 +102,12 @@ render() {
                       <div className="divider"></div>
                     
                     </div>
-                    <div classsName="row">
+                  {/*  <div className="row">
                       <Line data={this.mapData()} width="500" height="280"/>
-                    </div>
+                    </div>*/}
             	</div>
             </div>
-           </div>
+           </div> 
   	  )}
 }
 
@@ -123,7 +123,7 @@ export default createContainer(() => {
 
   return { 
     platformPowerlast : MASURA_TGV_ID1.find({},{limit:1}).fetch(),
-    platformPower : MASURA_TGV_ID1.find({}).fetch(),
+    platformPower : MASURA_TGV_ID1.find({},{limit:10}).fetch(),
    
   };
 }, Power);
