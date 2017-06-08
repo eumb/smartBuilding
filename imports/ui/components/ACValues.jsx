@@ -4,6 +4,11 @@ import React, { Component, PropTypes } from 'react';
 
 
 export default class ACValues extends Component {
+    
+  roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+  }
+
   render() {
   	sensortype=this.props.sensor;
   	//console.log(sensortype)
@@ -14,7 +19,7 @@ export default class ACValues extends Component {
     return (
      <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Voltage effective L1 </p>
+            <p><i className="fa fa-square gray"></i> Voltage effective L1 </p>
           </td>
           <td> {this.props.sensorvalue.Voltage_effective_L1}<small> V</small></td>
         </tr> 
@@ -27,7 +32,7 @@ export default class ACValues extends Component {
 
          <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Voltage effective L2 </p>
+            <p><i className="fa fa-square gray"></i> Voltage effective L2 </p>
           </td>
           <td> {this.props.sensorvalue.Voltage_effective_L2}<small> V</small></td>
         </tr> 
@@ -40,7 +45,7 @@ export default class ACValues extends Component {
     return (
       <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Voltage effective L3 </p>
+            <p><i className="fa fa-square gray"></i> Voltage effective L3 </p>
           </td>
           <td> {this.props.sensorvalue.Voltage_effective_L3}<small> V</small></td>
         </tr>
@@ -54,7 +59,7 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Current effective L1 </p>
+            <p><i className="fa fa-square gray"></i> Current effective L1 </p>
           </td>
           <td> {this.props.sensorvalue.Current_effective_L1}<small> A</small></td>
         </tr>
@@ -66,7 +71,7 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Current effective L2 </p>
+            <p><i className="fa fa-square gray"></i> Current effective L2 </p>
           </td>
           <td> {this.props.sensorvalue.Current_effective_L2}<small> A</small></td>
         </tr>
@@ -78,7 +83,7 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Current effective L3 </p>
+            <p><i className="fa fa-square gray"></i> Current effective L3 </p>
           </td>
           <td> {this.props.sensorvalue.Current_effective_L3}<small> A</small></td>
         </tr>
@@ -91,9 +96,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Active Power Sum (L1:L3) </p>
+            <p><i className="fa fa-square gray"></i> Active Power Sum (L1:L3) </p>
           </td>
-          <td> {this.props.sensorvalue.Active_Power_Sum_L1_L3/1000}<small> kW</small></td>
+          <td> {this.roundToTwo(this.props.sensorvalue.Active_Power_Sum_L1_L3/1000)}<small> kW</small></td>
         </tr>
     );
   }
@@ -103,9 +108,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Reactive power fundamental Sum (L1:L3) </p>
+            <p><i className="fa fa-square gray"></i> Reactive power fundamental Sum (L1:L3) </p>
           </td>
-          <td> {this.props.sensorvalue.Reactive_power_fundamental_Sum_L1_L3/1000}<small> kvar</small></td>
+          <td> {this.roundToTwo(this.props.sensorvalue.Reactive_power_fundamental_Sum_L1_L3/1000)}<small> kvar</small></td>
         </tr>
     );
   }
@@ -115,9 +120,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Consumed Active Energy Sum (L1:L3) </p>
+            <p><i className="fa fa-square gray"></i> Consumed Active Energy Sum (L1:L3) </p>
           </td>
-          <td> {this.props.sensorvalue.Consumed_Active_Energy_Sum_L1_L3/1000}<small> kWh</small></td>
+          <td> {this.roundToTwo(this.props.sensorvalue.Consumed_Active_Energy_Sum_L1_L3/1000)}<small> kWh</small></td>
         </tr>
     );
   }
@@ -127,9 +132,9 @@ export default class ACValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Reactive Energy Sum (L1:L3) </p>
+            <p><i className="fa fa-square gray"></i> Reactive Energy Sum (L1:L3) </p>
           </td>
-          <td> {this.props.sensorvalue.Reactive_Energy_Sum_L1_L3/1000}<small> kVArh</small></td>
+          <td> {this.roundToTwo(this.props.sensorvalue.Reactive_Energy_Sum_L1_L3/1000)}<small> kVArh</small></td>
         </tr>
     );
   }

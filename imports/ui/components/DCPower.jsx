@@ -50,7 +50,7 @@ mapData(dataset){
     labels: timeScale,
     datasets: [
         {
-            label: 'PSys',
+            label: 'System Power',
             fillColor: "rgba(225,241,238,0.5)",
             strokeColor: "rgba(220,220,220,1)",
             pointColor: "rgba(250,195,168,1)",
@@ -72,10 +72,10 @@ render() {
 
 
   var widthth = {
-      width:'37%'
+      width:'70%'
     };
   var widthtable={
-    width:'100%'
+    width:'90%'
   }
 
   var chartOptions= {
@@ -88,26 +88,21 @@ render() {
 
     return (
       <div>
-        
-                   <div className="row">
-              <div className="col-md-5 col-sm-6 col-xs-12">
-                <div className="x_panel">
-                  
-                    <div className="x_content">
-                      <table className="" style={widthtable}>
-                     <tbody>
+          <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
+           
+              <div className="col-md-5 col-sm-6 col-xs-12 bg-white">
+                <table className="" style={widthtable}>
+                    <tbody>
                       <tr>
-                     
                         <th>
-                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">Rectifier controller PSC3_1</p>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-white">
+                            <p className="power_title">Rectifier controller PSC3_1</p>
                           </div>
-                        
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.PSC3_1('USys')}
                           {this.PSC3_1('PSys')}
@@ -120,67 +115,58 @@ render() {
                       </td>
                       </tr>
                      </tbody>
-                    </table>
-                         </div>          
-                </div>
-              </div> 
-                   <div className="col-md-7 col-sm-6 col-xs-12">
-             <div className="x_panel">
-                    
-                    <div className="x_content">
-                       <Line data={this.mapData(this.props.PSC3_1_chart)} options={chartOptions} width="700" height="170" />
- </div>
-                  </div>
+                </table>
+              </div>
+              <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                
+                  <Line data={this.mapData(this.props.PSC3_1_chart)} width="700" height="170" />
+             
               </div>
-              </div>
-              <div className="row">
-             <div className="col-md-5 col-sm-6 col-xs-12">
-                <div className="x_panel">
-                  
-                    <div className="x_content">
-                      <table className="" style={widthtable}>
-                     <tbody>
-                      <tr>
-                     
-                        <th>
-                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">Rectifier controler PSC3_2</p>
-                          </div>
+            <div className="clearfix"></div>
+          </div>  
+            <div className="col-md-12 col-sm-12 col-xs-12">    <div className="divider"></div></div>
+           
+           <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
+                
+                    <div className="col-md-5 col-sm-6 col-xs-12 bg-white">
+                      <table  className="" style={widthtable}>
+                       <tbody>
+                        <tr>
+                       
+                          <th>
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-white">
+                              <p className="power_title">Rectifier controler PSC3_2</p>
+                            </div>
+                        
+                          </th>
+                        </tr>
+                        <tr>
+                        <td>
+                          <table className="table table-hover">
+                           <tbody>
+                              {this.PSC3_2('USys')}
+                            {this.PSC3_2('PSys')}
+                            {this.PSC3_2('ILoad')}
+                            {this.PSC3_2('IBatt')}
+                            {this.PSC3_2('IRect')}
+                          </tbody>
+                          </table>
+                        </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                    </div> 
+
+                    <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                       
-                        </th>
-                      </tr>
-                      <tr>
-                      <td>
-                        <table className="tile_info">
-                         <tbody>
-                            {this.PSC3_2('USys')}
-                          {this.PSC3_2('PSys')}
-                          {this.PSC3_2('ILoad')}
-                          {this.PSC3_2('IBatt')}
-                          {this.PSC3_2('IRect')}
-
-
-                        </tbody>
-                        </table>
-                      </td>
-                      </tr>
-                     </tbody>
-                    </table>
-                         </div>          
-                </div>
-              </div> 
-              <div className="col-md-7 col-sm-6 col-xs-12">
-                <div className="x_panel">
-                    
-                    <div className="x_content">
-                       <Line data={this.mapData(this.props.PSC3_2_chart)} width="700" height="170" />
-
+                        <Line data={this.mapData(this.props.PSC3_2_chart)} width="700" height="170" />
+                      
                     </div>
-                  </div>
+               
+                <div className="clearfix"></div>
               </div>
 
-                    </div>     
+
           </div> 
       
   

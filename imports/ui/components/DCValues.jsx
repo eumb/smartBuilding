@@ -12,7 +12,7 @@ export default class DCValues extends Component {
     return (
      <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>System Voltage </p>
+            <p><i className="fa fa-square gray"></i> System Voltage </p>
           </td>
           <td> {this.props.sensorvalue.USys} <small> V</small></td>
         </tr> 
@@ -25,7 +25,7 @@ export default class DCValues extends Component {
 
          <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>System Power </p>
+            <p><i className="fa fa-square gray"></i> System Power </p>
           </td>
           <td> {this.props.sensorvalue.PSys/1000} <small> kW</small></td>
         </tr> 
@@ -38,7 +38,7 @@ export default class DCValues extends Component {
     return (
       <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Load current</p>
+            <p><i className="fa fa-square gray"></i> Load current</p>
           </td>
           <td> {this.props.sensorvalue.ILoad} <small> A</small></td>
         </tr>
@@ -52,7 +52,7 @@ export default class DCValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Battery current </p>
+            <p><i className="fa fa-square gray"></i> Battery current </p>
           </td>
           <td> {this.props.sensorvalue.IBatt} <small> A</small></td>
         </tr>
@@ -64,7 +64,7 @@ export default class DCValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i>Rectifier current</p>
+            <p><i className="fa fa-square gray"></i> Rectifier current</p>
           </td>
           <td> {this.props.sensorvalue.IRect} <small> A</small></td>
         </tr>

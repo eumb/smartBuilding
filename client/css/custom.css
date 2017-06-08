@@ -975,7 +975,7 @@ table.tile_info td i {
   line-height: 28px; }
 
 table.tile_info td:first-child {
-  width: 83%; }
+  width: 100%; }
 
 td span {
   line-height: 28px; }
@@ -1530,7 +1530,7 @@ span.right {
 /** /top tiles **/
 .dashboard_graph {
   background: #fff;
-  padding: 10px 10px; }
+  padding: 10px 10px;   }
 
 .dashboard_graph .col-md-9, .dashboard_graph .col-md-3 {
   padding: 0;

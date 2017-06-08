@@ -96,21 +96,21 @@ render() {
               <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">SOSIRE TR4</p>
+                            <p className="power_title">SOSIRE TR4</p>
                           </div>
                         
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.SOSIRE_TR4_ID56('Voltage_effective_L1')}
                           {this.SOSIRE_TR4_ID56('Voltage_effective_L2')}
@@ -135,21 +135,21 @@ render() {
                         <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">SOSIRE TR3</p>
+                            <p className="power_title">SOSIRE TR3</p>
                           </div>
                       
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.SOSIRE_TR3_ID55('Voltage_effective_L1')}
                           {this.SOSIRE_TR3_ID55('Voltage_effective_L2')}
@@ -174,21 +174,21 @@ render() {
                               <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">SOSIRE TR2</p>
+                            <p className="power_title">SOSIRE TR2</p>
                           </div>
                       
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.SOSIRE_TR2_ID54('Voltage_effective_L1')}
                           {this.SOSIRE_TR2_ID54('Voltage_effective_L2')}
@@ -214,21 +214,21 @@ render() {
                             <div className="col-md-3 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">SOSIRE TR1</p>
+                            <p className="power_title">SOSIRE TR1</p>
                           </div>
                       
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.SOSIRE_TR1_ID53('Voltage_effective_L1')}
                           {this.SOSIRE_TR1_ID53('Voltage_effective_L2')}
@@ -257,21 +257,21 @@ render() {
               <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">MASURA TGV </p>
+                            <p className="power_title">MASURA TGV </p>
                           </div>
                         
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.MASURA_TGV_ID1('Voltage_effective_L1')}
                           {this.MASURA_TGV_ID1('Voltage_effective_L2')}
@@ -296,21 +296,21 @@ render() {
                         <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">TGD BIROURI</p>
+                            <p className="power_title">TGD BIROURI</p>
                           </div>
                       
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.TGD_BOROURI_ID52('Voltage_effective_L1')}
                           {this.TGD_BOROURI_ID52('Voltage_effective_L2')}
@@ -347,21 +347,21 @@ render() {
               <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">HVAC AirConditioning Wireless</p>
+                            <p className="power_title">HVAC AirConditioning Wireless</p>
                           </div>
                         
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.HVAC_CLIME_WIFI_ID73('Voltage_effective_L1')}
                           {this.HVAC_CLIME_WIFI_ID73('Voltage_effective_L2')}
@@ -386,21 +386,21 @@ render() {
                         <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">HVAC AirConditioning Fixed Netowrks</p>
+                            <p className="power_title">HVAC AirConditioning Fixed Netowrks</p>
                           </div>
                       
                         </th>
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.HVAC_CLIME_WIPRO_ID72('Voltage_effective_L1')}
                           {this.HVAC_CLIME_WIPRO_ID72('Voltage_effective_L2')}
@@ -469,13 +469,13 @@ export default createContainer(() => {
 
   return { 
  
-    MASURA_TGV_ID1: MASURA_TGV_ID1.find({}).fetch(),
+    MASURA_TGV_ID1: MASURA_TGV_ID1.find({},{limit:1}).fetch(),
     TGD_BOROURI_ID52: TGD_BOROURI_ID52.find({}).fetch(),
     SOSIRE_TR4_ID56: SOSIRE_TR4_ID56.find({}).fetch(),
     SOSIRE_TR3_ID55: SOSIRE_TR3_ID55.find({}).fetch(),
     SOSIRE_TR2_ID54: SOSIRE_TR2_ID54.find({}).fetch(),
     SOSIRE_TR1_ID53: SOSIRE_TR1_ID53.find({}).fetch(),
-    HVAC_CLIME_WIFI_ID73: HVAC_CLIME_WIFI_ID73.find({}).fetch(),
-    HVAC_CLIME_WIPRO_ID72: HVAC_CLIME_WIPRO_ID72.find({}).fetch(),
+    HVAC_CLIME_WIFI_ID73: HVAC_CLIME_WIFI_ID73.find({},{limit:1}).fetch(),
+    HVAC_CLIME_WIPRO_ID72: HVAC_CLIME_WIPRO_ID72.find({},{limit:1}).fetch(),
   };
 }, ACPower);

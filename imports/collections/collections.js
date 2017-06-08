@@ -46,8 +46,9 @@ if (Meteor.isServer) {
 
     Meteor.publish('HVAC_CLIME_WIFI_ID73', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIFI_ID73 data");
-      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:1});
+      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:20});
   });
+
 
     Meteor.publish('HVAC_CLIME_WIPRO_ID72', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIPRO_ID72 data");
@@ -91,7 +92,7 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:1});
+      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:20});
    });
 
   

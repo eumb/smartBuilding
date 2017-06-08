@@ -29,7 +29,9 @@ export default class MainLayout extends React.Component {
                        <div className="col-md-3 left_col">
                           <div className="left_col scroll-view">
                             <div className="navbar nav_title">
-                                <a href="index.html" className="site_title"><i className="fa fa-building-o"></i> <span>Smart Building</span></a>
+                                <a href="index.html" className="site_title"><i className="fa fa-building-o"></i> <span>Smart Campus</span></a>
+                                
+                                 {/*<img src="Smart_Building_Schita.png" alt="logo" height="70" width="200"></img>*/}
                             </div>
                             <div className="clearfix"></div>
                        
