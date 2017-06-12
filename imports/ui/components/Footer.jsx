@@ -6,9 +6,14 @@ export default class Footer extends React.Component {
     return (
 
 
-		<footer>
+		<footer className="footer_fixed">
           <div className="pull-right">
-            SmartBuiding by <a href="http://nokia.com">Nokia</a>
+            <div>
+                 {/*   <span className="title">Smartbuilding </span>
+                     <span className="by">by </span>*/}
+                  <span className="nokia_logo">NOKIA</span>
+              
+            </div>
         </div>
           <div className="clearfix"></div>
         </footer>  

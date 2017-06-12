@@ -25,14 +25,15 @@ export default class MainLayout extends React.Component {
               <div id="main_body" className="nav-md">
                 <div className="container body">
                   <div className="main_container">
-                     <Header />
+                     {/*<Header />*/}
                        <div className="col-md-3 left_col">
                           <div className="left_col scroll-view">
                             <div className="navbar nav_title">
-                                <a href="index.html" className="site_title"><i className="fa fa-building-o"></i> <span>Smart Campus</span></a>
+                                {/*<a href="index.html" className="site_title"><i className="fa fa-building-o"></i> <span>Smart Campus</span></a>*/}
                                 
-                                 {/*<img src="Smart_Building_Schita.png" alt="logo" height="70" width="200"></img>*/}
+                                 <img className="logo" src="Smart_Building_Schita_fundal.png" alt="logo" ></img>
                             </div>
+                            <div className="divider inverted"></div> 
                             <div className="clearfix"></div>
                        
                
@@ -62,7 +63,7 @@ export default class MainLayout extends React.Component {
 
                    
                   </div>
-                    <Footer />
+                   <Footer />
                   </div>
                 </div>
               </div>

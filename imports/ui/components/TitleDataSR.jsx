@@ -16,10 +16,10 @@ SRNoiseAverage = new Mongo.Collection("SRNoiseAverage");
 
 
 
-class TitleData extends React.Component {
+class TitleDataSR extends React.Component {
 
 renderTasks(sensorval) {
-    return this.props.sr.map((sensorvalue) => (
+    return this.props.SR.map((sensorvalue) => (
       <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
@@ -39,13 +39,13 @@ render() {
               <span className="count_top"><i className="fa fa-user"></i> Temperature (C)</span>
                {this.renderTasks('temp')}
 
-            {/*  <AvgData data={this.props.sr}/>*/}
+            {/*  <AvgData data={this.props.SR}/>*/}
   
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
                    </div>
                   <div className="col-md-6 tile">
                     <div  className=" count_top spaklines">  
-                  <SmallGraphs sensoraverage={this.props.srTempAverage} type={"temp"} />
+                  <SmallGraphs sensoraverage={this.props.SRTempAverage} type={"temp"} />
                 
                     </div> 
                  </div>
@@ -60,7 +60,7 @@ render() {
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
    <div  className="count_top spaklines">  </div>
-     <SmallGraphs sensoraverage={this.props.srHumidAverage} type={"humid"} />
+     <SmallGraphs sensoraverage={this.props.SRHumidAverage} type={"humid"} />
                  </div>
                 
               
@@ -83,7 +83,7 @@ render() {
               <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                     <SmallGraphs sensoraverage={this.props.srNoiseAverage} type={"noise"} />
+                     <SmallGraphs sensoraverage={this.props.SRNoiseAverage} type={"noise"} />
                  </div>
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -116,11 +116,11 @@ render() {
   }
 }
 
- TitleData.propTypes = {
-  sr: PropTypes.array.isRequired,
-   srHumidAverage: PropTypes.array.isRequired,
-  srTempAverage: PropTypes.array.isRequired,
-  srNoiseAverage: PropTypes.array.isRequired,
+ TitleDataSR.propTypes = {
+  SR: PropTypes.array.iSRequired,
+   SRHumidAverage: PropTypes.array.iSRequired,
+  SRTempAverage: PropTypes.array.iSRequired,
+  SRNoiseAverage: PropTypes.array.iSRequired,
 };
 
 
@@ -133,11 +133,11 @@ export default createContainer(() => {
 
 
   return { 
-    sr : ServerRoom.find({}).fetch(),
-     srHumidAverage : SRHumidAverage.find().fetch(),
-     srTempAverage : SRTempAverage.find().fetch(),
-      srNoiseAverage : SRNoiseAverage.find().fetch(),
+    SR : ServerRoom.find({}).fetch(),
+     SRHumidAverage : SRHumidAverage.find().fetch(),
+     SRTempAverage : SRTempAverage.find().fetch(),
+      SRNoiseAverage : SRNoiseAverage.find().fetch(),
    
    
   };
-}, TitleData);
+}, TitleDataSR);

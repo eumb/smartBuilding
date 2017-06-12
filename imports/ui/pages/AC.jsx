@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import TitleData from '../components/TitleData.jsx';
+
 import ACPower from '../components/ACPower.jsx';
 
 
@@ -19,7 +19,7 @@ export default class SR extends React.Component {
 
 <div>
        
- {/*  <TitleData />*/}
+
            <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
               

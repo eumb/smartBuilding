@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Heatmaps from '../components/Heatmaps.jsx';
-import TitleData from '../components/TitleData.jsx';
+import TitleDataWS from '../components/TitleDataWS.jsx';
 import WSNodeInfo from '../components/WSNodeInfo.jsx';
 
 
@@ -19,7 +19,7 @@ export default class WS extends React.Component {
 
 <div>
        
-        <TitleData />
+        <TitleDataWS />
         <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
               <div className="dashboard_graph">

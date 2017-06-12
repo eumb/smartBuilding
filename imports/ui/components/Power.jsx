@@ -29,8 +29,8 @@ for (i=0; i <xScale.length ;i++){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
-  console.log(Active_Power_Sum_L1_L3);
-  console.log(timeScale);
+  //console.log(Active_Power_Sum_L1_L3);
+  //console.log(timeScale);
 
 
 }
@@ -48,12 +48,56 @@ for (i=0; i <xScale.length ;i++){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
- console.log(Active_Power_Sum_L1_L3);
-  console.log(timeScale);
+ //console.log(Active_Power_Sum_L1_L3);
+ //console.log(timeScale);
 
 
 }
 
+
+generatePercentData(){
+  timeScale = [];
+  totalPower = [];
+  resultedPercentPower =[];
+  dataset=this.props.HvacPower;
+  dataset2=this.props.platformPower;
+  Active_Power_Sum_L1_L3_platform=_.pluck(dataset2, "Active_Power_Sum_L1_L3");
+  Active_Power_Sum_L1_L3_hvac=_.pluck(dataset, "Active_Power_Sum_L1_L3");
+  
+  for (i=0; i <xScale.length ;i++){
+    timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
+  }
+
+  for (i=0; i <xScale.length ;i++){
+    totalPower.push(Active_Power_Sum_L1_L3_platform[i]+Active_Power_Sum_L1_L3_hvac[i]);
+    resultedPercentPower.push((Active_Power_Sum_L1_L3_platform[i]/totalPower[i])*100);
+  }
+  console.log(totalPower)
+  console.log(resultedPercentPower)
+  console.log(timeScale)
+
+}
+
+mapDataPercent(){
+this.generatePercentData()
+
+var data = {
+    labels: timeScale,
+    datasets: [
+        {
+            label: 'Active_Power_Sum_Percent',
+            backgroundColor: 'rgba(88,203,181,0.5)',
+            radius: 0,
+            lineTension:0,
+            data:resultedPercentPower,
+        }
+    ],
+
+};
+
+    return data;
+
+}
 
 mapData(){
 
@@ -64,12 +108,8 @@ mapData(){
     datasets: [
         {
             label: 'Active_Power_Sum_L1_L3',
-            fillColor: "rgba(225,241,238,0.6)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(250,195,168,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
+          backgroundColor: 'rgba(88,203,181,0.5)',
+            radius: 0,
             data:Active_Power_Sum_L1_L3,
         }
     ],
@@ -91,11 +131,7 @@ mapDataHVAC(){
         {
             label: 'HVAC_CLIME_WIFI_ID73',
             backgroundColor: 'rgba(88,203,181,0.5)',
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(250,195,168,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
+            radius: 0,
             data:Active_Power_Sum_L1_L3,
         }
     ],
@@ -111,8 +147,9 @@ render() {
 
  var chartOptions = {
   responsive: true,
+
   tooltips: {
-    mode: 'label'
+    enabled:false
   },
   elements: {
     line: {
@@ -126,7 +163,7 @@ render() {
         display: false
       },
       labels: {
-        show: true
+        show: false
       }
     }],
     yAxes: [{
@@ -138,7 +175,7 @@ render() {
         display: false
       },
       labels: {
-        show: true
+        show: false
       }
   
     }]
@@ -206,6 +243,24 @@ render() {
                      </div> 
                  
 
+                  <div className="col-md-4 col-sm-4 col-xs-12">
+                     <div className="x_panel">
+                      <div className="row">
+                        <div className="align_right">
+                          <h2>HVAC Air Conditioning Power </h2>
+
+
+                        </div>
+                        <div className="divider"></div>
+
+                      </div>
+                      <div className="row">
+                        <div className="align_left">
+                          <Line data={this.mapDataPercent()} options={chartOptions}  width="500" height="280"/>
+                        </div>
+                      </div>
+                      </div>
+                     </div> 
 
                         
                    

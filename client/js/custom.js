@@ -31,7 +31,7 @@ Template.body.onRendered(function() {
         if ($li.is('.active')) {
             $li.removeClass('active active-sm');
             $('ul:first', $li).slideUp(function() {
-                setContentHeight();
+                //setContentHeight();
                 console.log("was active")
             });
         } else {
@@ -46,7 +46,7 @@ Template.body.onRendered(function() {
             console.log("now is active")
             $('ul:first', $li).slideDown(function() {
                 console.log("sliding menu")
-                setContentHeight();
+                //setContentHeight();
             });
         }
     });
@@ -74,7 +74,7 @@ Template.body.events({
 
         $("#main_body").toggleClass("nav-md nav-sm");
 
-        setContentHeight();
+        //setContentHeight();
 
     }
 

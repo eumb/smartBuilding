@@ -1,12 +1,24 @@
 import { Mongo } from 'meteor/mongo';
 
-export const Beers = new Meteor.Collection("Beers");
-export const ServerRoom = new Meteor.Collection("SR");
-export const WorkSpace = new Meteor.Collection("WS");
 
-export const Dev_5CCF7FA43A8B = new Meteor.Collection("5CCF7FA43A8B");
-export const Dev_5CCF7FF0B17A = new Meteor.Collection("5CCF7FF0B17A");
-export const Dev_5CCF7FF0B544 = new Meteor.Collection("5CCF7FF0B544");
+export const UserArea = new Meteor.Collection("UA");
+export const WorkSpace = new Meteor.Collection("WS");
+export const MeetingRoom = new Meteor.Collection("MR");
+export const ServerRoom = new Meteor.Collection("SR");
+export const Exterior = new Meteor.Collection("EXT");
+
+export const Dev_5CCF7FA43A8B = new Meteor.Collection("5CCF7FA43A8B");//{ "_id" : ObjectId("593922c6e95f2f2008a77d2d"), "temp" : 29.5, "humid" : 30.1, "noise" : 82.39, "noise_p" : 87.99, "light" : 4, "co2" : 0, "created_at" : ISODate("2017-06-08T10:11:18.476Z") }
+export const Dev_5CCF7FA43AB8 = new Meteor.Collection("5CCF7FA43AB8");//{ "_id" : ObjectId("593a8bffe95f2f11e4b5dc17"), "temp" : 26.9, "humid" : 45.7, "pres" : 0.16, "created_at" : ISODate("2017-06-09T11:52:31.183Z") }
+export const Dev_5CCF7FD5CB47 = new Meteor.Collection("5CCF7FD5CB47");//{ "_id" : ObjectId("593a9684e95f2f11e4b5fbdf"), "temp" : 26.8, "humid" : 34, "noise" : 58.24, "noise_p" : 72.39, "light" : 1516, "pres" : 0.05, "created_at" : ISODate("2017-06-09T12:37:24.333Z") }
+export const Dev_5CCF7FEFB40E = new Meteor.Collection("5CCF7FEFB40E");//{ "_id" : ObjectId("593a65d0e95f2f11e4b56936"), "temp" : 27.7, "humid" : 37.3, "light" : 742, "dust" : 77.92, "created_at" : ISODate("2017-06-09T09:09:36.934Z") }
+export const Dev_5CCF7FEFBE72 = new Meteor.Collection("5CCF7FEFBE72");//{ "_id" : ObjectId("593a8c07e95f2f11e4b5dc38"), "temp" : 25.9, "humid" : 38.7, "noise" : 58.24, "noise_p" : 70.54, "light" : 956, "created_at" : ISODate("2017-06-09T11:52:39.518Z") }
+export const Dev_5CCF7FEFBE9E = new Meteor.Collection("5CCF7FEFBE9E");//{ "_id" : ObjectId("593a8c3de95f2f11e4b5dcd3"), "temp" : 26.5, "humid" : 44.2, "pres" : 0, "created_at" : ISODate("2017-06-09T11:53:33.835Z") }
+export const Dev_5CCF7FF0A971 = new Meteor.Collection("5CCF7FF0A971");//{ "_id" : ObjectId("593a96b2e95f2f11e4b5fc7c"), "temp" : 25.8, "humid" : 40.2, "light" : 254, "uv" : 0, "co2" : 0, "created_at" : ISODate("2017-06-09T12:38:10.054Z") }
+export const Dev_5CCF7FF0AA4F = new Meteor.Collection("5CCF7FF0AA4F");//{ "_id" : ObjectId("593a65bce95f2f11e4b568e9"), "temp" : 26.7, "humid" : 35.5, "noise" : 61.65, "noise_p" : 89.74, "light" : 552, "created_at" : ISODate("2017-06-09T09:09:16.149Z") }
+export const Dev_5CCF7FF0B17A = new Meteor.Collection("5CCF7FF0B17A");//{ "_id" : ObjectId("593922a9e95f2f2008a77cd1"), "temp" : 32.4, "humid" : 22.2, "noise" : 35.2, "noise_p" : 47.17, "created_at" : ISODate("2017-06-08T10:10:49.341Z") }
+export const Dev_5CCF7FF0B544 = new Meteor.Collection("5CCF7FF0B544");//{ "_id" : ObjectId("593922b8e95f2f2008a77d0d"), "temp" : 32.2, "humid" : 25, "dust" : 0, "created_at" : ISODate("2017-06-08T10:11:04.307Z") }
+export const Dev_5CCF7FF0B704 = new Meteor.Collection("5CCF7FF0B704");//{ "_id" : ObjectId("593a8c5ce95f2f11e4b5dd32"), "temp" : 26.1, "humid" : 39.4, "noise" : 35.18, "noise_p" : 47.17, "light" : 65536, "created_at" : ISODate("2017-06-09T11:54:04.885Z") }
+
 export const PSC3_1 = new Meteor.Collection("PSC3_1");  //{ "_id" : ObjectId("59381ff0e95f2f2008a45b68"), "USys" : 53.4, "PSys" : 71267, "ILoad" : 1334.6, "IBatt" : 4.2, "IRect" : 1345.1, "created_at" : ISODate("2017-06-07T15:46:56.388Z") }
 export const PSC3_2 = new Meteor.Collection("PSC3_2");// { "_id" : ObjectId("59381ff0e95f2f2008a45b68"), "USys" : 53.4, "PSys" : 71267, "ILoad" : 1334.6, "IBatt" : 4.2, "IRect" : 1345.1, "created_at" : ISODate("2017-06-07T15:46:56.388Z") }
 export const MASURA_TGV_ID1 = new Meteor.Collection("MASURA_TGV_ID1"); // { "_id" : ObjectId("59382093e95f2f2008a45d5a"), "Voltage_effective_L1" : 234.04, "Voltage_effective_L2" : 234.64, "Voltage_effective_L3" : 233.15, "Current_effective_L1" : 701.55, "Current_effective_L2" : 726.48, "Current_effective_L3" : 685.7, "Active_Power_Sum_L1_L3" : 494108.7, "Reactive_power_fundamental_Sum_L1_L3" : 3971.04, "Consumed_Active_Energy_Sum_L1_L3" : 400776672, "Reactive_Energy_Sum_L1_L3" : 2391923, "created_at" : ISODate("2017-06-07T15:49:39.232Z") }
@@ -18,6 +30,10 @@ export const SOSIRE_TR1_ID53 = new Meteor.Collection("SOSIRE_TR1_ID53"); //{ "_i
 export const HVAC_CLIME_WIFI_ID73 = new Meteor.Collection("HVAC_CLIME_WIFI_ID73");//{ "_id" : ObjectId("5939246fe95f2f2008a78271"), "Voltage_effective_L1" : 227.48, "Voltage_effective_L2" : 229.18, "Voltage_effective_L3" : 227.93, "Current_effective_L1" : 78.07, "Current_effective_L2" : 78.09, "Current_effective_L3" : 78.21, "Active_Power_Sum_L1_L3" : 50705.9, "Reactive_power_fundamental_Sum_L1_L3" : -1520.03, "Consumed_Active_Energy_Sum_L1_L3" : 94677416, "Reactive_Energy_Sum_L1_L3" : -6902814.5, "created_at" : ISODate("2017-06-08T10:18:23.695Z") }
 export const HVAC_CLIME_WIPRO_ID72 =new Meteor.Collection("HVAC_CLIME_WIPRO_ID72"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
   
+
+
+
+
 
 /*Meteor.methods({
 	"insertBeer": function(numBeers, date) {
@@ -46,7 +62,7 @@ if (Meteor.isServer) {
 
     Meteor.publish('HVAC_CLIME_WIFI_ID73', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIFI_ID73 data");
-      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:20});
+      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:200});
   });
 
 
@@ -92,42 +108,107 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:20});
+      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:200});
    });
 
   
+
+
+  /*5CCF7FA43A8B
+5CCF7FA43AB8
+
+
+
+
+
+
+
+
+
+*/
+
+
 
   Meteor.publish('5CCF7FA43A8B', function eventsPublication() {
       console.log("subscribed to 5CCF7FA43A8B data");
       return Dev_5CCF7FA43A8B.find({} ,{ sort: { created_at: -1 },limit:1});
    });
-   Meteor.publish('5CCF7FF0B17A', function eventsPublication() {
+   Meteor.publish('5CCF7FA43AB8', function eventsPublication() {
+      console.log("subscribed to 5CCF7FA43AB8 data");
+      return Dev_5CCF7FA43AB8.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+ Meteor.publish('5CCF7FD5CB47', function eventsPublication() {
+      console.log("subscribed to 5CCF7FD5CB47 data");
+      return Dev_5CCF7FD5CB47.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FEFB40E', function eventsPublication() {
+      console.log("subscribed to 5CCF7FEFB40E data");
+      return Dev_5CCF7FEFB40E.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FEFBE72', function eventsPublication() {
+      console.log("subscribed to 5CCF7FEFBE72 data");
+      return Dev_5CCF7FEFBE72.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FEFBE9E', function eventsPublication() {
+      console.log("subscribed to 5CCF7FEFBE9E data");
+      return Dev_5CCF7FEFBE9E.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FF0A971', function eventsPublication() {
+      console.log("subscribed to 5CCF7FF0A971 data");
+      return Dev_5CCF7FF0A971.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FF0AA4F', function eventsPublication() {
+      console.log("subscribed to 5CCF7FF0AA4F data");
+      return Dev_5CCF7FF0AA4F.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FF0B17A', function eventsPublication() {
       console.log("subscribed to 5CCF7FF0B17A data");
       return Dev_5CCF7FF0B17A.find({} ,{ sort: { created_at: -1 },limit:1});
    });
- Meteor.publish('5CCF7FF0B544', function eventsPublication() {
-      console.log("subscribed to 5CCF7FF0B544 data");
+
+ Meteor.publish('Dev_5CCF7FF0B544', function eventsPublication() {
+      console.log("subscribed to Dev_5CCF7FF0B544 data");
       return Dev_5CCF7FF0B544.find({} ,{ sort: { created_at: -1 },limit:1});
    });
+
+
+ Meteor.publish('5CCF7FF0B704', function eventsPublication() {
+      console.log("subscribed to 5CCF7FF0B704 data");
+      return Dev_5CCF7FF0B704.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
 
 
 
   Meteor.publish('WS', function eventsPublication() {
       console.log("subscribed to server room data");
-      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:1});
+      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:50});
    });
-
+    Meteor.publish('MR', function eventsPublication() {
+      console.log("subscribed to meeting room data");
+      return MeetingRoom.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+  Meteor.publish('UA', function eventsPublication() {
+      console.log("subscribed to user area data");
+      return UserArea.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
 
  Meteor.publish('SR', function eventsPublication() {
       console.log("subscribed to server room data");
       return ServerRoom.find({}	,{ sort: { _id: -1 },limit:1});
    });
 
- Meteor.publish('SRHumidAverage',function averagePublication(){
+ Meteor.publish('WSHumidAverage',function averagePublication(){
     self = this;
-    console.log("subscribed to average humidity server room:");
+    console.log("subscribed to average humidity in WorkSpace");
 
-    sensorAvg = ServerRoom.aggregate([
+    sensorAvg = WorkSpace.aggregate([
       { $match: 
       		{ 
       		    
@@ -157,7 +238,7 @@ if (Meteor.isServer) {
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("SRHumidAverage", Random.id(), {
+      self.added("WSHumidAverage", Random.id(), {
       	day:sensorAvg._id,
       	averagevalue:sensorAvg.averageDayValue
       });
@@ -167,11 +248,11 @@ if (Meteor.isServer) {
 
 
 
- Meteor.publish('SRTempAverage',function averagePublication(){
+ Meteor.publish('WSTempAverage',function averagePublication(){
     self = this;
-    console.log("subscribed to average temperature server room:");
+    console.log("subscribed to average temperature in WorkSpace");
 
-    sensorAvg = ServerRoom.aggregate([
+    sensorAvg = WorkSpace.aggregate([
       { $match: 
           { 
               
@@ -201,7 +282,7 @@ if (Meteor.isServer) {
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("SRTempAverage", Random.id(), {
+      self.added("WSTempAverage", Random.id(), {
         day:sensorAvg._id,
         averagevalue:sensorAvg.averageDayValue
       });
@@ -211,11 +292,11 @@ if (Meteor.isServer) {
 
 
 
-  Meteor.publish('SRNoiseAverage',function averagePublication(){
+  Meteor.publish('WSNoiseAverage',function averagePublication(){
     self = this;
-    console.log("subscribed to noise average server room:");
+    console.log("subscribed to noise average in WorkSpace");
 
-    sensorAvg = ServerRoom.aggregate([
+    sensorAvg = WorkSpace.aggregate([
       { $match: 
           { 
               
@@ -245,7 +326,7 @@ if (Meteor.isServer) {
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("SRNoiseAverage", Random.id(), {
+      self.added("WSNoiseAverage", Random.id(), {
         day:sensorAvg._id,
         averagevalue:sensorAvg.averageDayValue
       });
