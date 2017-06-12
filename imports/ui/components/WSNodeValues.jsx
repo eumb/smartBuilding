@@ -20,7 +20,7 @@ export default class WSNodeValues extends Component {
 
          <tr>
           <td>
-            <p><i className="fa fa-square red"></i>Temperature </p>
+            <p><i className="fa fa-square red"></i> Temperature </p>
           </td>
           <td> {this.props.sensorvalue.temp}°C</td>
         </tr> 
@@ -33,7 +33,7 @@ export default class WSNodeValues extends Component {
     return (
       <tr>
           <td>
-            <p><i className="fa fa-square blue"></i>Humidity </p>
+            <p><i className="fa fa-square blue"></i> Humidity </p>
           </td>
           <td> {this.props.sensorvalue.humid}%</td>
         </tr>
@@ -47,12 +47,49 @@ export default class WSNodeValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square purple"></i>Noise </p>
+            <p><i className="fa fa-square purple"></i> Noise </p>
           </td>
           <td> {this.props.sensorvalue.noise}dB</td>
         </tr>
     );
 	}
+
+    if (sensortype==="co2"){
+
+    return (
+       <tr>
+          <td>
+            <p><i className="fa fa-square black"></i> CO2 </p>
+          </td>
+          <td> {this.props.sensorvalue.co2}ppm</td>
+        </tr>
+    );
+  }
+
+     if (sensortype==="light"){
+
+    return (
+       <tr>
+          <td>
+            <p><i className="fa fa-square green"></i> Light </p>
+          </td>
+          <td> {this.props.sensorvalue.light} lm</td>
+        </tr>
+    );
+  }
+
+     if (sensortype==="dust"){
+
+    return (
+       <tr>
+          <td>
+            <p><i className="fa fa-square gray"></i> Dust </p>
+          </td>
+          <td> {this.props.sensorvalue.dust}</td>
+        </tr>
+    );
+  }
+
 
 
   }

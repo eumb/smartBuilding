@@ -62,7 +62,7 @@ if (Meteor.isServer) {
 
     Meteor.publish('HVAC_CLIME_WIFI_ID73', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIFI_ID73 data");
-      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:200});
+      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:1640});
   });
 
 
@@ -94,11 +94,11 @@ if (Meteor.isServer) {
 
   Meteor.publish('PSC3_1', function eventsPublication() {
       console.log("subscribed to PSC3_1 data");
-      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:20});
+      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:1640});
   });
   Meteor.publish('PSC3_2', function eventsPublication() {
       console.log("subscribed to PSC3_2 data");
-      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:20});
+      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:1640});
   });
 
   Meteor.publish('TGD_BOROURI_ID52', function eventsPublication() {
@@ -108,7 +108,7 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:200});
+      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:1640});
    });
 
   
@@ -192,7 +192,7 @@ if (Meteor.isServer) {
    });
     Meteor.publish('MR', function eventsPublication() {
       console.log("subscribed to meeting room data");
-      return MeetingRoom.find({} ,{ sort: { created_at: -1 },limit:1});
+      return MeetingRoom.find({} ,{ sort: { created_at: -1 },limit:10});
    });
   Meteor.publish('UA', function eventsPublication() {
       console.log("subscribed to user area data");
@@ -202,6 +202,11 @@ if (Meteor.isServer) {
  Meteor.publish('SR', function eventsPublication() {
       console.log("subscribed to server room data");
       return ServerRoom.find({}	,{ sort: { _id: -1 },limit:1});
+   });
+
+ Meteor.publish('EXT', function eventsPublication() {
+      console.log("subscribed to exterior data");
+      return Exterior.find({} ,{ sort: { _id: -1 },limit:1});
    });
 
  Meteor.publish('WSHumidAverage',function averagePublication(){
@@ -327,6 +332,49 @@ if (Meteor.isServer) {
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
       self.added("WSNoiseAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+  Meteor.publish('WSLightAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to light average in WorkSpace");
+
+    sensorAvg = WorkSpace.aggregate([
+      { $match: 
+          { 
+              
+              light:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      //{$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$light"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("WSLightAverage", Random.id(), {
         day:sensorAvg._id,
         averagevalue:sensorAvg.averageDayValue
       });

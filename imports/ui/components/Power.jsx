@@ -25,7 +25,7 @@ generateChartData() {
 
 
 
-for (i=0; i <xScale.length ;i++){
+for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
@@ -44,7 +44,7 @@ generateChartDataHVAC() {
 
 
 
-for (i=0; i <xScale.length ;i++){
+for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
@@ -64,7 +64,7 @@ generatePercentData(){
   Active_Power_Sum_L1_L3_platform=_.pluck(dataset2, "Active_Power_Sum_L1_L3");
   Active_Power_Sum_L1_L3_hvac=_.pluck(dataset, "Active_Power_Sum_L1_L3");
   
-  for (i=0; i <xScale.length ;i++){
+  for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
@@ -72,9 +72,9 @@ generatePercentData(){
     totalPower.push(Active_Power_Sum_L1_L3_platform[i]+Active_Power_Sum_L1_L3_hvac[i]);
     resultedPercentPower.push((Active_Power_Sum_L1_L3_platform[i]/totalPower[i])*100);
   }
-  console.log(totalPower)
-  console.log(resultedPercentPower)
-  console.log(timeScale)
+ //console.log(totalPower)
+  //console.log(resultedPercentPower)
+ // console.log(timeScale)
 
 }
 
@@ -85,7 +85,7 @@ var data = {
     labels: timeScale,
     datasets: [
         {
-            label: 'Active_Power_Sum_Percent',
+            label: 'Platform Power Usage Effectiveness (24h)',
             backgroundColor: 'rgba(88,203,181,0.5)',
             radius: 0,
             lineTension:0,
@@ -107,7 +107,7 @@ mapData(){
     labels: timeScale,
     datasets: [
         {
-            label: 'Active_Power_Sum_L1_L3',
+            label: 'Active Power Sum (L1:L3) (24h)',
           backgroundColor: 'rgba(88,203,181,0.5)',
             radius: 0,
             data:Active_Power_Sum_L1_L3,
@@ -129,7 +129,7 @@ mapDataHVAC(){
     labels: timeScale,
     datasets: [
         {
-            label: 'HVAC_CLIME_WIFI_ID73',
+            label: 'HVAC CLIME WIRELESS (24h)',
             backgroundColor: 'rgba(88,203,181,0.5)',
             radius: 0,
             data:Active_Power_Sum_L1_L3,
@@ -149,7 +149,7 @@ render() {
   responsive: true,
 
   tooltips: {
-    enabled:false
+    enabled:true  
   },
   elements: {
     line: {
@@ -158,12 +158,16 @@ render() {
   },
   scales: {
     xAxes: [{
-      display: true,
+
+      display: false,
       gridLines: {
         display: false
       },
       labels: {
         show: false
+      },
+      ticks: {
+        max:2
       }
     }],
     yAxes: [{
@@ -247,7 +251,7 @@ render() {
                      <div className="x_panel">
                       <div className="row">
                         <div className="align_right">
-                          <h2>HVAC Air Conditioning Power </h2>
+                          <h2>Platform Power Usage Effectiveness </h2>
 
 
                         </div>
@@ -288,8 +292,8 @@ export default createContainer(() => {
 
   return {
     platformPowerlast : MASURA_TGV_ID1.find({},{limit:1}).fetch(),
-    platformPower : MASURA_TGV_ID1.find({}).fetch(),
-    HvacPower: HVAC_CLIME_WIFI_ID73.find({}).fetch(),
+    platformPower : MASURA_TGV_ID1.find({},{sort: {'created_at' : -1},limit:1000}).fetch(),
+    HvacPower: HVAC_CLIME_WIFI_ID73.find({},{sort: {'created_at' : -1},limit:1000}).fetch(),
 
   };
 }, Power);

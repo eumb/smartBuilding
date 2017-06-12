@@ -393,7 +393,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="power_title">HVAC AirConditioning Fixed Netowrks</p>
+                            <p className="power_title">HVAC AirConditioning Fixed Networks</p>
                           </div>
                       
                         </th>

@@ -19,7 +19,7 @@ export default class SR extends React.Component {
 
 <div>
        
-        <TitleDataSR />
+      {/*  <TitleDataSR />*/}
            <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
               <div className="dashboard_graph">

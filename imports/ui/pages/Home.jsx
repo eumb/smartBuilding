@@ -20,7 +20,7 @@ export default class Home extends React.Component {
 
 <div>
        
-      {/*  <TitleDataMR />*/}
+      <TitleDataMR />
         <div className="divider"></div>
         <TitleDataWS />		
           <Heatmaps />

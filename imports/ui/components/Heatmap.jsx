@@ -27,11 +27,11 @@ export default class Heatmap extends React.Component {
 
       //var c = d3.rgb(heatColors(1));
       
-      //console.log(c);
+      console.log(data);
       var width=100;
       var height=100;
       heatmap=data;
-      //console.log(heatmap)
+      console.log(heatmap)
       dx = heatmap["L01"][0].length;
       dy = heatmap["L01"].length;
       var context = this.refs.canvas1.getContext('2d'); 
@@ -43,7 +43,7 @@ export default class Heatmap extends React.Component {
             if (heatmap["L01"][y][x] === -100) {
                 var c = d3.rgb(heatColors(255));
                 var a = 0;
-            } else if (heatmap["L01"] === 85 || isNaN(heatmap["L01"][y][x])) {
+            } else if (heatmap["L01"] === 65536 || isNaN(heatmap["L01"][y][x])) {
 
                 var c = d3.rgb(0);
                 var a = 100;
@@ -84,6 +84,13 @@ el.appendChild(xml.documentElement);
 
     });
 
+
+
+}
+
+
+  componentDidUpdate(){
+
       if(this.props.type==="humid"){
 
 
@@ -101,12 +108,31 @@ el.appendChild(xml.documentElement);
 
       this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,430,208,this.props.data,this.props.type);
       }
-      
-      
-      
+  }
 
-   
-    	}
+
+  componentWillUpdate(){
+
+      if(this.props.type==="humid"){
+
+
+      this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="temp"){
+
+
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="noise"){
+
+
+      this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,430,208,this.props.data,this.props.type);
+      }  if(this.props.type==="light"){
+
+
+      this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,430,208,this.props.data,this.props.type);
+      }
+  }
+
+
  	render() {
 		
 		return (

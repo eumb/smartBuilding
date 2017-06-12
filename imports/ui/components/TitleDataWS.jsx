@@ -13,7 +13,7 @@ import SensorValue from '../components/SensorValue.jsx';
 WSHumidAverage = new Mongo.Collection("WSHumidAverage");
 WSTempAverage = new Mongo.Collection("WSTempAverage");
 WSNoiseAverage = new Mongo.Collection("WSNoiseAverage");
-
+WSLightAverage = new Mongo.Collection("WSLightAverage");
 
 
 class TitleDataWS extends React.Component {
@@ -24,6 +24,16 @@ renderTasks(sensorval) {
     ));
   }
 
+renderSensorsNoise(sensorval) {
+    return this.props.ws_noise.map((sensorvalue) => (
+      <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+renderSensorsCO2(sensorval) {
+    return this.props.ws_co2.map((sensorvalue) => (
+      <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
 
 render() {
 
@@ -41,13 +51,14 @@ render() {
 
             {/*  <AvgData data={this.props.WS}/>*/}
   
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            {/*  <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
                    </div>
                   <div className="col-md-6 tile">
-                    <div  className=" count_top spaklines">  
+                    <div  className=" count_top spaklines">
+
                   <SmallGraphs sensoraverage={this.props.WSTempAverage} type={"temp"} />
-                
-                    </div> 
+                 
+                    </div>
                  </div>
             </div>
          
@@ -55,7 +66,7 @@ render() {
                  <div className="col-md-6 col-sm-6 col-xs-6">
                     <span className="count_top"><i className="fa fa-clock-o"></i> Humidity (%)</span>
                     {this.renderTasks('humid')}
-                    <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>
+               {/*     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>*/}
                  </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
@@ -68,19 +79,19 @@ render() {
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Light (lmn)</span>
-              <div className="count green"> {this.renderTasks('light')}</div>
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <div className="count"> {this.renderTasks('light')}</div>
+          {/*    <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
            </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-               {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
+               <SmallGraphs sensoraverage={this.props.WSLightAverage} type={"noise"} />
                  </div>
             </div>
 
           <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Noise level (dB) </span>
-             {this.renderTasks('noise')}
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
+             {this.renderSensorsNoise('noise')}
+        {/*      <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                      <SmallGraphs sensoraverage={this.props.WSNoiseAverage} type={"noise"} />
@@ -88,9 +99,9 @@ render() {
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> CO2 level</span>
-              <div className="count">23</div>
-              <span className="count_bottom"><i className="red"><i className="fa fa-sort-desc"></i>12% </i> From last Week</span>
+              <span className="count_top"><i className="fa fa-user"></i> CO2 level (ppm)</span>
+             {this.renderSensorsCO2('co2')}
+{/*              <span className="count_bottom"><i className="red"><i className="fa fa-sort-desc"></i>12% </i> From last Week</span>*/}
             </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
@@ -99,9 +110,9 @@ render() {
 
              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Dust level  (ppm) </span>
+              <span className="count_top"><i className="fa fa-user"></i> Dust concentration  (pcs/0.01cf) </span>
               <div className="count"> {this.renderTasks('dust')}</div>
-              <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>
+{/*              <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>*/}
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    {/* <div  className=" count spaklines">  <SmallGraphs /></div> */}
@@ -118,9 +129,12 @@ render() {
 
  TitleDataWS.propTypes = {
   ws: PropTypes.array.isRequired,
+  ws_noise: PropTypes.array.isRequired,
+  ws_co2: PropTypes.array.isRequired,
    WSHumidAverage: PropTypes.array.isRequired,
   WSTempAverage: PropTypes.array.isRequired,
   WSNoiseAverage: PropTypes.array.isRequired,
+  WSLightAverage: PropTypes.array.isRequired,
 };
 
 
@@ -130,13 +144,17 @@ export default createContainer(() => {
     Meteor.subscribe('WSHumidAverage');
      Meteor.subscribe('WSTempAverage');
       Meteor.subscribe('WSNoiseAverage');
+        Meteor.subscribe('WSLightAverage');
 
 
   return { 
     ws : WorkSpace.find({DeviceID:"5CCF7FEFB40E"},{limit:1}).fetch(),
+    ws_noise : WorkSpace.find({DeviceID:"5CCF7FA43A8B"},{limit:1}).fetch(),
+    ws_co2 : WorkSpace.find({DeviceID:"5CCF7FA43A8B"},{limit:1}).fetch(),
      WSHumidAverage : WSHumidAverage.find().fetch(),
      WSTempAverage : WSTempAverage.find().fetch(),
       WSNoiseAverage : WSNoiseAverage.find().fetch(),
+      WSLightAverage : WSLightAverage.find().fetch(),
    
    
   };

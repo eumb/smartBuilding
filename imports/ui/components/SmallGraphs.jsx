@@ -1,6 +1,6 @@
 import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
+import { SparklinesReferenceLine, Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
 
 
 export default class SmallGraphs extends React.Component {
@@ -40,14 +40,16 @@ render() {
 
 var style = {
       height:'80px'
-    };
+    };  
   return (
                   <div className="sparkline22 graph" style={style}>
                  
-              <Sparklines data={this.renderTasks()} width={140} height={80}>
+              <Sparklines data={this.renderTasks()} limit={5} width={140} height={75}>
                 <SparklinesLine color="#1ABB9C" />
                     <SparklinesSpots />
+
                 </Sparklines>
+            <div> daily average</div> 
                  
                   </div>
 

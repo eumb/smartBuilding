@@ -1,142 +1,95 @@
  
 import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
-import  { Sparklines } from 'react-sparklines';
-import SmallGraphs from '../components/SmallGraphs.jsx';
 import { createContainer } from 'meteor/react-meteor-data';
-import {ServerRoom} from '../../collections/collections.js';
-import AvgData from '../components/AvgData.jsx';
-import SensorValue from '../components/SensorValue.jsx';
+import {MeetingRoom} from '../../collections/collections.js';
+import MRSensorValue from '../components/MRSensorValue.jsx';
 
-
-
-MRHumidAverage = new Mongo.Collection("MRHumidAverage");
-MRTempAverage = new Mongo.Collection("MRTempAverage");
-MRNoiseAverage = new Mongo.Collection("MRNoiseAverage");
-
-
+//5CCF7FA43AB8
+//5CCF7FEFBE9E
 
 class TitleDataMR extends React.Component {
 
-renderTasks(sensorval) {
-    return this.props.MR.map((sensorvalue) => (
-      <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+renderMR1(sensorval) {
+    return this.props.MR1.map((sensorvalue) => (
+      <MRSensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+renderMR2(sensorval) {
+    return this.props.MR2.map((sensorvalue) => (
+      <MRSensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
 
 
 render() {
 
-    temp="temp";
-    humid="humid";
-
   return (
        
        <div className="row tile_count">
             <div className="row tile_count">
-              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Temperature (C)</span>
-               {this.renderTasks('temp')}
 
-            {/*  <AvgData data={this.props.MR}/>*/}
-  
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count">
+                   {this.renderMR1('pres')}
+                    <div className="col-md-6 col-sm-6 col-xs-6">
+                     <span className="count_top"><i className="fa fa-user"></i> Temperature Meeting Room 1</span>
+                     <div>  {this.renderMR1('temp')} <span className="count">°C</span></div>
+                    </div>
+                    <div className="col-md-6 col-sm-6 col-xs-6">
+                        <span className="count_top"><i className="fa fa-clock-o"></i> Humidity Meeting Room 1</span>
+                        <div>  {this.renderMR1('humid')} <span className="count">%</span></div>*
+                    </div>
+                </div>  
+                <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count">
+                 {this.renderMR1('pres')}
+                    <div className="col-md-6 col-sm-6 col-xs-6">
+                      <span className="count_top"><i className="fa fa-user"></i> Temperature Meeting Room 2</span>
+                    <div> {this.renderMR2('temp')} <span className="count">°C</span></div>
+                    </div>
+                   <div className="col-md-6 col-sm-6 col-xs-6">
+                     <span className="count_top"><i className="fa fa-user"></i> Humidity Meeting Room 2</span>
+                    <div>  {this.renderMR2('humid')} <span className="count">%</span></div>
                    </div>
-                  <div className="col-md-6 tile">
-                    <div  className=" count_top spaklines">  
-                  <SmallGraphs sensoraverage={this.props.MRTempAverage} type={"temp"} />
-                
-                    </div> 
-                 </div>
-            </div>
-         
-            <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                 <div className="col-md-6 col-sm-6 col-xs-6">
-                    <span className="count_top"><i className="fa fa-clock-o"></i> Humidity (%)</span>
-                    {this.renderTasks('humid')}
-                    <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>
-                 </div>
-                  <div className="col-md-6 col-sm-6 col-xs-6">
-                   
-   <div  className="count_top spaklines">  </div>
-     <SmallGraphs sensoraverage={this.props.MRHumidAverage} type={"humid"} />
-                 </div>
-                
-              
-            </div>  
-            <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Light (lmn)</span>
-              <div className="count green"> {this.renderTasks('light')}</div>
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
-           </div>
-                  <div className="col-md-6 col-sm-6 col-xs-6">
-               {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
-                 </div>
-            </div>
-
-          <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-            <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Noise level (dB) </span>
-             {this.renderTasks('noise')}
-              <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>
-              </div>
-                  <div className="col-md-6 col-sm-6 col-xs-6">
-                     <SmallGraphs sensoraverage={this.props.MRNoiseAverage} type={"noise"} />
-                 </div>
-            </div>
-            <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> CO2 level</span>
-              <div className="count">23</div>
-              <span className="count_bottom"><i className="red"><i className="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-                  <div className="col-md-6 col-sm-6 col-xs-6">
-                   {/* <div  className=" count_top spaklines">  <SmallGraphs /></div> */}
-                 </div>
-            </div>
-
-             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Dust level  (ppm) </span>
-              <div className="count"> {this.renderTasks('dust')}</div>
-              <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>
-               </div>
-                  <div className="col-md-6 col-sm-6 col-xs-6">
-                   {/* <div  className=" count spaklines">  <SmallGraphs /></div> */}
-                 </div>
-            </div>
-    
-
+                </div>
           </div>
-          </div>
+      </div>
 
     );
   }
 }
 
  TitleDataMR.propTypes = {
-  MR: PropTypes.array.iMRequired,
-   MRHumidAverage: PropTypes.array.iMRequired,
-  MRTempAverage: PropTypes.array.iMRequired,
-  MRNoiseAverage: PropTypes.array.iMRequired,
+  MR1: PropTypes.array.isRequired,
+  MR2: PropTypes.array.isRequired,
+
+/*  MR1HumidAverage: PropTypes.array.iMRequired,
+  MR1TempAverage: PropTypes.array.iMRequired,
+  MR2HumidAverage: PropTypes.array.iMRequired,
+  MR2TempAverage: PropTypes.array.iMRequired,*/
+
 };
 
 
 export default createContainer(() => {
   Meteor.subscribe('MR');
 
-    Meteor.subscribe('MRHumidAverage');
-     Meteor.subscribe('MRTempAverage');
-      Meteor.subscribe('MRNoiseAverage');
+/*    Meteor.subscribe('MR1HumidAverage');
+    Meteor.subscribe('MR1TempAverage');
+    Meteor.subscribe('MR2HumidAverage');
+    Meteor.subscribe('MR2TempAverage');
+*/
+
 
 
   return { 
-    MR : ServerRoom.find({}).fetch(),
-     MRHumidAverage : MRHumidAverage.find().fetch(),
-     MRTempAverage : MRTempAverage.find().fetch(),
-      MRNoiseAverage : MRNoiseAverage.find().fetch(),
+     MR1 : MeetingRoom.find({DeviceID:"5CCF7FEFBE9E"},{limit:1}).fetch(),
+
+     MR2 : MeetingRoom.find({DeviceID:"5CCF7FA43AB8"},{limit:1}).fetch(),
+/*     MR1HumidAverage : MRHumidAverage.find().fetch(),
+     MR1TempAverage : MRTempAverage.find().fetch(),
+     MR2HumidAverage : MRHumidAverage.find().fetch(),
+     MR2TempAverage : MRTempAverage.find().fetch(),*/
+
    
    
   };
