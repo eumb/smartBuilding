@@ -36,6 +36,25 @@ export default class SRNodeValues extends Component {
         </tr>
     );
 	}
+       if (sensortype==="dust"){
+
+    return (
+       <tr>
+          <td>
+            <p><i className="fa fa-square gray"></i> Dust </p>
+          </td>
+          <td> {this.props.sensorvalue.dust}µg/m3</td>
+        </tr>
+    );
+  }
+      if (sensortype==="updated"){
+    date=moment(this.props.sensorvalue.created_at).utcOffset(+3);
+    console.log(this.props.sensorvalue.created_at)
+    console.log(date)
+    return (
+      <p> updated at: {this.props.sensorvalue.created_at.toString()}</p>
+    );
+  }
 
 	if (sensortype==="noise" && typeof(this.props.sensorvalue.noise)!='undefined'){
 
@@ -57,6 +76,7 @@ export default class SRNodeValues extends Component {
         </tr>
     );
   }
+
 
 
   }

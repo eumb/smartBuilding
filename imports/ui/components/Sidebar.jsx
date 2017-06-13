@@ -17,8 +17,8 @@ export default class Sidebar extends React.Component {
                       <ul className="nav child_menu">
                        
                         <li><Link to='/wsnodeinfo'>Office area</Link></li>
-                        <li><Link to='/usernodeinfo'>Lab user area</Link></li>
-                        <li><Link to='/srnodeinfo'>Server room</Link></li>
+                       {/* <li><Link to='/usernodeinfo'>Lab user area</Link></li>*/}
+                        <li><Link to='/srnodeinfo'>Server area</Link></li>
                       </ul>
                     </li>
                     

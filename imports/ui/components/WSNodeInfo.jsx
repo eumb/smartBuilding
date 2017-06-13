@@ -108,20 +108,18 @@ render() {
                       <td>
                         <table className="table table-hover">
                          <tbody>
-                    
                           {this.nodeValues5CCF7FA43A8B('temp')}
                           {this.nodeValues5CCF7FA43A8B('humid')}
                           {this.nodeValues5CCF7FA43A8B('noise')}
                           {this.nodeValues5CCF7FA43A8B('light')} 
                           {this.nodeValues5CCF7FA43A8B('co2')}
-                          {this.nodeValues5CCF7FA43A8B('updated')} 
-                        </tbody>
+                      </tbody>
                         </table>
                       </td>
                       </tr>
                      </tbody>
                     </table>
-
+     {this.nodeValues5CCF7FA43A8B('updated')} 
                     </div>          
                 </div>
               </div> 
@@ -149,20 +147,17 @@ render() {
                       <td>
                         <table className="table table-hover">
                          <tbody>
-                    
                           {this.nodeValues5CCF7FF0AA4F('temp')}
                           {this.nodeValues5CCF7FF0AA4F('humid')}
                           {this.nodeValues5CCF7FF0AA4F('noise')}
                           {this.nodeValues5CCF7FF0AA4F('light')} 
-                          {this.nodeValues5CCF7FF0AA4F('updated')} 
-
-                        </tbody>
+                       </tbody>
                         </table>
                       </td>
                       </tr>
                      </tbody>
                     </table>
-
+          {this.nodeValues5CCF7FF0AA4F('updated')} 
                     </div>          
                 </div>
               </div> 
@@ -191,20 +186,17 @@ render() {
                       <td>
                         <table className="table table-hover">
                          <tbody>
-                    
                           {this.nodeValues5CCF7FEFBAD3('temp')}
                           {this.nodeValues5CCF7FEFBAD3('humid')}
                           {this.nodeValues5CCF7FEFBAD3('noise')}
                           {this.nodeValues5CCF7FEFBAD3('light')} 
-                          {this.nodeValues5CCF7FEFBAD3('updated')} 
-
                         </tbody>
                         </table>
                       </td>
                       </tr>
                      </tbody>
                     </table>
-
+   {this.nodeValues5CCF7FEFBAD3('updated')} 
                     </div>          
                 </div>
               </div> 
@@ -235,21 +227,17 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValues5CCF7FEFB0C0('temp')}
                             {this.nodeValues5CCF7FEFB0C0('humid')}
                             {this.nodeValues5CCF7FEFB0C0('noise')}
                             {this.nodeValues5CCF7FEFB0C0('light')}
-                             {this.nodeValues5CCF7FEFB0C0('updated')} 
-
-
-                          </tbody>
+                         </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+       {this.nodeValues5CCF7FEFB0C0('updated')} 
                       </div>          
                   </div>
                 </div> 
@@ -277,21 +265,17 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValues5CCF7FEFB40E('temp')}
                             {this.nodeValues5CCF7FEFB40E('humid')}
                             {this.nodeValues5CCF7FEFB40E('light')}
                             {this.nodeValues5CCF7FEFB40E('dust')}
-                            {this.nodeValues5CCF7FEFB40E('updated')} 
-
-
                           </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+   {this.nodeValues5CCF7FEFB40E('updated')} 
                       </div>          
                   </div>
                 </div> 
@@ -318,21 +302,17 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValues5CCF7FEFBE72('temp')}
                             {this.nodeValues5CCF7FEFBE72('humid')}
                             {this.nodeValues5CCF7FEFBE72('noise')}
                             {this.nodeValues5CCF7FEFBE72('light')}
-                            {this.nodeValues5CCF7FEFBE72('updated')}
-
-
                           </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+ {this.nodeValues5CCF7FEFBE72('updated')}
                       </div>          
                   </div>
                 </div> 
@@ -364,20 +344,16 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValues5CCF7FEFBE9E('temp')}
                             {this.nodeValues5CCF7FEFBE9E('humid')}
                             {this.nodeValues5CCF7FEFBE9E('pres')} 
-                            {this.nodeValues5CCF7FA43AB8('updated')} 
-
-
                           </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+{this.nodeValues5CCF7FA43AB8('updated')} 
                       </div>          
                   </div>
                 </div> 
@@ -404,20 +380,16 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValues5CCF7FA43AB8('temp')}
                             {this.nodeValues5CCF7FA43AB8('humid')}
                             {this.nodeValues5CCF7FA43AB8('pres')} 
-                            {this.nodeValues5CCF7FA43AB8('updated')} 
-
-
                           </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+                        {this.nodeValues5CCF7FA43AB8('updated')} 
                       </div>          
                   </div>
                 </div> 
@@ -443,22 +415,18 @@ render() {
                         <td>
                           <table className="table table-hover">
                            <tbody>
-                      
                             {this.nodeValuesext('temp')}
                             {this.nodeValuesext('humid')}
                             {this.nodeValuesext('light')} 
 {/*                         {this.nodeValuesext('uv')}
 */}                         {this.nodeValuesext('co2')} 
-                            {this.nodeValuesext('updated')} 
-
-
                           </tbody>
                           </table>
                         </td>
                         </tr>
                        </tbody>
                       </table>
-
+                          {this.nodeValuesext('updated')} 
                       </div>          
                   </div>
                 </div> 
@@ -502,14 +470,14 @@ export default createContainer(() => {
   return { 
    ws : WorkSpace.find({}).fetch(),
    ext : Exterior.find({}).fetch(),
-   Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({}).fetch(),
-   Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({}).fetch(),
-   Dev_5CCF7FEFBAD3: Dev_5CCF7FEFBAD3.find({}).fetch(),
-   Dev_5CCF7FEFB0C0: Dev_5CCF7FEFB0C0.find({}).fetch(),
-   Dev_5CCF7FEFB40E: Dev_5CCF7FEFB40E.find({}).fetch(),
-   Dev_5CCF7FEFBE72: Dev_5CCF7FEFBE72.find({}).fetch(),
-   Dev_5CCF7FEFBE9E: Dev_5CCF7FEFBE9E.find({}).fetch(),
-   Dev_5CCF7FA43AB8: Dev_5CCF7FA43AB8.find({}).fetch(),
+   Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({},{limit:1}).fetch(),
+   Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFBAD3: Dev_5CCF7FEFBAD3.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFB0C0: Dev_5CCF7FEFB0C0.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFB40E: Dev_5CCF7FEFB40E.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFBE72: Dev_5CCF7FEFBE72.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFBE9E: Dev_5CCF7FEFBE9E.find({},{limit:1}).fetch(),
+   Dev_5CCF7FA43AB8: Dev_5CCF7FA43AB8.find({},{limit:1}).fetch(),
   };
 }, WSNodeInfo);
 

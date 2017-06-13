@@ -110,10 +110,11 @@ export default class WSNodeValues extends Component {
   }
 
     if (sensortype==="updated"){
-    let date=moment(this.props.sensorvalue.created_at).format('MM/DD/YYYY HH:MM');
-    //console.log(date)
+    date=moment(this.props.sensorvalue.created_at).utcOffset(+3);
+    console.log(this.props.sensorvalue.created_at)
+    console.log(date)
     return (
-      <p> updated at: {date}</p>
+      <p> updated at: {this.props.sensorvalue.created_at.toString()}</p>
     );
   }
 
