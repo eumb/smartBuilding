@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import { createContainer } from 'meteor/react-meteor-data';
 import {MeetingRoom} from '../../collections/collections.js';
 import MRSensorValue from '../components/MRSensorValue.jsx';
+import {Dev_5CCF7FEFBE9E} from '../../collections/collections.js';
+import {Dev_5CCF7FA43AB8} from '../../collections/collections.js';
+
 
 //5CCF7FA43AB8
 //5CCF7FEFBE9E
@@ -11,12 +14,12 @@ import MRSensorValue from '../components/MRSensorValue.jsx';
 class TitleDataMR extends React.Component {
 
 renderMR1(sensorval) {
-    return this.props.MR1.map((sensorvalue) => (
+    return this.props.Dev_5CCF7FEFBE9E.map((sensorvalue) => (
       <MRSensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
 renderMR2(sensorval) {
-    return this.props.MR2.map((sensorvalue) => (
+    return this.props.Dev_5CCF7FA43AB8.map((sensorvalue) => (
       <MRSensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
@@ -61,7 +64,8 @@ render() {
  TitleDataMR.propTypes = {
   MR1: PropTypes.array.isRequired,
   MR2: PropTypes.array.isRequired,
-
+  Dev_5CCF7FA43AB8:PropTypes.array.isRequired,
+  Dev_5CCF7FEFBE9E:PropTypes.array.isRequired,
 /*  MR1HumidAverage: PropTypes.array.iMRequired,
   MR1TempAverage: PropTypes.array.iMRequired,
   MR2HumidAverage: PropTypes.array.iMRequired,
@@ -72,7 +76,8 @@ render() {
 
 export default createContainer(() => {
   Meteor.subscribe('MR');
-
+  Meteor.subscribe('Dev_5CCF7FA43AB8');
+  Meteor.subscribe('Dev_5CCF7FEFBE9E');
 /*    Meteor.subscribe('MR1HumidAverage');
     Meteor.subscribe('MR1TempAverage');
     Meteor.subscribe('MR2HumidAverage');
@@ -83,8 +88,11 @@ export default createContainer(() => {
 
   return { 
      MR1 : MeetingRoom.find({DeviceID:"5CCF7FEFBE9E"},{limit:1}).fetch(),
-
      MR2 : MeetingRoom.find({DeviceID:"5CCF7FA43AB8"},{limit:1}).fetch(),
+     Dev_5CCF7FEFBE9E:MeetingRoom.find({},{limit:1}).fetch(),
+     Dev_5CCF7FA43AB8:MeetingRoom.find({},{limit:1}).fetch(),
+
+
 /*     MR1HumidAverage : MRHumidAverage.find().fetch(),
      MR1TempAverage : MRTempAverage.find().fetch(),
      MR2HumidAverage : MRHumidAverage.find().fetch(),
