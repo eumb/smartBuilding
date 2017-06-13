@@ -11,14 +11,14 @@ export default class Heatmap extends React.Component {
       var colOrigDomain = [20, 22, 25, 27, 29];
       var colorDomain = [20, 22, 25, 27, 29];
     }if (type==="humid"){
-      var colOrigDomain = [30, 40, 45, 50, 55];
-      var colorDomain = [30, 40, 45, 50, 55];
+      var colOrigDomain = [35, 42, 45, 47, 50];
+      var colorDomain = [35, 42, 45, 47, 50];
     }if(type==="light"){
-      var colOrigDomain = [800, 900, 1000, 1100, 1200];
-      var colorDomain = [800, 900, 1000, 1100, 1200];
+      var colOrigDomain = [4500, 2500, 1300, 600, 100];
+      var colorDomain = [4500, 2500, 1300, 600, 100];
     }if(type==="noise"){
-      var colOrigDomain = [70, 80, 90, 95, 100];
-      var colorDomain = [70, 80, 90, 95, 100];
+      var colOrigDomain = [40, 50, 70, 90, 100];
+      var colorDomain = [40, 50, 70, 90, 100];
     }
   
       var heatColors = d3.scale.linear()
@@ -94,19 +94,19 @@ el.appendChild(xml.documentElement);
       if(this.props.type==="humid"){
 
 
-      this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,430,208,this.props.data,this.props.type);
+      this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="temp"){
 
 
-      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,430,208,this.props.data,this.props.type);
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="noise"){
 
 
-      this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,430,208,this.props.data,this.props.type);
+      this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="light"){
 
 
-      this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,430,208,this.props.data,this.props.type);
+      this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,420,208,this.props.data,this.props.type);
       }
   }
 

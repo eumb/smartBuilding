@@ -26,31 +26,12 @@ export default class MRSensorValue extends Component {
     );
 	}
 
-	if (sensortype==="noise"){
-
-    return (
-      <div className="count">{this.props.sensorvalue.noise}</div>
-    );
-	}
-    if (sensortype==="light"){
-
-    return (
-      <div className="count">{this.props.sensorvalue.light}</div>
-    );
-  }
-   if (sensortype==="dust"){
-
-    return (
-      <div className="count">{this.props.sensorvalue.dust}</div>
-    );
-  
-  }  
     if (sensortype==="pres"){
 
-      if (this.props.sensorvalue.pres!=0){
+      if (this.props.sensorvalue.pres>0){
          return (
        
-              <div className="ocupied col-md-6 col-sm-4 col-xs-6 tile_stats_count">
+              <div className="ocupied col-md-6 col-sm-4 col-xs-6">
                      
               </div>        
         );
@@ -58,7 +39,7 @@ export default class MRSensorValue extends Component {
     
     else if(this.props.sensorvalue.pres===0){
       return (
-       <div className="vacant col-md-6 col-sm-4 col-xs-6 tile_stats_count">
+       <div className="vacant col-md-6 col-sm-4 col-xs-6 ">
                      
      </div>    
     );

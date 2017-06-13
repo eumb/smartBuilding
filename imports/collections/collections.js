@@ -7,17 +7,41 @@ export const MeetingRoom = new Meteor.Collection("MR");
 export const ServerRoom = new Meteor.Collection("SR");
 export const Exterior = new Meteor.Collection("EXT");
 
+//WS
+//1
 export const Dev_5CCF7FA43A8B = new Meteor.Collection("5CCF7FA43A8B");//{ "_id" : ObjectId("593922c6e95f2f2008a77d2d"), "temp" : 29.5, "humid" : 30.1, "noise" : 82.39, "noise_p" : 87.99, "light" : 4, "co2" : 0, "created_at" : ISODate("2017-06-08T10:11:18.476Z") }
-export const Dev_5CCF7FA43AB8 = new Meteor.Collection("5CCF7FA43AB8");//{ "_id" : ObjectId("593a8bffe95f2f11e4b5dc17"), "temp" : 26.9, "humid" : 45.7, "pres" : 0.16, "created_at" : ISODate("2017-06-09T11:52:31.183Z") }
-export const Dev_5CCF7FD5CB47 = new Meteor.Collection("5CCF7FD5CB47");//{ "_id" : ObjectId("593a9684e95f2f11e4b5fbdf"), "temp" : 26.8, "humid" : 34, "noise" : 58.24, "noise_p" : 72.39, "light" : 1516, "pres" : 0.05, "created_at" : ISODate("2017-06-09T12:37:24.333Z") }
-export const Dev_5CCF7FEFB40E = new Meteor.Collection("5CCF7FEFB40E");//{ "_id" : ObjectId("593a65d0e95f2f11e4b56936"), "temp" : 27.7, "humid" : 37.3, "light" : 742, "dust" : 77.92, "created_at" : ISODate("2017-06-09T09:09:36.934Z") }
+//2
+export const Dev_5CCF7FEFB40E = new Meteor.Collection("5CCF7FEFB40E");//{    "_id" : ObjectId("593a65d0e95f2f11e4b56936"), "temp" : 27.7, "humid" : 37.3, "light" : 742.0, "dust" : 77.92, "created_at" : ISODate("2017-06-09T09:09:36.934Z")}
+//3
 export const Dev_5CCF7FEFBE72 = new Meteor.Collection("5CCF7FEFBE72");//{ "_id" : ObjectId("593a8c07e95f2f11e4b5dc38"), "temp" : 25.9, "humid" : 38.7, "noise" : 58.24, "noise_p" : 70.54, "light" : 956, "created_at" : ISODate("2017-06-09T11:52:39.518Z") }
-export const Dev_5CCF7FEFBE9E = new Meteor.Collection("5CCF7FEFBE9E");//{ "_id" : ObjectId("593a8c3de95f2f11e4b5dcd3"), "temp" : 26.5, "humid" : 44.2, "pres" : 0, "created_at" : ISODate("2017-06-09T11:53:33.835Z") }
+//4
+export const Dev_5CCF7FF0AA4F = new Meteor.Collection("5CCF7FF0AA4F");//{"_id" : ObjectId("593a65bce95f2f11e4b568e9"),"temp" : 26.7,"humid" : 35.5,"noise" : 61.65,"noise_p" : 89.74,"light" : 552.0,"created_at" : ISODate("2017-06-09T09:09:16.149Z")}
+//5
+export const Dev_5CCF7FEFBAD3 = new Meteor.Collection("5CCF7FEFBAD3");//{"_id" : ObjectId("593fb529e95f2f11e4c523b2"),"temp" : 26.9,"humid" : 52.5, "noise" : 58.05,"noise_p" : 58.05,"light" : 426.0,"created_at" : ISODate("2017-06-13T09:49:29.604Z")}
+//6
+export const Dev_5CCF7FEFB0C0 = new Meteor.Collection("5CCF7FEFB0C0");//{"_id" : ObjectId("593f89bee95f2f11e4c49b27"), "temp" : 26.6, "humid" : 54.5,"noise" : 58.65,"noise_p" : 58.65,"light" : 617.0,"created_at" : ISODate("2017-06-13T06:44:14.645Z")}
+
+
+//EXT
 export const Dev_5CCF7FF0A971 = new Meteor.Collection("5CCF7FF0A971");//{ "_id" : ObjectId("593a96b2e95f2f11e4b5fc7c"), "temp" : 25.8, "humid" : 40.2, "light" : 254, "uv" : 0, "co2" : 0, "created_at" : ISODate("2017-06-09T12:38:10.054Z") }
-export const Dev_5CCF7FF0AA4F = new Meteor.Collection("5CCF7FF0AA4F");//{ "_id" : ObjectId("593a65bce95f2f11e4b568e9"), "temp" : 26.7, "humid" : 35.5, "noise" : 61.65, "noise_p" : 89.74, "light" : 552, "created_at" : ISODate("2017-06-09T09:09:16.149Z") }
+
+
+//MR1
+export const Dev_5CCF7FEFBE9E = new Meteor.Collection("5CCF7FEFBE9E");//{ "_id" : ObjectId("593a8c3de95f2f11e4b5dcd3"), "temp" : 26.5, "humid" : 44.2, "pres" : 0, "created_at" : ISODate("2017-06-09T11:53:33.835Z") }
+//MR2
+export const Dev_5CCF7FA43AB8 = new Meteor.Collection("5CCF7FA43AB8");//{ "_id" : ObjectId("593a8bffe95f2f11e4b5dc17"), "temp" : 26.9, "humid" : 45.7, "pres" : 0.16, "created_at" : ISODate("2017-06-09T11:52:31.183Z") }
+
+//UA
+export const Dev_5CCF7FD5CB47 = new Meteor.Collection("5CCF7FD5CB47");//{ "_id" : ObjectId("593a9684e95f2f11e4b5fbdf"), "temp" : 26.8, "humid" : 34, "noise" : 58.24, "noise_p" : 72.39, "light" : 1516, "pres" : 0.05, "created_at" : ISODate("2017-06-09T12:37:24.333Z") }
+
+
+//SR
+export const Dev_5CCF7FF0B704 = new Meteor.Collection("5CCF7FF0B704");//{ "_id" : ObjectId("593a8c5ce95f2f11e4b5dd32"), "temp" : 26.1, "humid" : 39.4, "noise" : 35.18, "noise_p" : 47.17, "light" : 65536, "created_at" : ISODate("2017-06-09T11:54:04.885Z") }
 export const Dev_5CCF7FF0B17A = new Meteor.Collection("5CCF7FF0B17A");//{ "_id" : ObjectId("593922a9e95f2f2008a77cd1"), "temp" : 32.4, "humid" : 22.2, "noise" : 35.2, "noise_p" : 47.17, "created_at" : ISODate("2017-06-08T10:10:49.341Z") }
 export const Dev_5CCF7FF0B544 = new Meteor.Collection("5CCF7FF0B544");//{ "_id" : ObjectId("593922b8e95f2f2008a77d0d"), "temp" : 32.2, "humid" : 25, "dust" : 0, "created_at" : ISODate("2017-06-08T10:11:04.307Z") }
-export const Dev_5CCF7FF0B704 = new Meteor.Collection("5CCF7FF0B704");//{ "_id" : ObjectId("593a8c5ce95f2f11e4b5dd32"), "temp" : 26.1, "humid" : 39.4, "noise" : 35.18, "noise_p" : 47.17, "light" : 65536, "created_at" : ISODate("2017-06-09T11:54:04.885Z") }
+
+
+
 
 export const PSC3_1 = new Meteor.Collection("PSC3_1");  //{ "_id" : ObjectId("59381ff0e95f2f2008a45b68"), "USys" : 53.4, "PSys" : 71267, "ILoad" : 1334.6, "IBatt" : 4.2, "IRect" : 1345.1, "created_at" : ISODate("2017-06-07T15:46:56.388Z") }
 export const PSC3_2 = new Meteor.Collection("PSC3_2");// { "_id" : ObjectId("59381ff0e95f2f2008a45b68"), "USys" : 53.4, "PSys" : 71267, "ILoad" : 1334.6, "IBatt" : 4.2, "IRect" : 1345.1, "created_at" : ISODate("2017-06-07T15:46:56.388Z") }
@@ -30,6 +54,14 @@ export const SOSIRE_TR1_ID53 = new Meteor.Collection("SOSIRE_TR1_ID53"); //{ "_i
 export const HVAC_CLIME_WIFI_ID73 = new Meteor.Collection("HVAC_CLIME_WIFI_ID73");//{ "_id" : ObjectId("5939246fe95f2f2008a78271"), "Voltage_effective_L1" : 227.48, "Voltage_effective_L2" : 229.18, "Voltage_effective_L3" : 227.93, "Current_effective_L1" : 78.07, "Current_effective_L2" : 78.09, "Current_effective_L3" : 78.21, "Active_Power_Sum_L1_L3" : 50705.9, "Reactive_power_fundamental_Sum_L1_L3" : -1520.03, "Consumed_Active_Energy_Sum_L1_L3" : 94677416, "Reactive_Energy_Sum_L1_L3" : -6902814.5, "created_at" : ISODate("2017-06-08T10:18:23.695Z") }
 export const HVAC_CLIME_WIPRO_ID72 =new Meteor.Collection("HVAC_CLIME_WIPRO_ID72"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
   
+export const MN_ZONA_1_ID2 =new Meteor.Collection("MN_ZONA_1_ID2"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
+export const MN_ZONA_2_ID3 =new Meteor.Collection("MN_ZONA_2_ID3"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
+export const MN_ZONA_3_ID6 =new Meteor.Collection("MN_ZONA_3_ID6"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
+export const FN_VITALI_ID7 =new Meteor.Collection("FN_VITALI_ID7"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
+export const FN_NORMALI_ID8 =new Meteor.Collection("FN_NORMALI_ID8"); //{ "_id" : ObjectId("59392573e95f2f2008a78593"), "Voltage_effective_L1" : 226.78, "Voltage_effective_L2" : 228.73, "Voltage_effective_L3" : 227.8, "Current_effective_L1" : 48.99, "Current_effective_L2" : 49.11, "Current_effective_L3" : 49.45, "Active_Power_Sum_L1_L3" : 31997.23, "Reactive_power_fundamental_Sum_L1_L3" : -1187.17, "Consumed_Active_Energy_Sum_L1_L3" : 67128472, "Reactive_Energy_Sum_L1_L3" : -3952733.5, "created_at" : ISODate("2017-06-08T10:22:43.688Z") }
+
+  
+
 
 
 
@@ -62,7 +94,7 @@ if (Meteor.isServer) {
 
     Meteor.publish('HVAC_CLIME_WIFI_ID73', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIFI_ID73 data");
-      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:1640});
+      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:640});
   });
 
 
@@ -94,11 +126,11 @@ if (Meteor.isServer) {
 
   Meteor.publish('PSC3_1', function eventsPublication() {
       console.log("subscribed to PSC3_1 data");
-      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:1640});
+      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:640});
   });
   Meteor.publish('PSC3_2', function eventsPublication() {
       console.log("subscribed to PSC3_2 data");
-      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:1640});
+      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:640});
   });
 
   Meteor.publish('TGD_BOROURI_ID52', function eventsPublication() {
@@ -108,10 +140,35 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:1640});
+      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:640});
    });
 
   
+
+ Meteor.publish('MN_ZONA_1_ID2', function eventsPublication() {
+      console.log("subscribed to MN_ZONA_1_ID2");
+      return MN_ZONA_1_ID2.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('MN_ZONA_2_ID3', function eventsPublication() {
+      console.log("subscribed to MN_ZONA_2_ID3");
+      return MN_ZONA_2_ID3.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('MN_ZONA_3_ID6', function eventsPublication() {
+      console.log("subscribed to MN_ZONA_3_ID6");
+      return MN_ZONA_3_ID6.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('FN_VITALI_ID7', function eventsPublication() {
+      console.log("subscribed to FN_VITALI_ID7");
+      return FN_VITALI_ID7.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('FN_NORMALI_ID8', function eventsPublication() {
+      console.log("subscribed to FN_NORMALI_ID8");
+      return FN_NORMALI_ID8.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
 
 
   /*5CCF7FA43A8B
@@ -133,9 +190,14 @@ if (Meteor.isServer) {
       console.log("subscribed to 5CCF7FA43A8B data");
       return Dev_5CCF7FA43A8B.find({} ,{ sort: { created_at: -1 },limit:1});
    });
-   Meteor.publish('5CCF7FA43AB8', function eventsPublication() {
-      console.log("subscribed to 5CCF7FA43AB8 data");
-      return Dev_5CCF7FA43AB8.find({} ,{ sort: { created_at: -1 },limit:1});
+
+    Meteor.publish('5CCF7FEFBAD3', function eventsPublication() {
+      console.log("subscribed to 5CCF7FEFBAD3 data");
+      return Dev_5CCF7FEFBAD3.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+      Meteor.publish('5CCF7FEFB0C0', function eventsPublication() {
+      console.log("subscribed to 5CCF7FEFB0C0 data");
+      return Dev_5CCF7FEFB0C0.find({} ,{ sort: { created_at: -1 },limit:1});
    });
  Meteor.publish('5CCF7FD5CB47', function eventsPublication() {
       console.log("subscribed to 5CCF7FD5CB47 data");
@@ -153,8 +215,13 @@ if (Meteor.isServer) {
    });
 
  Meteor.publish('5CCF7FEFBE9E', function eventsPublication() {
-      console.log("subscribed to 5CCF7FEFBE9E data");
+      console.log("subscribed to 5CCF7FEFBE9E MR1 data");
       return Dev_5CCF7FEFBE9E.find({} ,{ sort: { created_at: -1 },limit:1});
+   });
+
+ Meteor.publish('5CCF7FA43AB8', function eventsPublication() {
+      console.log("subscribed to CCF7FA43AB8 MR2 data");
+      return Dev_5CCF7FA43AB8.find({} ,{ sort: { created_at: -1 },limit:1});
    });
 
  Meteor.publish('5CCF7FF0A971', function eventsPublication() {
@@ -172,12 +239,10 @@ if (Meteor.isServer) {
       return Dev_5CCF7FF0B17A.find({} ,{ sort: { created_at: -1 },limit:1});
    });
 
- Meteor.publish('Dev_5CCF7FF0B544', function eventsPublication() {
-      console.log("subscribed to Dev_5CCF7FF0B544 data");
+ Meteor.publish('5CCF7FF0B544', function eventsPublication() {
+      console.log("subscribed to 5CCF7FF0B544 data");
       return Dev_5CCF7FF0B544.find({} ,{ sort: { created_at: -1 },limit:1});
    });
-
-
  Meteor.publish('5CCF7FF0B704', function eventsPublication() {
       console.log("subscribed to 5CCF7FF0B704 data");
       return Dev_5CCF7FF0B704.find({} ,{ sort: { created_at: -1 },limit:1});
@@ -192,7 +257,7 @@ if (Meteor.isServer) {
    });
     Meteor.publish('MR', function eventsPublication() {
       console.log("subscribed to meeting room data");
-      return MeetingRoom.find({} ,{ sort: { created_at: -1 },limit:10});
+      return MeetingRoom.find({} ,{ sort: { created_at: -1 },limit:50});
    });
   Meteor.publish('UA', function eventsPublication() {
       console.log("subscribed to user area data");

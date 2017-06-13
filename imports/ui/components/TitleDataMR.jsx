@@ -37,7 +37,7 @@ render() {
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6">
                         <span className="count_top"><i className="fa fa-clock-o"></i> Humidity Meeting Room 1</span>
-                        <div>  {this.renderMR1('humid')} <span className="count">%</span></div>*
+                        <div>  {this.renderMR1('humid')} <span className="count">%</span></div>
                     </div>
                 </div>  
                 <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count">

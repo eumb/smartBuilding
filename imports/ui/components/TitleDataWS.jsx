@@ -110,7 +110,7 @@ render() {
 
              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-user"></i> Dust concentration  (pcs/0.01cf) </span>
+              <span className="count_top"><i className="fa fa-user"></i> Dust concentration  (µg/m3) </span>
               <div className="count"> {this.renderTasks('dust')}</div>
 {/*              <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>*/}
                </div>

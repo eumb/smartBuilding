@@ -13,6 +13,12 @@ import {SOSIRE_TR1_ID53} from '../../collections/collections.js';
 import {HVAC_CLIME_WIFI_ID73} from '../../collections/collections.js';
 import {HVAC_CLIME_WIPRO_ID72} from '../../collections/collections.js';
 
+import {MN_ZONA_1_ID2} from '../../collections/collections.js';
+import {MN_ZONA_2_ID3} from '../../collections/collections.js';
+import {MN_ZONA_3_ID6} from '../../collections/collections.js';
+import {FN_VITALI_ID7} from '../../collections/collections.js';
+import {FN_NORMALI_ID8} from '../../collections/collections.js';
+
 class ACPower extends React.Component {
 // Meteor.Collection("MASURA_TGV_ID1"); // { "_id" : ObjectId("59382093e95f2f2008a45d5a"), "Voltage_effective_L1" : 234.04, "Voltage_effective_L2" : 234.64, "Voltage_effective_L3" : 233.15, "Current_effective_L1" : 701.55, 
 //"Current_effective_L2" : 726.48, "Current_effective_L3" : 685.7, "Active_Power_Sum_L1_L3" : 494108.7, "Reactive_power_fundamental_Sum_L1_L3" : 3971.04, 
@@ -75,6 +81,35 @@ HVAC_CLIME_WIPRO_ID72(sensorval) {
 
 
 
+MN_ZONA_1_ID2(sensorval) {
+    return this.props.MN_ZONA_1_ID2.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+MN_ZONA_2_ID3(sensorval) {
+    return this.props.MN_ZONA_2_ID3.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+MN_ZONA_3_ID6(sensorval) {
+    return this.props.MN_ZONA_3_ID6.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+FN_VITALI_ID7(sensorval) {
+    return this.props.FN_VITALI_ID7.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+FN_NORMALI_ID8(sensorval) {
+    return this.props.FN_NORMALI_ID8.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
 
 
 
@@ -429,6 +464,239 @@ render() {
 
 
 
+  <div className="row">
+              <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Fixed Networks Platform</p>
+                          </div>
+                        
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.FN_VITALI_ID7('Voltage_effective_L1')}
+                          {this.FN_VITALI_ID7('Voltage_effective_L2')}
+                          {this.FN_VITALI_ID7('Voltage_effective_L3')}
+                          {this.FN_VITALI_ID7('Current_effective_L1')}
+                          {this.FN_VITALI_ID7('Current_effective_L2')}
+                          {this.FN_VITALI_ID7('Current_effective_L3')}
+                          {this.FN_VITALI_ID7('Active_Power_Sum_L1_L3')}
+                          {this.FN_VITALI_ID7('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.FN_VITALI_ID7('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.FN_VITALI_ID7('Reactive_Energy_Sum_L1_L3')}
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+                        <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Fixed Networks Office</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.FN_NORMALI_ID8('Voltage_effective_L1')}
+                          {this.FN_NORMALI_ID8('Voltage_effective_L2')}
+                          {this.FN_NORMALI_ID8('Voltage_effective_L3')}
+                          {this.FN_NORMALI_ID8('Current_effective_L1')}
+                          {this.FN_NORMALI_ID8('Current_effective_L2')}
+                          {this.FN_NORMALI_ID8('Current_effective_L3')}
+                          {this.FN_NORMALI_ID8('Active_Power_Sum_L1_L3')}
+                          {this.FN_NORMALI_ID8('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.FN_NORMALI_ID8('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.FN_NORMALI_ID8('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+
+                       
+          </div> 
+
+
+
+
+
+
+
+
+
+           <div className="row">
+              <div className="col-md-4 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Mobile Network Zone 1</p>
+                          </div>
+                        
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.MN_ZONA_1_ID2('Voltage_effective_L1')}
+                          {this.MN_ZONA_1_ID2('Voltage_effective_L2')}
+                          {this.MN_ZONA_1_ID2('Voltage_effective_L3')}
+                          {this.MN_ZONA_1_ID2('Current_effective_L1')}
+                          {this.MN_ZONA_1_ID2('Current_effective_L2')}
+                          {this.MN_ZONA_1_ID2('Current_effective_L3')}
+                          {this.MN_ZONA_1_ID2('Active_Power_Sum_L1_L3')}
+                          {this.MN_ZONA_1_ID2('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.MN_ZONA_1_ID2('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.MN_ZONA_1_ID2('Reactive_Energy_Sum_L1_L3')}
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+                        <div className="col-md-4 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Mobile Network Zone 2</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.MN_ZONA_2_ID3('Voltage_effective_L1')}
+                          {this.MN_ZONA_2_ID3('Voltage_effective_L2')}
+                          {this.MN_ZONA_2_ID3('Voltage_effective_L3')}
+                          {this.MN_ZONA_2_ID3('Current_effective_L1')}
+                          {this.MN_ZONA_2_ID3('Current_effective_L2')}
+                          {this.MN_ZONA_2_ID3('Current_effective_L3')}
+                          {this.MN_ZONA_2_ID3('Active_Power_Sum_L1_L3')}
+                          {this.MN_ZONA_2_ID3('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.MN_ZONA_2_ID3('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.MN_ZONA_2_ID3('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+                              <div className="col-md-4 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Mobile Network Zone 3</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.MN_ZONA_3_ID6('Voltage_effective_L1')}
+                          {this.MN_ZONA_3_ID6('Voltage_effective_L2')}
+                          {this.MN_ZONA_3_ID6('Voltage_effective_L3')}
+                          {this.MN_ZONA_3_ID6('Current_effective_L1')}
+                          {this.MN_ZONA_3_ID6('Current_effective_L2')}
+                          {this.MN_ZONA_3_ID6('Current_effective_L3')}
+                          {this.MN_ZONA_3_ID6('Active_Power_Sum_L1_L3')}
+                          {this.MN_ZONA_3_ID6('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.MN_ZONA_3_ID6('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.MN_ZONA_3_ID6('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                         </div>          
+                </div>
+              </div> 
+
+                                   
+          </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
   
     );
@@ -451,8 +719,14 @@ ACPower.propTypes = {
    SOSIRE_TR1_ID53: PropTypes.array.isRequired,
    HVAC_CLIME_WIFI_ID73: PropTypes.array.isRequired,
    HVAC_CLIME_WIPRO_ID72: PropTypes.array.isRequired,
-   
- 
+   MN_ZONA_3_ID6: PropTypes.array.isRequired,
+   MN_ZONA_2_ID3: PropTypes.array.isRequired,
+   MN_ZONA_1_ID2: PropTypes.array.isRequired,
+   FN_NORMALI_ID8: PropTypes.array.isRequired,
+   FN_VITALI_ID7: PropTypes.array.isRequired,
+
+
+
 };
 
 
@@ -466,6 +740,11 @@ export default createContainer(() => {
   Meteor.subscribe('SOSIRE_TR1_ID53');
   Meteor.subscribe('HVAC_CLIME_WIFI_ID73');
   Meteor.subscribe('HVAC_CLIME_WIPRO_ID72');
+  Meteor.subscribe('MN_ZONA_1_ID2');
+  Meteor.subscribe('MN_ZONA_2_ID3');
+  Meteor.subscribe('MN_ZONA_3_ID6');
+  Meteor.subscribe('FN_VITALI_ID7');
+  Meteor.subscribe('FN_NORMALI_ID8');
 
   return { 
  
@@ -477,5 +756,11 @@ export default createContainer(() => {
     SOSIRE_TR1_ID53: SOSIRE_TR1_ID53.find({}).fetch(),
     HVAC_CLIME_WIFI_ID73: HVAC_CLIME_WIFI_ID73.find({},{limit:1}).fetch(),
     HVAC_CLIME_WIPRO_ID72: HVAC_CLIME_WIPRO_ID72.find({},{limit:1}).fetch(),
+    MN_ZONA_3_ID6:MN_ZONA_3_ID6.find({},{limit:1}).fetch(),
+    MN_ZONA_2_ID3:MN_ZONA_2_ID3.find({},{limit:1}).fetch(),
+    MN_ZONA_1_ID2:MN_ZONA_1_ID2.find({},{limit:1}).fetch(),
+    FN_VITALI_ID7:MN_ZONA_2_ID3.find({},{limit:1}).fetch(),
+    FN_NORMALI_ID8:MN_ZONA_1_ID2.find({},{limit:1}).fetch(),
+
   };
 }, ACPower);

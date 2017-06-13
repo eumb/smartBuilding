@@ -3,11 +3,11 @@ import { createContainer } from 'meteor/react-meteor-data';
 import classNames from 'classnames';
 import Heatmap from '../components/Heatmap.jsx';
 import {Dev_5CCF7FA43A8B} from '../../collections/collections.js';
-import {Dev_5CCF7FF0AA4F} from '../../collections/collections.js';
-import {Dev_5CCF7FF0B17A} from '../../collections/collections.js';
-import {Dev_5CCF7FF0B704} from '../../collections/collections.js';
 import {Dev_5CCF7FEFB40E} from '../../collections/collections.js';
 import {Dev_5CCF7FEFBE72} from '../../collections/collections.js';
+import {Dev_5CCF7FF0AA4F} from '../../collections/collections.js';
+import {Dev_5CCF7FEFBAD3} from '../../collections/collections.js';
+import {Dev_5CCF7FEFB0C0} from '../../collections/collections.js';
 
 class Heatmaps extends React.Component {
  
@@ -26,35 +26,35 @@ class Heatmaps extends React.Component {
 
     });
     
-    h2=_.pluck(this.props.Dev_5CCF7FF0AA4F, "temp");
+    h2=_.pluck(this.props.Dev_5CCF7FEFB40E, "temp");
     tempMap2.push(h2)
     tempMap2.forEach(function(e) {
       dev2_value = e.toString()*1;
 
     });
     
-    h3=_.pluck(this.props.Dev_5CCF7FF0B17A, "temp");
+    h3=_.pluck(this.props.Dev_5CCF7FEFBE72, "temp");
     tempMap3.push(h3)
     tempMap3.forEach(function(e) {
       dev3_value = e.toString()*1;
 
     });
     
-    h4=_.pluck(this.props.Dev_5CCF7FF0B704, "temp");
+    h4=_.pluck(this.props.Dev_5CCF7FF0AA4F, "temp");
     tempMap4.push(h4)
      tempMap4.forEach(function(e) {
       dev4_value = e.toString()*1;
 
     });
     
-    h5=_.pluck(this.props.Dev_5CCF7FEFB40E, "temp");
+    h5=_.pluck(this.props.Dev_5CCF7FEFBAD3, "temp");
     tempMap5.push(h5)
      tempMap5.forEach(function(e) {
       dev5_value = e.toString()*1;
 
     });
     
-    h6=_.pluck(this.props.Dev_5CCF7FEFBE72, "temp");
+    h6=_.pluck(this.props.Dev_5CCF7FEFB0C0, "temp");
     tempMap6.push(h6)
      tempMap6.forEach(function(e) {
       dev6_value = e.toString()*1;
@@ -63,8 +63,8 @@ class Heatmaps extends React.Component {
 
     return heatmap={
      "L01":[
-          [dev1_value, dev2_value,  dev3_value],
-          [dev4_value, dev5_value, dev6_value]
+          [dev3_value, dev2_value,  dev1_value],
+          [dev6_value, dev5_value, dev4_value]
         ]
     }
 
@@ -86,35 +86,35 @@ class Heatmaps extends React.Component {
 
     });
     
-    h2=_.pluck(this.props.Dev_5CCF7FF0AA4F, "humid");
+    h2=_.pluck(this.props.Dev_5CCF7FEFB40E, "humid");
     tempMap2.push(h2)
     tempMap2.forEach(function(e) {
       dev2_value = e.toString()*1;
 
     });
     
-    h3=_.pluck(this.props.Dev_5CCF7FF0B17A, "humid");
+    h3=_.pluck(this.props.Dev_5CCF7FEFBE72, "humid");
     tempMap3.push(h3)
     tempMap3.forEach(function(e) {
       dev3_value = e.toString()*1;
 
     });
     
-    h4=_.pluck(this.props.Dev_5CCF7FF0B704, "humid");
+    h4=_.pluck(this.props.Dev_5CCF7FF0AA4F, "humid");
     tempMap4.push(h4)
      tempMap4.forEach(function(e) {
       dev4_value = e.toString()*1;
 
     });
     
-    h5=_.pluck(this.props.Dev_5CCF7FEFB40E, "humid");
+    h5=_.pluck(this.props.Dev_5CCF7FEFBAD3, "humid");
     tempMap5.push(h5)
      tempMap5.forEach(function(e) {
       dev5_value = e.toString()*1;
 
     });
     
-    h6=_.pluck(this.props.Dev_5CCF7FEFBE72, "humid");
+    h6=_.pluck(this.props.Dev_5CCF7FEFB0C0, "humid");
     tempMap6.push(h6)
      tempMap6.forEach(function(e) {
       dev6_value = e.toString()*1;
@@ -123,8 +123,8 @@ class Heatmaps extends React.Component {
 
     return humid={
      "L01":[
-          [dev1_value, dev2_value,  dev3_value],
-          [dev4_value, dev5_value, dev6_value]
+       [dev3_value, dev2_value,  dev1_value],
+          [dev6_value, dev5_value, dev4_value]
         ]
     }
 
@@ -146,35 +146,35 @@ class Heatmaps extends React.Component {
 
     });
     
-    h2=_.pluck(this.props.Dev_5CCF7FF0AA4F, "noise_p");
+    h2=_.pluck(this.props.Dev_5CCF7FEFB40E, "noise_p");
     tempMap2.push(h2)
     tempMap2.forEach(function(e) {
       dev2_value = e.toString()*1;
 
     });
     
-    h3=_.pluck(this.props.Dev_5CCF7FF0B17A, "noise_p");
+    h3=_.pluck(this.props.Dev_5CCF7FEFBE72, "noise_p");
     tempMap3.push(h3)
     tempMap3.forEach(function(e) {
       dev3_value = e.toString()*1;
 
     });
     
-    h4=_.pluck(this.props.Dev_5CCF7FF0B704, "noise_p");
+    h4=_.pluck(this.props.Dev_5CCF7FF0AA4F, "noise_p");
     tempMap4.push(h4)
      tempMap4.forEach(function(e) {
       dev4_value = e.toString()*1;
 
     });
     
-    h5=_.pluck(this.props.Dev_5CCF7FEFB40E, "noise_p");
+    h5=_.pluck(this.props.Dev_5CCF7FEFBAD3, "noise_p");
     tempMap5.push(h5)
      tempMap5.forEach(function(e) {
       dev5_value = e.toString()*1;
 
     });
     
-    h6=_.pluck(this.props.Dev_5CCF7FEFBE72, "noise_p");
+    h6=_.pluck(this.props.Dev_5CCF7FEFB0C0, "noise_p");
     tempMap6.push(h6)
      tempMap6.forEach(function(e) {
       dev6_value = e.toString()*1;
@@ -183,8 +183,8 @@ class Heatmaps extends React.Component {
 
     return noise={
      "L01":[
-          [dev1_value, dev2_value,  dev3_value],
-          [dev4_value, dev5_value, dev6_value]
+      [dev3_value, 55,  dev1_value],
+          [dev6_value, dev5_value, dev4_value]
         ]
     }
 
@@ -206,35 +206,35 @@ class Heatmaps extends React.Component {
 
     });
     
-    h2=_.pluck(this.props.Dev_5CCF7FF0AA4F, "light");
+    h2=_.pluck(this.props.Dev_5CCF7FEFB40E, "light");
     tempMap2.push(h2)
     tempMap2.forEach(function(e) {
       dev2_value = e.toString()*1;
 
     });
     
-    h3=_.pluck(this.props.Dev_5CCF7FF0B17A, "light");
+    h3=_.pluck(this.props.Dev_5CCF7FEFBE72, "light");
     tempMap3.push(h3)
     tempMap3.forEach(function(e) {
       dev3_value = e.toString()*1;
 
     });
     
-    h4=_.pluck(this.props.Dev_5CCF7FF0B704, "light");
+    h4=_.pluck(this.props.Dev_5CCF7FF0AA4F, "light");
     tempMap4.push(h4)
      tempMap4.forEach(function(e) {
       dev4_value = e.toString()*1;
 
     });
     
-    h5=_.pluck(this.props.Dev_5CCF7FEFB40E, "light");
+    h5=_.pluck(this.props.Dev_5CCF7FEFBAD3, "light");
     tempMap5.push(h5)
      tempMap5.forEach(function(e) {
       dev5_value = e.toString()*1;
 
     });
     
-    h6=_.pluck(this.props.Dev_5CCF7FEFBE72, "light");
+    h6=_.pluck(this.props.Dev_5CCF7FEFB0C0, "light");
     tempMap6.push(h6)
      tempMap6.forEach(function(e) {
       dev6_value = e.toString()*1;
@@ -243,8 +243,8 @@ class Heatmaps extends React.Component {
 
     light={
      "L01":[
-          [dev1_value, dev2_value,  dev3_value],
-          [dev4_value, dev5_value, dev6_value]
+     [dev3_value, dev2_value,  dev1_value],
+          [dev6_value, dev5_value, dev4_value]
         ]
     } 
     console.log(light)
@@ -511,11 +511,11 @@ class Heatmaps extends React.Component {
 Heatmaps.propTypes = {
 
   Dev_5CCF7FA43A8B: PropTypes.array.isRequired,
-  Dev_5CCF7FF0AA4F: PropTypes.array.isRequired,
-  Dev_5CCF7FF0B17A: PropTypes.array.isRequired,
-  Dev_5CCF7FF0B704: PropTypes.array.isRequired,
   Dev_5CCF7FEFB40E: PropTypes.array.isRequired,
   Dev_5CCF7FEFBE72: PropTypes.array.isRequired,
+  Dev_5CCF7FF0AA4F: PropTypes.array.isRequired,
+  Dev_5CCF7FEFBAD3: PropTypes.array.isRequired,
+  Dev_5CCF7FEFB0C0: PropTypes.array.isRequired,
 
  
 };
@@ -524,19 +524,19 @@ Heatmaps.propTypes = {
 export default createContainer(() => {
 
   Meteor.subscribe('5CCF7FA43A8B');
-  Meteor.subscribe('5CCF7FF0AA4F');
-  Meteor.subscribe('5CCF7FF0B17A');
-  Meteor.subscribe('5CCF7FF0B704');
   Meteor.subscribe('5CCF7FEFB40E');
   Meteor.subscribe('5CCF7FEFBE72');
+  Meteor.subscribe('5CCF7FF0AA4F');
+  Meteor.subscribe('5CCF7FEFBAD3');
+  Meteor.subscribe('5CCF7FEFB0C0');
 
   return { 
    Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({}).fetch(),
-   Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({}).fetch(),
-   Dev_5CCF7FF0B17A: Dev_5CCF7FF0B17A.find({}).fetch(),
-   Dev_5CCF7FF0B704: Dev_5CCF7FF0B704.find({}).fetch(),
    Dev_5CCF7FEFB40E: Dev_5CCF7FEFB40E.find({}).fetch(),
    Dev_5CCF7FEFBE72: Dev_5CCF7FEFBE72.find({}).fetch(),
+   Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({}).fetch(),
+   Dev_5CCF7FEFBAD3: Dev_5CCF7FEFBAD3.find({}).fetch(),
+   Dev_5CCF7FEFB0C0: Dev_5CCF7FEFB0C0.find({}).fetch(),
   };
 }, Heatmaps);
 

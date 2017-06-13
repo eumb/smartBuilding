@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
  
 // Task component - represents a single todo item
 export default class WSNodeValues extends Component {
+  
   render() {
+
   	sensortype=this.props.sensor;
   	//console.log(sensortype)
   	//console.log(this.props.sensorvalue)
@@ -22,11 +24,26 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square red"></i> Temperature </p>
           </td>
-          <td> {this.props.sensorvalue.temp}°C</td>
+          <td> {this.props.sensorvalue.temp} °C</td>
         </tr> 
     
     );
 	}
+
+    if (sensortype==="pres"){
+
+    return (
+     
+
+         <tr>
+          <td>
+            <p><i className="fa fa-square yellow"></i> Presence percentage </p>
+          </td>
+          <td> {this.props.sensorvalue.pres} %</td>
+        </tr> 
+    
+    );
+  }
 
 	if (sensortype==="humid"){
 
@@ -35,12 +52,14 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square blue"></i> Humidity </p>
           </td>
-          <td> {this.props.sensorvalue.humid}%</td>
+          <td> {this.props.sensorvalue.humid} %</td>
         </tr>
      
      
     );
 	}
+
+
 
 	if (sensortype==="noise"){
 
@@ -49,7 +68,7 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square purple"></i> Noise </p>
           </td>
-          <td> {this.props.sensorvalue.noise}dB</td>
+          <td> {this.props.sensorvalue.noise} dB</td>
         </tr>
     );
 	}
@@ -61,7 +80,7 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square black"></i> CO2 </p>
           </td>
-          <td> {this.props.sensorvalue.co2}ppm</td>
+          <td> {this.props.sensorvalue.co2} ppm</td>
         </tr>
     );
   }
@@ -73,7 +92,7 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square green"></i> Light </p>
           </td>
-          <td> {this.props.sensorvalue.light} lm</td>
+          <td> {this.props.sensorvalue.light} lx</td>
         </tr>
     );
   }
@@ -85,8 +104,16 @@ export default class WSNodeValues extends Component {
           <td>
             <p><i className="fa fa-square gray"></i> Dust </p>
           </td>
-          <td> {this.props.sensorvalue.dust}</td>
+          <td> {this.props.sensorvalue.dust} µg/m3</td>
         </tr>
+    );
+  }
+
+    if (sensortype==="updated"){
+    let date=moment(this.props.sensorvalue.created_at).format('MM/DD/YYYY HH:MM');
+    //console.log(date)
+    return (
+      <p> updated at: {date}</p>
     );
   }
 
