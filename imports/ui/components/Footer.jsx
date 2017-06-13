@@ -7,6 +7,14 @@ export default class Footer extends React.Component {
 
 
 		<footer className="footer_fixed">
+          <div className="pull-left">
+            <div>
+                 {/*   <span className="title">Smartbuilding </span>
+                     <span className="by">by </span>*/}
+                  <h5>Powered by Nokia © 2017</h5>
+              
+            </div>
+          </div>  
           <div className="pull-right">
             <div>
                  {/*   <span className="title">Smartbuilding </span>

@@ -11,8 +11,8 @@ export default class Heatmap extends React.Component {
       var colOrigDomain = [20, 22, 25, 27, 29];
       var colorDomain = [20, 22, 25, 27, 29];
     }if (type==="humid"){
-      var colOrigDomain = [35, 42, 45, 47, 50];
-      var colorDomain = [35, 42, 45, 47, 50];
+      var colOrigDomain = [35, 40, 45, 47, 50];
+      var colorDomain = [35, 40, 45, 47, 50];
     }if(type==="light"){
       var colOrigDomain = [4500, 2500, 1300, 600, 100];
       var colorDomain = [4500, 2500, 1300, 600, 100];
@@ -27,11 +27,11 @@ export default class Heatmap extends React.Component {
 
       //var c = d3.rgb(heatColors(1));
       
-      console.log(data);
+      //console.log(data);
       var width=100;
       var height=100;
       heatmap=data;
-      console.log(heatmap)
+      //console.log(heatmap)
       dx = heatmap["L01"][0].length;
       dy = heatmap["L01"].length;
       var context = this.refs.canvas1.getContext('2d'); 

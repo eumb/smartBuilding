@@ -30,6 +30,18 @@ export default class SmallGraphs extends React.Component {
       return Math.round(d.averagevalue);
     })
     }
+         if (type==="dust"){
+   return data=this.props.sensoraverage.map(function(d){
+      //console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
+    })
+    }
+         if (type==="co2"){
+   return data=this.props.sensoraverage.map(function(d){
+      //console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
+    })
+    }
   }
 
 
@@ -39,17 +51,17 @@ render() {
 
 
 var style = {
-      height:'80px'
+      height:'85px'
     };  
   return (
                   <div className="sparkline22 graph" style={style}>
                  
-              <Sparklines data={this.renderTasks()} limit={5} width={140} height={75}>
+              <Sparklines data={this.renderTasks()} limit={5} width={150} height={85}>
                 <SparklinesLine color="#1ABB9C" />
                     <SparklinesSpots />
 
                 </Sparklines>
-            <div> daily average</div> 
+            <div> daily average trend</div> 
                  
                   </div>
 

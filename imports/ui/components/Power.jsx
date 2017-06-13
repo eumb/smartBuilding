@@ -2,26 +2,21 @@
 import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import { createContainer } from 'meteor/react-meteor-data';
-
-import {MASURA_TGV_ID1} from '../../collections/collections.js';
-import {HVAC_CLIME_WIFI_ID73} from '../../collections/collections.js';
-import PowerValue from '../components/PowerValue.jsx';
-
 import {Line} from 'react-chartjs';
+
+
+MASURA_TGV_ID1Average = new Mongo.Collection("MASURA_TGV_ID1Average");
+HVAC_CLIME_WIFI_ID73Average = new Mongo.Collection("HVAC_CLIME_WIFI_ID73Average");
 
 class Power extends React.Component {
 
-renderTasks() {
-    return this.props.platformPowerlast.map((platformPower) => (
-      <PowerValue key={platformPower._id} platformPower={platformPower} />
-    ));
-  }
+
 
 generateChartData() {
   timeScale = [];
   dataset=this.props.platformPower;
-  Active_Power_Sum_L1_L3=_.pluck(dataset, "Active_Power_Sum_L1_L3");
-  xScale=_.pluck(dataset, "created_at");
+  Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
+  xScale=_.pluck(dataset, "day");
 
 
 
@@ -39,8 +34,8 @@ for (i=xScale.length; i>0;i--){
 generateChartDataHVAC() {
   timeScale = [];
   dataset=this.props.HvacPower;
-  Active_Power_Sum_L1_L3=_.pluck(dataset, "Active_Power_Sum_L1_L3");
-  xScale=_.pluck(dataset, "created_at");
+  Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
+  xScale=_.pluck(dataset, "day");
 
 
 
@@ -61,8 +56,8 @@ generatePercentData(){
   resultedPercentPower =[];
   dataset=this.props.HvacPower;
   dataset2=this.props.platformPower;
-  Active_Power_Sum_L1_L3_platform=_.pluck(dataset2, "Active_Power_Sum_L1_L3");
-  Active_Power_Sum_L1_L3_hvac=_.pluck(dataset, "Active_Power_Sum_L1_L3");
+  Active_Power_Sum_L1_L3_platform=_.pluck(dataset2, "averagevalue");
+  Active_Power_Sum_L1_L3_hvac=_.pluck(dataset, "averagevalue");
   
   for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
@@ -82,12 +77,12 @@ mapDataPercent(){
 this.generatePercentData()
 
 var data = {
-    labels: timeScale,
+    labels: xScale,
     datasets: [
         {
             label: 'Platform Power Usage Effectiveness (24h)',
             backgroundColor: 'rgba(88,203,181,0.5)',
-            radius: 0,
+            //radius: 0,
             lineTension:0,
             data:resultedPercentPower,
         }
@@ -104,12 +99,12 @@ mapData(){
   this.generateChartData();
 
    var data = {
-    labels: timeScale,
+    labels: xScale,
     datasets: [
         {
-            label: 'Active Power Sum (L1:L3) (24h)',
+            label: 'Active Power Sum (L1:L3) (daily average)',
           backgroundColor: 'rgba(88,203,181,0.5)',
-            radius: 0,
+           
             data:Active_Power_Sum_L1_L3,
         }
     ],
@@ -126,12 +121,12 @@ mapDataHVAC(){
   this.generateChartDataHVAC();
 
    var data = {
-    labels: timeScale,
+    labels: xScale,
     datasets: [
         {
-            label: 'HVAC CLIME WIRELESS (24h)',
+            label: 'HVAC CLIME WIRELESS (daily average)',
             backgroundColor: 'rgba(88,203,181,0.5)',
-            radius: 0,
+          
             data:Active_Power_Sum_L1_L3,
         }
     ],
@@ -159,7 +154,7 @@ render() {
   scales: {
     xAxes: [{
 
-      display: false,
+      display: true,
       gridLines: {
         display: false
       },
@@ -285,15 +280,15 @@ render() {
 
 
 export default createContainer(() => {
-  Meteor.subscribe('MASURA_TGV_ID1'),
-  Meteor.subscribe('HVAC_CLIME_WIFI_ID73');
+  Meteor.subscribe('MASURA_TGV_ID1Average'),
+  Meteor.subscribe('HVAC_CLIME_WIFI_ID73Average');
 
 
 
   return {
-    platformPowerlast : MASURA_TGV_ID1.find({},{limit:1}).fetch(),
-    platformPower : MASURA_TGV_ID1.find({},{sort: {'created_at' : -1},limit:1000}).fetch(),
-    HvacPower: HVAC_CLIME_WIFI_ID73.find({},{sort: {'created_at' : -1},limit:1000}).fetch(),
+    
+    platformPower : MASURA_TGV_ID1Average.find({}).fetch(),
+    HvacPower: HVAC_CLIME_WIFI_ID73Average.find({}).fetch(),
 
   };
 }, Power);

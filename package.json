@@ -29,6 +29,8 @@
     "react-chartjs": "^2.0.0-beta2",
     "react-dom": "^15.5.4",
     "react-highcharts": "^12.0.0",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-sparklines": "^1.6.0",
+    "selenium-webdriver": "^3.4.0"
   }
 }

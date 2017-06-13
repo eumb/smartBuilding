@@ -469,7 +469,7 @@ export default createContainer(() => {
 
   return { 
    ws : WorkSpace.find({}).fetch(),
-   ext : Exterior.find({}).fetch(),
+   ext : Exterior.find({},{limit:1}).fetch(),
    Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({},{limit:1}).fetch(),
    Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({},{limit:1}).fetch(),
    Dev_5CCF7FEFBAD3: Dev_5CCF7FEFBAD3.find({},{limit:1}).fetch(),

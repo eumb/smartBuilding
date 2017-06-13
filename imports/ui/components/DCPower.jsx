@@ -7,6 +7,11 @@ import DCValues from '../components/DCValues.jsx';
 import {PSC3_1} from '../../collections/collections.js';
 import {PSC3_2} from '../../collections/collections.js';
 import {Line} from 'react-chartjs';
+
+
+PSC3_1Average = new Mongo.Collection("PSC3_1Average");
+PSC3_2Average = new Mongo.Collection("PSC3_2Average");
+
 class DCPower extends React.Component {
 
 //Meteor.Collection("PSC3_1");  //{ "_id" : ObjectId("59381ff0e95f2f2008a45b68"), "USys" : 53.4, "PSys" : 71267, "ILoad" : 1334.6, "IBatt" : 4.2, "IRect" : 1345.1, "created_at" : ISODate("2017-06-07T15:46:56.388Z") }
@@ -27,13 +32,14 @@ PSC3_2(sensorval) {
 generateChartData(dataset) {
   timeScale = [];
   
-  PSys=_.pluck(dataset, "PSys");
-  xScale=_.pluck(dataset, "created_at");
-
+  PSys=_.pluck(dataset, "averagevalue");
+  xScale=_.pluck(dataset, "day");
+  console.log(PSys)
+  console.log(xScale)
 
 
 for (i=0; i <xScale.length ;i++){
-    timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
+    timeScale.push(moment(xScale[i]).utcOffset(3).format("YY/MM/DD "));
   }
 
   //console.log(PSys);
@@ -47,16 +53,12 @@ mapData(dataset){
   this.generateChartData(dataset);
    
    var data = {
-    labels: timeScale,
+    labels: xScale,
     datasets: [
         {
-            label: 'System Power',
+            label: 'System Power daily average',
             fillColor: "rgba(225,241,238,0.5)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(250,195,168,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
+           /* radius: 0,*/
             data:PSys,
         }
     ],
@@ -78,16 +80,49 @@ render() {
     width:'90%'
   }
 
-  var chartOptions= {
+  var chartOptions = {
+  responsive: true,
 
-        multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
- 
+  tooltips: {
+    enabled:true  
+  },
+  elements: {
+    line: {
+      fill: true
+    }
+  },
+  scales: {
+    xAxes: [{
+
+      display: true,
+      gridLines: {
+        display: false
+      },
+      labels: {
+        show: false
+      }
+     
+    }],
+    yAxes: [{
+      type: 'linear',
+      display: true,
+      position: 'left',
+      id: 'y-axis-1',
+      gridLines: {
+        display: false
+      },
+      labels: {
+        show: false
+      }
   
+    }]
+  }
+}
 
- }
+
 
     return (
-      <div>
+      <div className="dc_page">
           <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
            
               <div className="col-md-5 col-sm-6 col-xs-12 bg-white">
@@ -119,7 +154,7 @@ render() {
               </div>
               <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                
-                  <Line data={this.mapData(this.props.PSC3_1_chart)} width="700" height="170" />
+                  <Line data={this.mapData(this.props.PSC3_1_chart)} options={chartOptions} width="700" height="170" />
              
               </div>
             <div className="clearfix"></div>
@@ -159,7 +194,7 @@ render() {
 
                     <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                       
-                        <Line data={this.mapData(this.props.PSC3_2_chart)} width="700" height="170" />
+                        <Line data={this.mapData(this.props.PSC3_2_chart)} options={chartOptions} width="700" height="170" />
                       
                     </div>
                
@@ -180,7 +215,8 @@ DCPower.propTypes = {
   
   PSC3_1: PropTypes.array.isRequired,
   PSC3_2: PropTypes.array.isRequired,
- 
+  PSC3_2_chart: PropTypes.array.isRequired,
+  PSC3_1_chart: PropTypes.array.isRequired,
  
 };
 
@@ -189,13 +225,15 @@ export default createContainer(() => {
  
   Meteor.subscribe('PSC3_1');
   Meteor.subscribe('PSC3_2');
+  Meteor.subscribe('PSC3_1Average');
+  Meteor.subscribe('PSC3_2Average');
 
   return { 
  
    PSC3_1: PSC3_1.find({},{limit:1}).fetch(),
    PSC3_2: PSC3_2.find({},{limit:1}).fetch(),
-   PSC3_2_chart: PSC3_2.find({},{limit:20}).fetch(),
-   PSC3_1_chart: PSC3_1.find({},{limit:20}).fetch(),
+   PSC3_2_chart: PSC3_2Average.find({}).fetch(),
+   PSC3_1_chart: PSC3_1Average.find({}).fetch(),
 
 
   };

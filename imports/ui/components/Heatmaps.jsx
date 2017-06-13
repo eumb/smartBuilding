@@ -247,7 +247,7 @@ class Heatmaps extends React.Component {
           [dev6_value, dev5_value, dev4_value]
         ]
     } 
-    console.log(light)
+    //console.log(light)
     return light;
 
   }
@@ -409,10 +409,10 @@ class Heatmaps extends React.Component {
                   {/*  <div className='legend-title'>Temperature mapping</div>*/}
                       <div className='legend-scale'>
                         <ul className='legend-labels'>
-                          <li><span style={firsthumid}></span>30 %</li>
+                          <li><span style={firsthumid}></span>35 %</li>
                           <li><span style={secondhumid}></span>40 %</li>
                           <li><span style={thirdhumid}></span>45 %</li>
-                          <li><span style={fourthhumid}></span>50 5</li>
+                          <li><span style={fourthhumid}></span>50 %</li>
                           <li><span style={fifthhumid}></span>55 %</li>
                         </ul>
                       </div>
@@ -444,11 +444,15 @@ class Heatmaps extends React.Component {
                   {/*  <div className='legend-title'>Temperature mapping</div>*/}
                       <div className='legend-scale'>
                         <ul className='legend-labels'>
-                          <li><span style={firstlight}></span>800 lm</li>
-                          <li><span style={secondlight}></span>900 lm</li>
-                          <li><span style={thirdlight}></span>1000 lm</li>
-                          <li><span style={fourthlight}></span>1100 lm</li>
-                          <li><span style={fifthlight}></span>1200 lm</li>
+                          <li><span style={fifthlight}></span>500 lx</li>
+                          <li><span style={fourthlight}></span>1000 lx</li>
+                          <li><span style={thirdlight}></span>1500 lx</li>
+                          <li><span style={secondlight}></span>2500 lx</li>
+                          <li><span style={firstlight}></span>4500 lx</li>
+                          
+                          
+                          
+                          
                         </ul>
                       </div>
                       
@@ -480,10 +484,10 @@ class Heatmaps extends React.Component {
                   {/*  <div className='legend-title'>Temperature mapping</div>*/}
                       <div className='legend-scale'>
                         <ul className='legend-labels'>
-                          <li><span style={firstnoise}></span>70 dB</li>
-                          <li><span style={secondnoise}></span>80 dB</li>
-                          <li><span style={thirdnoise}></span>90 dB</li>
-                          <li><span style={fourthnoise}></span>95 dB</li>
+                          <li><span style={firstnoise}></span>40 dB</li>
+                          <li><span style={secondnoise}></span>50 dB</li>
+                          <li><span style={thirdnoise}></span>70 dB</li>
+                          <li><span style={fourthnoise}></span>90 dB</li>
                           <li><span style={fifthnoise}></span>100 dB</li>
                         </ul>
                       </div>

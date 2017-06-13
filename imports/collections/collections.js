@@ -94,7 +94,7 @@ if (Meteor.isServer) {
 
     Meteor.publish('HVAC_CLIME_WIFI_ID73', function eventsPublication() {
       console.log("subscribed to HVAC_CLIME_WIFI_ID73 data");
-      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:640});
+      return HVAC_CLIME_WIFI_ID73.find({} ,{ sort: { created_at: -1 },limit:1});
   });
 
 
@@ -126,11 +126,11 @@ if (Meteor.isServer) {
 
   Meteor.publish('PSC3_1', function eventsPublication() {
       console.log("subscribed to PSC3_1 data");
-      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:640});
+      return PSC3_1.find({} ,{ sort: { created_at: -1 },limit:1});
   });
   Meteor.publish('PSC3_2', function eventsPublication() {
       console.log("subscribed to PSC3_2 data");
-      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:640});
+      return PSC3_2.find({} ,{ sort: { created_at: -1 },limit:1});
   });
 
   Meteor.publish('TGD_BOROURI_ID52', function eventsPublication() {
@@ -140,7 +140,7 @@ if (Meteor.isServer) {
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
-      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:640});
+      return MASURA_TGV_ID1.find({} ,{ sort: { created_at: -1 },limit:1});
    });
 
   
@@ -253,7 +253,7 @@ if (Meteor.isServer) {
 
   Meteor.publish('WS', function eventsPublication() {
       console.log("subscribed to server room data");
-      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:50});
+      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:5000});
    });
     Meteor.publish('MR', function eventsPublication() {
       console.log("subscribed to meeting room data");
@@ -261,56 +261,249 @@ if (Meteor.isServer) {
    });
   Meteor.publish('UA', function eventsPublication() {
       console.log("subscribed to user area data");
-      return UserArea.find({} ,{ sort: { created_at: -1 },limit:1});
+      return UserArea.find({} ,{ sort: { created_at: -1 },limit:50});
    });
 
  Meteor.publish('SR', function eventsPublication() {
       console.log("subscribed to server room data");
-      return ServerRoom.find({}	,{ sort: { _id: -1 },limit:1});
+      return ServerRoom.find({}	,{ sort: { _id: -1 },limit:50});
    });
 
  Meteor.publish('EXT', function eventsPublication() {
       console.log("subscribed to exterior data");
-      return Exterior.find({} ,{ sort: { _id: -1 },limit:1});
+      return Exterior.find({} ,{ sort: { _id: -1 },limit:50});
    });
 
- Meteor.publish('WSHumidAverage',function averagePublication(){
+ 
+
+Meteor.publish('PSC3_1Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Psys in PSC3_1");
+
+    sensorAvg = PSC3_1.aggregate([
+      { $match: 
+          { 
+              
+              PSys:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$PSys"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("PSC3_1Average", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+Meteor.publish('PSC3_2Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Psys in PSC3_2");
+
+    sensorAvg = PSC3_2.aggregate([
+      { $match: 
+          { 
+              
+              PSys:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$PSys"
+        }
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("PSC3_2Average", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+
+
+
+
+
+Meteor.publish('HVAC_CLIME_WIFI_ID73Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in HVAC_CLIME_WIFI_ID73");
+
+    sensorAvg = HVAC_CLIME_WIFI_ID73.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        }
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("HVAC_CLIME_WIFI_ID73Average", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in MASURA_TGV_ID1");
+
+    sensorAvg = MASURA_TGV_ID1.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        }
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("MASURA_TGV_ID1Average", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+  
+
+
+
+
+
+
+   Meteor.publish('WSHumidAverage',function averagePublication(){
     self = this;
     console.log("subscribed to average humidity in WorkSpace");
 
     sensorAvg = WorkSpace.aggregate([
       { $match: 
-      		{ 
-      		    
-      		    humid:{$exists: true},
-      		    created_at:{$exists:true}
-      		    /*,
-      			created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
-      		    
-      		}
+          { 
+              
+              humid:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
       },
       //{$sort : {"created_at" : -1}},
       {
-	       $group: {
-	      _id: {
-	         
-	             $dayOfYear: "$created_at"
-	         
-	         },
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
 
-	      	averageDayValue: {
-	        $avg: "$humid"
-	      }
-	    	
-	      }
-  	  }
+          averageDayValue: {
+          $avg: "$humid"
+        }
+        
+        }
+      }
     ]);
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
       self.added("WSHumidAverage", Random.id(), {
-      	day:sensorAvg._id,
-      	averagevalue:sensorAvg.averageDayValue
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
       });
   });
     self.ready()
@@ -333,7 +526,7 @@ if (Meteor.isServer) {
               
           }
       },
-      //{$sort : {"created_at" : -1}},
+      {$sort : {"created_at" : -1}},
       {
          $group: {
         _id: {
@@ -377,7 +570,7 @@ if (Meteor.isServer) {
               
           }
       },
-      //{$sort : {"created_at" : -1}},
+      {$sort : {"created_at" : -1}},
       {
          $group: {
         _id: {
@@ -420,7 +613,7 @@ if (Meteor.isServer) {
               
           }
       },
-      //{$sort : {"created_at" : -1}},
+      {$sort : {"created_at" : -1}},
       {
          $group: {
         _id: {
@@ -447,8 +640,280 @@ if (Meteor.isServer) {
     self.ready()
  });
 
+  Meteor.publish('WSDustAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to dust average in WorkSpace");
 
-  
+    sensorAvg = WorkSpace.aggregate([
+      { $match: 
+          { 
+              
+              dust:{$exists: true},
+              created_at:{$exists:true},
+            
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$dust"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("WSDustAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+Meteor.publish('WSCO2Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to CO2 average in WorkSpace");
+
+    sensorAvg = WorkSpace.aggregate([
+      { $match: 
+          { 
+              
+              co2:{$exists: true},
+              created_at:{$exists:true},
+            
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$co2"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("WSCO2Average", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Meteor.publish('SRHumidAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to average humidity in ServerRoom");
+
+    sensorAvg = ServerRoom.aggregate([
+      { $match: 
+          { 
+              
+              humid:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$humid"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("SRHumidAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+ Meteor.publish('SRTempAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to average temperature in ServerRoom");
+
+    sensorAvg = ServerRoom.aggregate([
+      { $match: 
+          { 
+              
+              temp:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$temp"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("SRTempAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+  Meteor.publish('SRNoiseAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to noise average in ServerRoom");
+
+    sensorAvg = ServerRoom.aggregate([
+      { $match: 
+          { 
+              
+              noise:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$noise"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("SRNoiseAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+  Meteor.publish('SRDustAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to dust average in ServerRoom");
+
+    sensorAvg = ServerRoom.aggregate([
+      { $match: 
+          { 
+              
+              dust:{$exists: true},
+              created_at:{$exists:true}
+
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$dust"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("SRDustAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
 
 
 }
