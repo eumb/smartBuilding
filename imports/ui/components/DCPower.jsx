@@ -31,7 +31,7 @@ PSC3_2(sensorval) {
   }
 generateChartData(dataset) {
   timeScale = [];
-  
+  PSys_kW=[];
   PSys=_.pluck(dataset, "averagevalue");
   xScale=_.pluck(dataset, "day");
   console.log(PSys)
@@ -41,6 +41,10 @@ generateChartData(dataset) {
 for (i=0; i <xScale.length ;i++){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("YY/MM/DD "));
   }
+  for (i=0; i <xScale.length ;i++){
+    PSys_kW.push(PSys[i]/1000);
+  }
+
 
   //console.log(PSys);
   //console.log(timeScale);
@@ -59,7 +63,7 @@ mapData(dataset){
             label: 'System Power daily average',
             fillColor: "rgba(225,241,238,0.5)",
            /* radius: 0,*/
-            data:PSys,
+            data:PSys_kW,
         }
     ],
 
@@ -95,6 +99,10 @@ render() {
     xAxes: [{
 
       display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Day',
+      },
       gridLines: {
         display: false
       },
@@ -104,6 +112,10 @@ render() {
      
     }],
     yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'kW',
+      },
       type: 'linear',
       display: true,
       position: 'left',

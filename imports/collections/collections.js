@@ -253,7 +253,7 @@ if (Meteor.isServer) {
 
   Meteor.publish('WS', function eventsPublication() {
       console.log("subscribed to server room data");
-      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:5000});
+      return WorkSpace.find({} ,{ sort: { created_at: -1 },limit:50});
    });
     Meteor.publish('MR', function eventsPublication() {
       console.log("subscribed to meeting room data");
@@ -357,7 +357,7 @@ Meteor.publish('PSC3_2Average',function averagePublication(){
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_2Average", Random.id(), {
-        day:sensorAvg._id,
+        day:sensorAvg._id,  
         averagevalue:sensorAvg.averageDayValue
       });
   });

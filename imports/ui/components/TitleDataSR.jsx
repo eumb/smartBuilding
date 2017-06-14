@@ -2,7 +2,7 @@
 import React,{ Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import  { Sparklines } from 'react-sparklines';
-import SmallGraphs from '../components/SmallGraphs.jsx';
+import SmallGraphsSR from '../components/SmallGraphsSR.jsx';
 import { createContainer } from 'meteor/react-meteor-data';
 import {ServerRoom} from '../../collections/collections.js';
 import AvgData from '../components/AvgData.jsx';
@@ -47,7 +47,7 @@ render() {
                    </div>
                   <div className="col-md-6 tile">
                     <div  className=" count_top spaklines">  
-                  <SmallGraphs sensoraverage={this.props.srTempAverage} type={"temp"} />
+                  <SmallGraphsSR sensoraverage={this.props.srTempAverage} type={"temp"} />
                 
                     </div> 
                  </div>
@@ -62,7 +62,7 @@ render() {
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
    <div  className="count_top spaklines">  </div>
-     <SmallGraphs sensoraverage={this.props.srHumidAverage} type={"humid"} />
+     <SmallGraphsSR sensoraverage={this.props.srHumidAverage} type={"humid"} />
                  </div>
                 
               
@@ -76,7 +76,7 @@ render() {
          {/*     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                     <SmallGraphs sensoraverage={this.props.srNoiseAverage} type={"noise"} />
+                     <SmallGraphsSR sensoraverage={this.props.srNoiseAverage} type={"noise"} />
                  </div>
             </div>
      
@@ -88,7 +88,7 @@ render() {
         {/*      <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>*/}
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                  <SmallGraphs sensoraverage={this.props.srDustAverage} type={"dust"} />
+                  <SmallGraphsSR sensoraverage={this.props.srDustAverage} type={"dust"} />
                  </div>
             </div>
     

@@ -14,6 +14,7 @@ class Power extends React.Component {
 
 generateChartData() {
   timeScale = [];
+  Active_Power_Sum_L1_L3_kW=[];
   dataset=this.props.platformPower;
   Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
   xScale=_.pluck(dataset, "day");
@@ -22,6 +23,10 @@ generateChartData() {
 
 for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
+  }
+
+for (i=xScale.length; i>0;i--){
+    Active_Power_Sum_L1_L3_kW.push(Active_Power_Sum_L1_L3[i]/1000);
   }
 
   //console.log(Active_Power_Sum_L1_L3);
@@ -33,6 +38,7 @@ for (i=xScale.length; i>0;i--){
 
 generateChartDataHVAC() {
   timeScale = [];
+  Active_Power_Sum_L1_L3_kW=[];
   dataset=this.props.HvacPower;
   Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
   xScale=_.pluck(dataset, "day");
@@ -41,6 +47,9 @@ generateChartDataHVAC() {
 
 for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
+  }
+for (i=xScale.length; i>0;i--){
+    Active_Power_Sum_L1_L3_kW.push(Active_Power_Sum_L1_L3[i]/1000);
   }
 
  //console.log(Active_Power_Sum_L1_L3);
@@ -105,7 +114,7 @@ mapData(){
             label: 'Active Power Sum (L1:L3) (daily average)',
           backgroundColor: 'rgba(88,203,181,0.5)',
            
-            data:Active_Power_Sum_L1_L3,
+            data:Active_Power_Sum_L1_L3_kW,
         }
     ],
 
@@ -127,7 +136,7 @@ mapDataHVAC(){
             label: 'HVAC CLIME WIRELESS (daily average)',
             backgroundColor: 'rgba(88,203,181,0.5)',
           
-            data:Active_Power_Sum_L1_L3,
+            data:Active_Power_Sum_L1_L3_kW,
         }
     ],
 
@@ -155,26 +164,82 @@ render() {
     xAxes: [{
 
       display: true,
+      scaleLabel: {
+          display: true,
+          labelString: 'Day',
+      },
       gridLines: {
         display: false
       },
       labels: {
-        show: false
+        show: true
       },
-      ticks: {
-        max:2
-      }
+    
     }],
     yAxes: [{
       type: 'linear',
       display: true,
+      scaleLabel: {
+          display: true,
+          labelString: 'kW',
+      },
+
       position: 'left',
       id: 'y-axis-1',
       gridLines: {
         display: false
       },
       labels: {
-        show: false
+        show: true
+      }
+  
+    }]
+  }
+}
+
+
+var chartOptions1 = {
+  responsive: true,
+
+  tooltips: {
+    enabled:true  
+  },
+  elements: {
+    line: {
+      fill: true
+    }
+  },
+  scales: {
+    xAxes: [{
+
+      display: true,
+      scaleLabel: {
+          display: true,
+          labelString: 'Day',
+      },
+      gridLines: {
+        display: false
+      },
+      labels: {
+        show: true
+      },
+    
+    }],
+    yAxes: [{
+      type: 'linear',
+      display: true,
+      scaleLabel: {
+          display: true,
+          labelString: '%',
+      },
+
+      position: 'left',
+      id: 'y-axis-1',
+      gridLines: {
+        display: false
+      },
+      labels: {
+        show: true
       }
   
     }]
@@ -255,7 +320,7 @@ render() {
                       </div>
                       <div className="row">
                         <div className="align_left">
-                          <Line data={this.mapDataPercent()} options={chartOptions}  width="500" height="280"/>
+                          <Line data={this.mapDataPercent()} options={chartOptions1}  width="500" height="280"/>
                         </div>
                       </div>
                       </div>

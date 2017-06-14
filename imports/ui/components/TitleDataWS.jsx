@@ -7,7 +7,8 @@ import { createContainer } from 'meteor/react-meteor-data';
 import {WorkSpace} from '../../collections/collections.js';
 import AvgData from '../components/AvgData.jsx';
 import SensorValue from '../components/SensorValue.jsx';
-
+import {Dev_5CCF7FA43A8B} from '../../collections/collections.js';
+import {Dev_5CCF7FEFB40E} from '../../collections/collections.js';
 
 
 WSHumidAverage = new Mongo.Collection("WSHumidAverage");
@@ -31,6 +32,7 @@ renderSensorsDust(sensorval) {
     ));
   }
 renderSensorsCO2(sensorval) {
+  console.log(this.props.ws)
     return this.props.ws_co2.map((sensorvalue) => (
       <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
@@ -137,6 +139,8 @@ render() {
   WSNoiseAverage: PropTypes.array.isRequired,
   WSLightAverage: PropTypes.array.isRequired,
   WSDustAverage: PropTypes.array.isRequired,
+    Dev_5CCF7FA43A8B: PropTypes.array.isRequired,
+ Dev_5CCF7FEFB40E: PropTypes.array.isRequired,
 };
 
 
@@ -149,10 +153,12 @@ export default createContainer(() => {
         Meteor.subscribe('WSLightAverage');
 Meteor.subscribe('WSDustAverage');
 Meteor.subscribe('WSCO2Average');
+  Meteor.subscribe('5CCF7FA43A8B');
+  Meteor.subscribe('5CCF7FEFB40E');
 
   return { 
-    ws : WorkSpace.find({DeviceID:"5CCF7FF0AA4F"},{limit:1}).fetch(),
-    ws_dust : WorkSpace.find({DeviceID:"5CCF7FEFB40E"},{limit:1}).fetch(),
+    ws : Dev_5CCF7FA43A8B.find({},{limit:1}).fetch(),
+    ws_dust : Dev_5CCF7FEFB40E.find({},{limit:1}).fetch(),
     ws_co2 : WorkSpace.find({DeviceID:"5CCF7FA43A8B"},{limit:1}).fetch(),
      WSHumidAverage : WSHumidAverage.find().fetch(),
      WSTempAverage : WSTempAverage.find().fetch(),
@@ -160,6 +166,8 @@ Meteor.subscribe('WSCO2Average');
       WSLightAverage : WSLightAverage.find().fetch(),
    WSDustAverage: WSDustAverage.find().fetch(),
    WSCO2Average:WSCO2Average.find().fetch(),
+   Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({},{limit:1}).fetch(),
+   Dev_5CCF7FEFB40E: Dev_5CCF7FEFB40E.find({},{limit:1}).fetch(),
 
   };
 }, TitleDataWS);
