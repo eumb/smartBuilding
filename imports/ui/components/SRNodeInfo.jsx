@@ -65,7 +65,7 @@ render() {
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.Dev_5CCF7FF0B17A('temp')}
                           {this.Dev_5CCF7FF0B17A('humid')}
@@ -78,7 +78,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-                    {this.Dev_5CCF7FF0B17A('updated')}
+                    <p className="updated">{this.Dev_5CCF7FF0B17A('updated')}</p>
                          </div>          
                 </div>
               </div> 
@@ -99,7 +99,7 @@ render() {
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.Dev_5CCF7FF0B544('temp')}
                           {this.Dev_5CCF7FF0B544('humid')}
@@ -111,7 +111,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-                    {this.Dev_5CCF7FF0B544('updated')}
+                   <p className="updated"> {this.Dev_5CCF7FF0B544('updated')}</p>
                          </div>          
                 </div>
               </div> 
@@ -133,7 +133,7 @@ render() {
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.Dev_5CCF7FF0B704('temp')}
                           {this.Dev_5CCF7FF0B704('humid')}
@@ -145,7 +145,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-                           {this.Dev_5CCF7FF0B704('updated')}
+                        <p className="updated">   {this.Dev_5CCF7FF0B704('updated')}</p>
                          </div>          
                 </div>
               </div> 
@@ -158,7 +158,7 @@ render() {
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
@@ -172,7 +172,7 @@ render() {
                       </tr>
                       <tr>
                       <td>
-                        <table className="tile_info">
+                        <table className="table table-hover">
                          <tbody>
                           {this.Dev_5CCF7FD5CB47('temp')}
                           {this.Dev_5CCF7FD5CB47('humid')}
@@ -185,7 +185,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-                        {this.Dev_5CCF7FD5CB47('updated')}
+                       <p className="updated"> {this.Dev_5CCF7FD5CB47('updated')}</p>
                          </div>          
                 </div>
               </div> 

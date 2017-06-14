@@ -22,7 +22,7 @@ export default class WS extends React.Component {
         <TitleDataWS />
         <div className="row">
             <div className="col-md-12 col-sm-12 col-xs-12">
-              <div className="dashboard_graph">
+              <div className="sr_page">
                     <div className="row">
                       <div className="align_right">
                         <h3>WorkSpace <small>Realtime data</small> </h3>

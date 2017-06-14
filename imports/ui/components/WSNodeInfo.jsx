@@ -87,7 +87,7 @@ render() {
           <div className="row">
 
 
-              <div className="col-md-4 col-sm-4 col-xs-12">
+              <div className="col-md-4 col-sm-4 col-xs-12 bg">
                 <div className="x_panel ">
                   
                     <div className="">
@@ -119,7 +119,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-     {this.nodeValues5CCF7FA43A8B('updated')} 
+   <p className="updated">  {this.nodeValues5CCF7FA43A8B('updated')} </p>
                     </div>          
                 </div>
               </div> 
@@ -157,7 +157,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-          {this.nodeValues5CCF7FF0AA4F('updated')} 
+        <p className="updated">  {this.nodeValues5CCF7FF0AA4F('updated')} </p>
                     </div>          
                 </div>
               </div> 
@@ -196,7 +196,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-   {this.nodeValues5CCF7FEFBAD3('updated')} 
+  <p className="updated"> {this.nodeValues5CCF7FEFBAD3('updated')} </p>
                     </div>          
                 </div>
               </div> 
@@ -237,7 +237,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
-       {this.nodeValues5CCF7FEFB0C0('updated')} 
+      <p className="updated"> {this.nodeValues5CCF7FEFB0C0('updated')} </p>
                       </div>          
                   </div>
                 </div> 
@@ -275,7 +275,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
-   {this.nodeValues5CCF7FEFB40E('updated')} 
+   <p className="updated">{this.nodeValues5CCF7FEFB40E('updated')} </p>
                       </div>          
                   </div>
                 </div> 
@@ -312,7 +312,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
- {this.nodeValues5CCF7FEFBE72('updated')}
+ <p className="updated">{this.nodeValues5CCF7FEFBE72('updated')}</p>
                       </div>          
                   </div>
                 </div> 
@@ -324,7 +324,7 @@ render() {
             <div className="row">
                 
              <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className=" ">
+                  <div className="x_panel">
                     
                       <div className="">
 
@@ -353,7 +353,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
-{this.nodeValues5CCF7FA43AB8('updated')} 
+<p className="updated">{this.nodeValues5CCF7FA43AB8('updated')} </p>
                       </div>          
                   </div>
                 </div> 
@@ -389,7 +389,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
-                        {this.nodeValues5CCF7FA43AB8('updated')} 
+                       <p className="updated"> {this.nodeValues5CCF7FA43AB8('updated')} </p>
                       </div>          
                   </div>
                 </div> 
@@ -426,7 +426,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
-                          {this.nodeValuesext('updated')} 
+                          <p className="updated">{this.nodeValuesext('updated')} </p> 
                       </div>          
                   </div>
                 </div> 

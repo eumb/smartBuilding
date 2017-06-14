@@ -133,3 +133,10 @@ max-height:100%;
 .dc_page{
   height: 920px;
 }
+.bg{
+  background: #F7F7F7;
+}
+.updated{
+  position:absolute;
+  bottom: 0;
+}
