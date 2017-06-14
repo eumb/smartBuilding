@@ -49,53 +49,43 @@ render() {
             <div className="row tile_count">
               <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-thermometer"></i> Office Temperature (°C)</span>
-               {this.renderTasks('temp')}
-
-            {/*  <AvgData data={this.props.WS}/>*/}
-  
-            {/*  <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
-                   </div>
-                  <div className="col-md-6 tile">
-                    <div  className=" count_top spaklines">
+                  <span className="count_top"><i className="wi wi-thermometer"></i> Office F Temperature (°C)</span>
+                   {this.renderTasks('temp')}
+               </div>
+               <div className="col-md-6 col-sm-6 col-xs-6">
+            
 
                   <SmallGraphs sensoraverage={this.props.WSTempAverage} type={"temp"} />
                  
-                    </div>
+                    
                  </div>
             </div>
          
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                  <div className="col-md-6 col-sm-6 col-xs-6">
-                    <span className="count_top"><i className="wi  wi-humidity"></i> Office Humidity (%)</span>
+                    <span className="count_top"><i className="wi  wi-humidity"></i> Office F Humidity (%)</span>
                     {this.renderTasks('humid')}
-               {/*     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>*/}
                  </div>
                     
                   <div className="col-md-6 col-sm-6 col-xs-6">
-                   
-   <div  className="count_top spaklines">  </div>
-     <SmallGraphs sensoraverage={this.props.WSHumidAverage} type={"humid"} />
+                                     
+                       <SmallGraphs sensoraverage={this.props.WSHumidAverage} type={"humid"} />
                  </div>
-                
-              
             </div>  
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-horizon-alt"></i> Office Light (lx)</span>
-              <div className="count"> {this.renderTasks('light')}</div>
-          {/*    <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
+              <span className="count_top"><i className="wi wi-horizon-alt"></i> Office F Light (lx)</span>
+              {this.renderTasks('light')}
            </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
-               <SmallGraphs sensoraverage={this.props.WSLightAverage} type={"noise"} />
+               <SmallGraphs sensoraverage={this.props.WSLightAverage} type={"light"} />
                  </div>
             </div>
 
           <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-bullhorn"></i> Office Noise (dB) </span>
+              <span className="count_top"><i className="fa fa-bullhorn"></i> Office F Noise (dB) </span>
              {this.renderTasks('noise')}
-        {/*      <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                      <SmallGraphs sensoraverage={this.props.WSNoiseAverage} type={"noise"} />
@@ -103,9 +93,8 @@ render() {
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-smog"></i> Office CO2  (ppm)</span>
+              <span className="count_top"><i className="wi wi-smog"></i> Office F CO2  (ppm)</span>
              {this.renderSensorsCO2('co2')}
-{/*              <span className="count_bottom"><i className="red"><i className="fa fa-sort-desc"></i>12% </i> From last Week</span>*/}
             </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                   <SmallGraphs sensoraverage={this.props.WSCO2Average} type={"co2"} />
@@ -114,9 +103,8 @@ render() {
 
              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-dust"></i> Office Dust (µg/m3) </span>
-              <div className="count"> {this.renderSensorsDust('dust')}</div>
-{/*              <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>*/}
+              <span className="count_top"><i className="wi wi-dust"></i> Office F Dust (µg/m3) </span>
+              {this.renderSensorsDust('dust')}
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                 <SmallGraphs sensoraverage={this.props.WSDustAverage} type={"dust"} />

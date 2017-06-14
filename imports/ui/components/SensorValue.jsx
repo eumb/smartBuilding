@@ -12,9 +12,30 @@ export default class WSSensorValue extends Component {
 
   	if (sensortype==="temp"){
 
-    return (
-      <div className="count">{this.props.sensorvalue.temp}</div>
+     if (this.props.sensorvalue.temp <20){
+      return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.temp}</div>
+      <span><strong>Comfortable:</strong></span><div>25 °C</div> 
+       </div>
     );
+    } 
+    if (this.props.sensorvalue.temp > 30){
+            return (
+      <div>
+      <div className="count red">{this.props.sensorvalue.temp}</div>
+       <span><strong>Comfortable:</strong></span><div>25 °C</div> 
+       </div>
+    );
+    } else {
+
+                return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.humid}</div>
+       <span><strong>Comfortable:</strong></span><div><strong>25 °C</strong></div> 
+       </div>
+    );
+    }
 	}
 
 	if (sensortype==="humid"){
@@ -22,7 +43,7 @@ export default class WSSensorValue extends Component {
       return (
       <div>
       <div className="count yellow">{this.props.sensorvalue.humid}</div>
-       <span><strong>Comfortable: 30%-60%</strong></span> 
+        <span><strong>Comfortable:</strong></span><div>30%-60%</div> 
        </div>
     );
     } 
@@ -46,29 +67,115 @@ export default class WSSensorValue extends Component {
 	}
 
 	if (sensortype==="noise"){
-
+    if (this.props.sensorvalue.noise > 70){
     return (
-      <div className="count">{this.props.sensorvalue.noise}</div>
-    );
-	}
-    if (sensortype==="light"){
+      <div>
+      <div className="count red">{this.props.sensorvalue.noise}</div>
 
-    return (
-      <div className="count">{this.props.sensorvalue.light}</div>
+         <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div> 
+      </div>
     );
+	  } 
+    if(this.props.sensorvalue.noise < 50){
+       return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.noise}</div>
+          <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div>
+      </div>
+    );
+    }else
+    {
+       return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.noise}</div>
+          <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div>
+      </div>
+    );
+    }
+
+  }
+  if (sensortype==="light"){
+    if (this.props.sensorvalue.light > 600){
+      return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.light}</div>
+      <span><strong>Comfortable:</strong></span><div>400 lx</div> 
+       </div>
+    );
+    } 
+    if (this.props.sensorvalue.light < 300){
+            return (
+      <div>
+      <div className="count red">{this.props.sensorvalue.light}</div>
+       <span><strong>Comfortable:</strong></span><div>400 lx</div> 
+       </div>
+    );
+    } else {
+
+                return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.light}</div>
+       <span><strong>Comfortable:</strong></span><div><strong>400 lx</strong></div> 
+       </div>
+    );
+    }  
+
   }
    if (sensortype==="dust"){
-
-    return (
-      <div className="count">{this.props.sensorvalue.dust}</div>
+    if (this.props.sensorvalue.dust <10){
+      return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.dust}</div>
+      <span><strong>Normal:</strong></span><div>35 µg/m3</div> 
+       </div>
     );
+    } 
+    if (this.props.sensorvalue.dust > 50){
+            return (
+      <div>
+      <div className="count red">{this.props.sensorvalue.dust}</div>
+       <span><strong>Normal:</strong></span><div>35 µg/m3</div> 
+       </div>
+    );
+    } else {
+
+                return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.dust}</div>
+       <span><strong>Normal:</strong></span><div><strong>35 µg/m3</strong></div> 
+       </div>
+    );
+    } 
   
   }  
-      if (sensortype==="co2"){
+  
+  if (sensortype==="co2"){
 
+ if (this.props.sensorvalue.co2 > 1000){
     return (
-      <div className="count">{this.props.sensorvalue.co2}</div>
+      <div>
+      <div className="count red">{this.props.sensorvalue.co2}</div>
+
+         <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div> 
+      </div>
     );
+    } 
+    if(this.props.sensorvalue.co2 < 350){
+       return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.co2}</div>
+          <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div>
+      </div>
+    );
+    }else
+    {
+       return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.co2}</div>
+          <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div>
+      </div>
+    );
+    }
   
   }  
 

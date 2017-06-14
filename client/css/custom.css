@@ -260,7 +260,9 @@ body .container.body .right_col {
 
 .red {
   color: #E74C3C; }
-
+.yellow{
+  color: yellow;
+}
 .dark {
   color: #34495E; }
 

@@ -42,6 +42,12 @@ export default class SmallGraphs extends React.Component {
       return Math.round(d.averagevalue);
     })
     }
+       if (type==="light"){
+   return data=this.props.sensoraverage.map(function(d){
+      //console.log(Math.round(d.averagevalue))
+      return Math.round(d.averagevalue);
+    })
+    }
   }
 
 
@@ -61,7 +67,7 @@ var style = {
                     <SparklinesSpots />
 
                 </Sparklines>
-            <div> daily average trend</div> 
+            <div> daily trend</div> 
                  
                   </div>
 

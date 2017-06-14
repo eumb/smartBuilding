@@ -40,11 +40,7 @@ render() {
                <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Temperature (°C)</span>
                {this.renderTasks('temp')}
-
-            {/*  <AvgData data={this.props.SR}/>*/}
-  
-              {/*<span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
-                   </div>
+                 </div>
                   <div className="col-md-6 tile">
                     <div  className=" count_top spaklines">  
                   <SmallGraphsSR sensoraverage={this.props.srTempAverage} type={"temp"} />
@@ -57,7 +53,6 @@ render() {
                  <div className="col-md-6 col-sm-6 col-xs-6">
                     <span className="count_top"><i className="wi  wi-humidity"></i> Humidity (%)</span>
                     {this.renderTasks('humid')}
-                {/*    <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>*/}
                  </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
@@ -73,7 +68,6 @@ render() {
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-bullhorn"></i> Noise level (dB) </span>
              {this.renderTasks('noise')}
-         {/*     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</span>*/}
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                      <SmallGraphsSR sensoraverage={this.props.srNoiseAverage} type={"noise"} />
@@ -84,8 +78,7 @@ render() {
              <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="wi wi-dust"></i> Dust level  (ppm) </span>
-              <div className="count"> {this.renderDust('dust')}</div>
-        {/*      <div className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>34% </i> From last Week</div>*/}
+             {this.renderDust('dust')}
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
                   <SmallGraphsSR sensoraverage={this.props.srDustAverage} type={"dust"} />
