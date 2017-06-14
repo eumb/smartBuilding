@@ -33,7 +33,7 @@ renderSensorsDust(sensorval) {
   }
 renderSensorsCO2(sensorval) {
   console.log(this.props.ws)
-    return this.props.ws_co2.map((sensorvalue) => (
+    return this.props.ws.map((sensorvalue) => (
       <SensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
