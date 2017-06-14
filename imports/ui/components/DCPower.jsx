@@ -61,7 +61,7 @@ mapData(dataset){
     datasets: [
         {
             label: 'System Power daily average',
-            fillColor: "rgba(225,241,238,0.5)",
+            backgroundColor: 'rgba(88,203,181,0.5)',
            /* radius: 0,*/
             data:PSys_kW,
         }

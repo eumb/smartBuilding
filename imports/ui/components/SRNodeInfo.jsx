@@ -49,7 +49,7 @@ render() {
        <div> 
            <div className="row">
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="x_panel">
+                <div className="x_panel_small">
                   
                     <div className="">
                       <table className="" style={widthtable}>
@@ -83,7 +83,7 @@ render() {
                 </div>
               </div> 
                         <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="x_panel">
+                <div className="x_panel_small">
                   
                     <div className="">
                       <table className="" style={widthtable}>
@@ -117,7 +117,7 @@ render() {
               </div> 
 
                         <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="x_panel">
+                <div className="x_panel_small">
                   
                     <div className="">
                       <table className="" style={widthtable}>
@@ -156,7 +156,7 @@ render() {
 
           <div className="row">
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="x_panel">
+                <div className="x_panel_small">
                   
                     <div className="">
                       <table className="" style={widthtable}>

@@ -88,7 +88,7 @@ render() {
 
 
               <div className="col-md-4 col-sm-4 col-xs-12 bg">
-                <div className="x_panel ">
+                <div className="x_panel_small ">
                   
                     <div className="">
 
@@ -127,7 +127,7 @@ render() {
 
 
               <div className="col-md-4 col-sm-4 col-xs-12">
-                <div className="x_panel ">
+                <div className="x_panel_small ">
                   
                     <div className="">
 
@@ -166,7 +166,7 @@ render() {
 
 
               <div className="col-md-4 col-sm-4 col-xs-12">
-                <div className="x_panel ">
+                <div className="x_panel_small ">
                   
                     <div className="">
 
@@ -207,7 +207,7 @@ render() {
 
               <div className="row">
                 <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel ">
+                  <div className="x_panel_small ">
                     
                       <div className="">
 
@@ -245,7 +245,7 @@ render() {
 
 
                 <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel ">
+                  <div className="x_panel_small ">
                     
                       <div className="">
 
@@ -282,7 +282,7 @@ render() {
 
 
                 <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel ">
+                  <div className="x_panel_small ">
                     
                       <div className="">
 
@@ -324,7 +324,7 @@ render() {
             <div className="row">
                 
              <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel">
+                  <div className="x_panel_small">
                     
                       <div className="">
 
@@ -360,7 +360,7 @@ render() {
 
 
                      <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel ">
+                  <div className="x_panel_small ">
                     
                       <div className="">
 
@@ -395,7 +395,7 @@ render() {
                 </div> 
 
                 <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel ">
+                  <div className="x_panel_small ">
                     
                       <div className="">
 
