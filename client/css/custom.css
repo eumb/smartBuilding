@@ -1481,7 +1481,8 @@ span.right {
 /** top tiles  */
 .tile_count {
   /* margin-bottom: 20px; */
- /*  margin-top: 20px; */ }
+ /*  margin-top: 20px; */ 
+margin-top: 5px}
 
 .tile_count .tile_stats_count {
   border-bottom: 1px solid #D9DEE4;

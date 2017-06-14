@@ -51,7 +51,7 @@ render() {
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
@@ -85,7 +85,7 @@ render() {
                         <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>
@@ -119,7 +119,7 @@ render() {
                         <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel">
                   
-                    <div className="x_content">
+                    <div className="">
                       <table className="" style={widthtable}>
                      <tbody>
                       <tr>

@@ -114,7 +114,7 @@ export default class WSNodeValues extends Component {
     //console.log(this.props.sensorvalue.created_at)
     //console.log(date)
     return (
-      <p> updated at: {this.props.sensorvalue.created_at.toString()}</p>
+      <p> <strong> Updated at: </strong>{this.props.sensorvalue.created_at.toString()}</p>
     );
   }
 

@@ -89,7 +89,7 @@ var data = {
     labels: xScale,
     datasets: [
         {
-            label: 'Platform Power Usage Effectiveness (24h)',
+            label: 'Platform Power Usage Effectiveness (daily average)',
             backgroundColor: 'rgba(88,203,181,0.5)',
             //radius: 0,
             lineTension:0,

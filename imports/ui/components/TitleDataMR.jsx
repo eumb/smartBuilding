@@ -44,7 +44,7 @@ render() {
                     </div>
                 </div>  
                 <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count">
-                 {this.renderMR1('pres')}
+                 {this.renderMR2('pres')}
                     <div className="col-md-6 col-sm-6 col-xs-6">
                       <span className="count_top"><i className="wi wi-thermometer"></i> Temperature Meeting Room 2</span>
                     <div> {this.renderMR2('temp')} <span className="count">°C</span></div>
@@ -62,8 +62,7 @@ render() {
 }
 
  TitleDataMR.propTypes = {
-  MR1: PropTypes.array.isRequired,
-  MR2: PropTypes.array.isRequired,
+
   Dev_5CCF7FA43AB8:PropTypes.array.isRequired,
   Dev_5CCF7FEFBE9E:PropTypes.array.isRequired,
 /*  MR1HumidAverage: PropTypes.array.iMRequired,
@@ -76,8 +75,8 @@ render() {
 
 export default createContainer(() => {
   Meteor.subscribe('MR');
-  Meteor.subscribe('Dev_5CCF7FA43AB8');
-  Meteor.subscribe('Dev_5CCF7FEFBE9E');
+  Meteor.subscribe('5CCF7FA43AB8');
+  Meteor.subscribe('5CCF7FEFBE9E');
 /*    Meteor.subscribe('MR1HumidAverage');
     Meteor.subscribe('MR1TempAverage');
     Meteor.subscribe('MR2HumidAverage');
@@ -87,10 +86,9 @@ export default createContainer(() => {
 
 
   return { 
-     MR1 : MeetingRoom.find({DeviceID:"5CCF7FEFBE9E"},{limit:1}).fetch(),
-     MR2 : MeetingRoom.find({DeviceID:"5CCF7FA43AB8"},{limit:1}).fetch(),
-     Dev_5CCF7FEFBE9E:MeetingRoom.find({},{limit:1}).fetch(),
-     Dev_5CCF7FA43AB8:MeetingRoom.find({},{limit:1}).fetch(),
+  
+     Dev_5CCF7FEFBE9E:Dev_5CCF7FEFBE9E.find({}).fetch(),
+     Dev_5CCF7FA43AB8:Dev_5CCF7FA43AB8.find({}).fetch(),
 
 
 /*     MR1HumidAverage : MRHumidAverage.find().fetch(),
