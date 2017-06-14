@@ -71,6 +71,7 @@ render() {
                     {this.renderTasks('humid')}
                {/*     <span className="count_bottom"><i className="green"><i className="fa fa-sort-asc"></i>3% </i> Decreasing</span>*/}
                  </div>
+                    
                   <div className="col-md-6 col-sm-6 col-xs-6">
                    
    <div  className="count_top spaklines">  </div>

@@ -18,10 +18,31 @@ export default class WSSensorValue extends Component {
 	}
 
 	if (sensortype==="humid"){
-
-    return (
-      <div className="count">{this.props.sensorvalue.humid}</div>
+    if (this.props.sensorvalue.humid <30){
+      return (
+      <div>
+      <div className="count yellow">{this.props.sensorvalue.humid}</div>
+       <span><strong>Comfortable: 30%-60%</strong></span> 
+       </div>
     );
+    } 
+    if (this.props.sensorvalue.humid > 60){
+            return (
+      <div>
+      <div className="count red">{this.props.sensorvalue.humid}</div>
+       <span><strong>Comfortable:</strong></span><div>30%-60%</div> 
+       </div>
+    );
+    } else {
+
+                return (
+      <div>
+      <div className="count green">{this.props.sensorvalue.humid}</div>
+       <span><strong>Comfortable:</strong></span><div><strong>30%-60%</strong></div> 
+       </div>
+    );
+    }
+    
 	}
 
 	if (sensortype==="noise"){

@@ -109,6 +109,19 @@ export default class WSNodeValues extends Component {
     );
   }
 
+
+     if (sensortype==="uv"){
+
+    return (
+       <tr>
+          <td>
+            <p><i className="fa fa-square gray"></i> Ultraviolet Light </p>
+          </td>
+          <td> {this.props.sensorvalue.uv} </td>
+        </tr>
+    );
+  }
+
     if (sensortype==="updated"){
     date=moment(this.props.sensorvalue.created_at).utcOffset(+3);
     //console.log(this.props.sensorvalue.created_at)

@@ -8,6 +8,7 @@ import {Dev_5CCF7FEFBE72} from '../../collections/collections.js';
 import {Dev_5CCF7FF0AA4F} from '../../collections/collections.js';
 import {Dev_5CCF7FEFBAD3} from '../../collections/collections.js';
 import {Dev_5CCF7FEFB0C0} from '../../collections/collections.js';
+import {Dev_5CCF7FF0A971} from '../../collections/collections.js';
 
 class Heatmaps extends React.Component {
  
@@ -19,6 +20,7 @@ class Heatmaps extends React.Component {
     tempMap4=[]
     tempMap5=[]
     tempMap6=[]
+    tempMap7=[]
     h1=_.pluck(this.props.Dev_5CCF7FA43A8B, "temp");
     tempMap1.push(h1)
     tempMap1.forEach(function(e) {
@@ -60,15 +62,26 @@ class Heatmaps extends React.Component {
       dev6_value = e.toString()*1;
 
     });
+    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "temp");
+    tempMap7.push(h7)
+     tempMap7.forEach(function(e) {
+      dev7_value = e.toString()*1;
+
+    });
 
     return heatmap={
      "L01":[
+          
           [dev3_value, dev2_value,  dev1_value],
           [dev6_value, dev5_value, dev4_value]
         ]
     }
 
   }
+
+
+
+
 
 
   humidityMap(){
@@ -252,7 +265,91 @@ class Heatmaps extends React.Component {
 
   }
 
+   heatMapExtTemp(){
+ 
 
+    tempMap7=[]
+  
+    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "temp");
+    tempMap7.push(h7)
+     tempMap7.forEach(function(e) {
+      dev7_value = e.toString()*1;
+
+    });
+
+     heatmap={
+     "L01":[
+          
+          [dev7_value,dev7_value, dev7_value],
+          [dev7_value,dev7_value, dev7_value]
+        ]
+    }
+    //console.log(heatmap)
+    return heatmap;
+  }
+     heatMapExtHumid(){
+ 
+
+    tempMap7=[]
+  
+    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "humid");
+    tempMap7.push(h7)
+     tempMap7.forEach(function(e) {
+      dev7_value = e.toString()*1;
+
+    });
+
+    return humid={
+     "L01":[
+          
+          [dev7_value,dev7_value, dev7_value],
+          [dev7_value,dev7_value, dev7_value]
+        ]
+    }
+
+  }
+     heatMapExtNoise(){
+ 
+
+    tempMap7=[]
+  
+    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "noise");
+    tempMap7.push(h7)
+     tempMap7.forEach(function(e) {
+      dev7_value = e.toString()*1;
+
+    });
+
+    return noise={
+     "L01":[
+          
+          [dev7_value,dev7_value, dev7_value],
+          [dev7_value,dev7_value, dev7_value]
+        ]
+    }
+
+  }
+     heatMapExtLight(){
+ 
+
+    tempMap7=[]
+  
+    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "light");
+    tempMap7.push(h7)
+     tempMap7.forEach(function(e) {
+      dev7_value = e.toString()*1;
+
+    });
+
+    return light={
+     "L01":[
+          
+          [dev7_value,dev7_value, dev7_value],
+          [dev7_value,dev7_value, dev7_value]
+        ]
+    }
+
+  }
 
   render() {
 
@@ -369,7 +466,8 @@ class Heatmaps extends React.Component {
                   
                       </div>*/}
                       <div className="col-md-12 col-sm-4 col-xs-12">
-                        <Heatmap data={this.heatMap()} type={"temp"}/>
+                        <Heatmap data={this.heatMap()} ext={this.heatMapExtTemp()} type={"temp"}/>
+
                       </div>
                   <div className="row">
                     <div className='my-legend'>
@@ -402,7 +500,7 @@ class Heatmaps extends React.Component {
                   
                       </div>*/}
                       <div className="col-md-12 col-sm-4 col-xs-12">
-                        <Heatmap data={this.humidityMap()} type={"humid"}/>
+                        <Heatmap data={this.humidityMap()} ext={this.heatMapExtHumid()} type={"humid"}/>
                       </div>
                           <div className="row">
                     <div className='my-legend'>
@@ -436,7 +534,7 @@ class Heatmaps extends React.Component {
                   
                       </div>*/}
                       <div className="col-md-12 col-sm-4 col-xs-12">
-                        <Heatmap data={this.lightMap()} type={"light"}/>
+                        <Heatmap data={this.lightMap()} ext={this.heatMapExtLight()} type={"light"}/>
                       </div>
 
                                  <div className="row">
@@ -476,7 +574,7 @@ class Heatmaps extends React.Component {
                       
                           </div>*/}
                           <div className="col-md-12 col-sm-4 col-xs-12">
-                            <Heatmap data={this.noiseMap()} type={"noise"}/>
+                            <Heatmap data={this.noiseMap()} ext={this.heatMapExtNoise()} type={"noise"}/>
                           </div>
 
                                                      <div className="row">
@@ -520,6 +618,7 @@ Heatmaps.propTypes = {
   Dev_5CCF7FF0AA4F: PropTypes.array.isRequired,
   Dev_5CCF7FEFBAD3: PropTypes.array.isRequired,
   Dev_5CCF7FEFB0C0: PropTypes.array.isRequired,
+  Dev_5CCF7FF0A971: PropTypes.array.isRequired,
 
  
 };
@@ -533,6 +632,7 @@ export default createContainer(() => {
   Meteor.subscribe('5CCF7FF0AA4F');
   Meteor.subscribe('5CCF7FEFBAD3');
   Meteor.subscribe('5CCF7FEFB0C0');
+  Meteor.subscribe('5CCF7FF0A971');
 
   return { 
    Dev_5CCF7FA43A8B: Dev_5CCF7FA43A8B.find({}).fetch(),
@@ -541,6 +641,7 @@ export default createContainer(() => {
    Dev_5CCF7FF0AA4F: Dev_5CCF7FF0AA4F.find({}).fetch(),
    Dev_5CCF7FEFBAD3: Dev_5CCF7FEFBAD3.find({}).fetch(),
    Dev_5CCF7FEFB0C0: Dev_5CCF7FEFB0C0.find({}).fetch(),
+   Dev_5CCF7FF0A971: Dev_5CCF7FF0A971.find({}).fetch(),
   };
 }, Heatmaps);
 

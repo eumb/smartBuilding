@@ -406,7 +406,7 @@ render() {
                        
                           <th>
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Exterior Node</p>
+                              <p className="">Exterior - Node 5CCF7FF0A971</p>
                             </div>
                          
                           </th>
@@ -418,8 +418,8 @@ render() {
                             {this.nodeValuesext('temp')}
                             {this.nodeValuesext('humid')}
                             {this.nodeValuesext('light')} 
-{/*                         {this.nodeValuesext('uv')}
-*/}                         {this.nodeValuesext('co2')} 
+                            {this.nodeValuesext('uv')}
+                           {this.nodeValuesext('co2')} 
                           </tbody>
                           </table>
                         </td>

@@ -8,14 +8,14 @@ export default class Heatmap extends React.Component {
     drawHeatmap(color1,color2,color3,color4,color5,x1,y1,x2,y2,data,type){
 
     if(type==="temp"){
-      var colOrigDomain = [20, 22, 25, 27, 29];
-      var colorDomain = [20, 22, 25, 27, 29];
+      var colOrigDomain = [20, 22, 25, 27, 40];
+      var colorDomain = [20, 22, 25, 27, 40];
     }if (type==="humid"){
-      var colOrigDomain = [35, 40, 45, 47, 50];
-      var colorDomain = [35, 40, 45, 47, 50];
+      var colOrigDomain = [30, 40, 45, 47, 50];
+      var colorDomain = [30, 40, 45, 47, 50];
     }if(type==="light"){
-      var colOrigDomain = [4500, 2500, 1300, 600, 100];
-      var colorDomain = [4500, 2500, 1300, 600, 100];
+      var colOrigDomain = [11000, 5500, 2300, 600, 100];
+      var colorDomain = [11000, 5500, 2300, 600, 100];
     }if(type==="noise"){
       var colOrigDomain = [40, 50, 70, 90, 100];
       var colorDomain = [40, 50, 70, 90, 100];
@@ -91,20 +91,26 @@ el.appendChild(xml.documentElement);
 
   componentDidUpdate(){
 
+
+
       if(this.props.type==="humid"){
 
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
 
       this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="temp"){
 
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
 
       this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="noise"){
 
-
+/*      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
+*/
       this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,420,208,this.props.data,this.props.type);
       }  if(this.props.type==="light"){
 
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
 
       this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,420,208,this.props.data,this.props.type);
       }
@@ -115,18 +121,21 @@ el.appendChild(xml.documentElement);
 
       if(this.props.type==="humid"){
 
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
 
       this.drawHeatmap('#f1eef6', '#bdc9e1', '#74a9cf', '#2b8cbe', '#045a8d',12,41,430,208,this.props.data,this.props.type);
       }  if(this.props.type==="temp"){
 
-
+        this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
       this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',12,41,430,208,this.props.data,this.props.type);
       }  if(this.props.type==="noise"){
 
-
+/*      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
+*/
       this.drawHeatmap('#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f',12,41,430,208,this.props.data,this.props.type);
       }  if(this.props.type==="light"){
 
+      this.drawHeatmap('#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404',0,90,20,80,this.props.ext,this.props.type);
 
       this.drawHeatmap('#ffffcc', '#c2e699', '#78c679', '#31a354', '#006837',12,41,430,208,this.props.data,this.props.type);
       }
