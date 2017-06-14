@@ -25,7 +25,7 @@ for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
-for (i=xScale.length; i>0;i--){
+for (i=0; i <xScale.length ;i++){
     Active_Power_Sum_L1_L3_kW.push(Active_Power_Sum_L1_L3[i]/1000);
   }
 
@@ -48,7 +48,7 @@ generateChartDataHVAC() {
 for (i=xScale.length; i>0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
-for (i=xScale.length; i>0;i--){
+for (i=0; i <xScale.length ;i++){
     Active_Power_Sum_L1_L3_kW.push(Active_Power_Sum_L1_L3[i]/1000);
   }
 
@@ -68,7 +68,7 @@ generatePercentData(){
   Active_Power_Sum_L1_L3_platform=_.pluck(dataset2, "averagevalue");
   Active_Power_Sum_L1_L3_hvac=_.pluck(dataset, "averagevalue");
   
-  for (i=xScale.length; i>0;i--){
+  for (i=xScale.length; i>=0;i--){
     timeScale.push(moment(xScale[i]).utcOffset(3).format("H:mm"));
   }
 
