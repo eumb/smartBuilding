@@ -61,7 +61,7 @@ var style = {
                     <SparklinesSpots />
 
                 </Sparklines>
-            <div> daily trend</div> 
+            <div className="daily_trend"> daily trend</div> 
                  
                   </div>
 

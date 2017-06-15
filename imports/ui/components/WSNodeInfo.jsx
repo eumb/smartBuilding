@@ -83,7 +83,7 @@ render() {
     return (
         
          
-<div>
+<div className="ws_nodeInfo">
           <div className="row">
 
 

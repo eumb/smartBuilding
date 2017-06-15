@@ -123,7 +123,7 @@ render() {
   }
     return (
         
-        <div>
+        <div className="ws_nodeInfo">
 
 
 

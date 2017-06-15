@@ -31,7 +31,7 @@ export default class MainLayout extends React.Component {
                             <div className="navbar nav_title">
                                 {/*<a href="index.html" className="site_title"><i className="fa fa-building-o"></i> <span>Smart Campus</span></a>*/}
                                 
-                                 <img className="logo" src="Smart_Building_Schita_fundal.png" alt="logo" ></img>
+                                 <img className="logo" src="logo.png" alt="logo" ></img>
                             </div>
                             <div className="divider inverted"></div> 
                             <div className="clearfix"></div>

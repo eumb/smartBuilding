@@ -58,16 +58,17 @@ render() {
 
 var style = {
       height:'85px'
+      
     };  
   return (
-                  <div className="sparkline22 graph" style={style}>
+                  <div className="sparkline22 graph " style={style}>
                  
               <Sparklines data={this.renderTasks()} limit={5} width={150} height={85}>
                 <SparklinesLine color="#1ABB9C" />
                     <SparklinesSpots />
 
                 </Sparklines>
-            <div> daily trend</div> 
+            <div className="daily_trend"> daily trend</div> 
                  
                   </div>
 

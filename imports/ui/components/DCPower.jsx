@@ -134,7 +134,7 @@ render() {
 
 
     return (
-      <div className="dc_page">
+      <div className="dc_page ws_nodeInfo">
           <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
            
               <div className="col-md-5 col-sm-6 col-xs-12 bg-white">

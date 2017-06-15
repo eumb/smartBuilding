@@ -46,7 +46,7 @@ render() {
     width:'100%'
   }
     return (
-       <div> 
+       <div className="ws_nodeInfo"> 
            <div className="row">
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel_small">
