@@ -138,10 +138,19 @@ max-height:100%;
 }
 .updated{
   position:absolute;
+
+  bottom: 0;
+}
+.updated_currents{
+  position:relative;
+  margin-top: 5px;
   bottom: 0;
 }
 .centered{
 
   position: relative;
   padding-left : 15%
+}
+.powered{
+  padding-top: 5px;
 }

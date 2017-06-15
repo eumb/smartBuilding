@@ -7,7 +7,16 @@ export default class DCValues extends Component {
   	//console.log(sensortype)
   	//console.log(this.props.sensorvalue)
     
-  	if (sensortype==="USys"){
+  	 if (sensortype==="updated"){
+    date=moment(this.props.sensorvalue.created_at).utcOffset(+3);
+    //console.log(this.props.sensorvalue.created_at)
+    //console.log(date)
+    return (
+      <p> <strong> Updated at: </strong>{this.props.sensorvalue.created_at.toString()}</p>
+    );
+  }
+
+    if (sensortype==="USys"){
 
     return (
      <tr>

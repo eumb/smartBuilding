@@ -164,6 +164,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                              <p className="updated_currents">  {this.SOSIRE_TR4_ID56('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -203,6 +204,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                               <p className="updated_currents">  {this.SOSIRE_TR3_ID55('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -242,6 +244,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                    <p className="updated_currents">  {this.SOSIRE_TR2_ID54('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -282,6 +285,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                            <p className="updated_currents">  {this.SOSIRE_TR1_ID53('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -325,6 +329,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                       <p className="updated_currents">  {this.MASURA_TGV_ID1('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -364,6 +369,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                       <p className="updated_currents">  {this.TGD_BOROURI_ID52('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -415,6 +421,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                           <p className="updated_currents">  {this.HVAC_CLIME_WIFI_ID73('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -454,6 +461,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                       <p className="updated_currents">  {this.HVAC_CLIME_WIPRO_ID72('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -501,6 +509,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                    <p className="updated_currents">  {this.FN_VITALI_ID7('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -540,6 +549,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                              <p className="updated_currents">  {this.FN_NORMALI_ID8('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -592,6 +602,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                          <p className="updated_currents">  {this.MN_ZONA_1_ID2('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -631,6 +642,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                            <p className="updated_currents">  {this.MN_ZONA_2_ID3('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -670,6 +682,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
+                          <p className="updated_currents">  {this.MN_ZONA_3_ID6('updated')} </p>
                          </div>          
                 </div>
               </div> 

@@ -163,6 +163,7 @@ render() {
                       </tr>
                      </tbody>
                 </table>
+                <p className="updated_currents">  {this.PSC3_1('updated')} </p>
               </div>
               <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                
@@ -202,6 +203,7 @@ render() {
                         </tr>
                        </tbody>
                       </table>
+                           <p className="updated_currents">  {this.PSC3_2('updated')} </p>
                     </div> 
 
                     <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
