@@ -72,7 +72,7 @@ export default class WSSensorValue extends Component {
       <div>
       <div className="count green ">{this.props.sensorvalue.noise}</div>
 
-         <span><strong>Comfortable:</strong></span><div><strong> less than 70 dB</strong></div> 
+         <span><strong>Comfortable:</strong></span><div><strong> Less than 70 dB</strong></div> 
       </div>
     );
 	  } 
@@ -80,7 +80,7 @@ export default class WSSensorValue extends Component {
        return (
       <div>
       <div className="count red">{this.props.sensorvalue.noise}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>less than 70 dB</strong></div>
+          <span><strong>Comfortable:</strong></span><div><strong>Less than 70 dB</strong></div>
       </div>
     ); 
      }
@@ -141,7 +141,7 @@ export default class WSSensorValue extends Component {
        return (
       <div>
       <div className="count green">{this.props.sensorvalue.co2}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>7Less than 1000 ppm</strong></div>
+          <span><strong>Comfortable:</strong></span><div><strong>Less than 1000 ppm</strong></div>
       </div>
     );
     }

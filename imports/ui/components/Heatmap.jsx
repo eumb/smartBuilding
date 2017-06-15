@@ -8,8 +8,8 @@ export default class Heatmap extends React.Component {
     drawHeatmap(color1,color2,color3,color4,color5,x1,y1,x2,y2,data,type){
 
     if(type==="temp"){
-      var colOrigDomain = [20, 22, 25, 27, 40];
-      var colorDomain = [20, 22, 25, 27, 40];
+      var colOrigDomain = [25, 27, 29, 31, 33];
+      var colorDomain = [25, 27, 29, 31, 33];
     }if (type==="humid"){
       var colOrigDomain = [30, 40, 45, 47, 50];
       var colorDomain = [30, 40, 45, 47, 50];
