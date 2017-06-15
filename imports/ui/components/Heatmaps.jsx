@@ -444,7 +444,7 @@ class Heatmaps extends React.Component {
 
               {/*    <div className="row x_title">
                     <div className="col-md-6">
-                      <h3> Office <small>floor plan heatmap</small></h3>
+                      <h3> "Office F" <small>floor plan heatmap</small></h3>
                     </div>
                     <div className="col-md-6">
                
@@ -454,7 +454,7 @@ class Heatmaps extends React.Component {
                   <div className="col-md-3 col-sm-4 col-xs-12 bg-white">
                     <div className="row">
                       <div className="align_right">
-                        <h2>Temperature <small>Office heatmap</small> </h2>
+                        <h2>Temperature <small>"Office F" heatmap</small> </h2>
                                   
                       </div>  
                       <div className="divider"></div>
@@ -488,7 +488,7 @@ class Heatmaps extends React.Component {
                  <div className="col-md-3 col-sm-4 col-xs-12">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
-                        <h2>Humidity  <small>Office heatmap</small></h2>
+                        <h2>Humidity  <small>"Office F" heatmap</small></h2>
                                   
                       </div>  
                       <div className="divider"></div>
@@ -522,7 +522,7 @@ class Heatmaps extends React.Component {
                    <div className="col-md-3 col-sm-4 col-xs-12">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
-                        <h2>Natural Light  <small>Office heatmap</small></h2>
+                        <h2>Natural Light  <small>"Office F" heatmap</small></h2>
                                   
                       </div>  
                       <div className="divider"></div>
@@ -562,7 +562,7 @@ class Heatmaps extends React.Component {
                    <div className="col-md-3 col-sm-4 col-xs-12">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                           <div className="align_right">
-                            <h2>Noise    <small>Office heatmap</small></h2>
+                            <h2>Noise    <small>"Office F" heatmap</small></h2>
                                       
                           </div>  
                           <div className="divider"></div>

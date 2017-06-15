@@ -15,7 +15,7 @@ export default class WSSensorValue extends Component {
      if (this.props.sensorvalue.temp <20){
       return (
       <div>
-      <div className="count yellow">{this.props.sensorvalue.temp}</div>
+      <div className="count red">{this.props.sensorvalue.temp}</div>
       <span><strong>Comfortable:</strong></span><div>25 °C</div> 
        </div>
     );
@@ -31,7 +31,7 @@ export default class WSSensorValue extends Component {
 
                 return (
       <div>
-      <div className="count green">{this.props.sensorvalue.humid}</div>
+      <div className="count green">{this.props.sensorvalue.temp}</div>
        <span><strong>Comfortable:</strong></span><div><strong>25 °C</strong></div> 
        </div>
     );
@@ -42,7 +42,7 @@ export default class WSSensorValue extends Component {
     if (this.props.sensorvalue.humid <30){
       return (
       <div>
-      <div className="count yellow">{this.props.sensorvalue.humid}</div>
+      <div className="count red">{this.props.sensorvalue.humid}</div>
         <span><strong>Comfortable:</strong></span><div>30%-60%</div> 
        </div>
     );
@@ -67,47 +67,32 @@ export default class WSSensorValue extends Component {
 	}
 
 	if (sensortype==="noise"){
-    if (this.props.sensorvalue.noise > 70){
+    if (this.props.sensorvalue.noise < 70){
     return (
       <div>
-      <div className="count red">{this.props.sensorvalue.noise}</div>
+      <div className="count green ">{this.props.sensorvalue.noise}</div>
 
-         <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div> 
+         <span><strong>Comfortable:</strong></span><div><strong> less than 70 dB</strong></div> 
       </div>
     );
 	  } 
-    if(this.props.sensorvalue.noise < 50){
+    if(this.props.sensorvalue.noise >= 70){
        return (
       <div>
-      <div className="count yellow">{this.props.sensorvalue.noise}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div>
+      <div className="count red">{this.props.sensorvalue.noise}</div>
+          <span><strong>Comfortable:</strong></span><div><strong>less than 70 dB</strong></div>
       </div>
-    );
-    }else
-    {
-       return (
-      <div>
-      <div className="count green">{this.props.sensorvalue.noise}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>50-70 dB</strong></div>
-      </div>
-    );
-    }
+    ); 
+     }
 
   }
   if (sensortype==="light"){
-    if (this.props.sensorvalue.light > 600){
-      return (
-      <div>
-      <div className="count yellow">{this.props.sensorvalue.light}</div>
-      <span><strong>Comfortable:</strong></span><div>400 lx</div> 
-       </div>
-    );
-    } 
+   
     if (this.props.sensorvalue.light < 300){
             return (
       <div>
       <div className="count red">{this.props.sensorvalue.light}</div>
-       <span><strong>Comfortable:</strong></span><div>400 lx</div> 
+       <span><strong>Comfortable:</strong></span><div> ~ 400 lx</div> 
        </div>
     );
     } else {
@@ -115,34 +100,26 @@ export default class WSSensorValue extends Component {
                 return (
       <div>
       <div className="count green">{this.props.sensorvalue.light}</div>
-       <span><strong>Comfortable:</strong></span><div><strong>400 lx</strong></div> 
+       <span><strong>Comfortable:</strong></span><div><strong> ~ 400 lx</strong></div> 
        </div>
     );
     }  
 
   }
    if (sensortype==="dust"){
-    if (this.props.sensorvalue.dust <10){
+    if (this.props.sensorvalue.dust <=10){
       return (
       <div>
-      <div className="count yellow">{this.props.sensorvalue.dust}</div>
+      <div className="count green">{this.props.sensorvalue.dust}</div>
       <span><strong>Normal:</strong></span><div>35 µg/m3</div> 
        </div>
     );
     } 
-    if (this.props.sensorvalue.dust > 50){
+    if (this.props.sensorvalue.dust > 10){
             return (
       <div>
       <div className="count red">{this.props.sensorvalue.dust}</div>
        <span><strong>Normal:</strong></span><div>35 µg/m3</div> 
-       </div>
-    );
-    } else {
-
-                return (
-      <div>
-      <div className="count green">{this.props.sensorvalue.dust}</div>
-       <span><strong>Normal:</strong></span><div><strong>35 µg/m3</strong></div> 
        </div>
     );
     } 
@@ -156,34 +133,24 @@ export default class WSSensorValue extends Component {
       <div>
       <div className="count red">{this.props.sensorvalue.co2}</div>
 
-         <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div> 
+         <span><strong>Comfortable:</strong></span><div><strong>Less than 1000 ppm</strong></div> 
       </div>
     );
     } 
-    if(this.props.sensorvalue.co2 < 350){
-       return (
-      <div>
-      <div className="count yellow">{this.props.sensorvalue.co2}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div>
-      </div>
-    );
-    }else
-    {
+    if(this.props.sensorvalue.co2 <=1000){
        return (
       <div>
       <div className="count green">{this.props.sensorvalue.co2}</div>
-          <span><strong>Comfortable:</strong></span><div><strong>700 ppm</strong></div>
+          <span><strong>Comfortable:</strong></span><div><strong>7Less than 1000 ppm</strong></div>
       </div>
     );
     }
-  
-  }  
 
   }
 
 }
 
- 
+}
 WSSensorValue.propTypes = {
   // This component gets the task to display through a React prop.
   // We can use propTypes to indicate it is required
