@@ -835,8 +835,8 @@ h2 {
   column-break-inside: avoid;
   opacity: 1;
   transition: all .2s ease;
-  min-height: 320px;
-  max-height: 320px; }
+  min-height: 310px;
+  max-height: 310px; }
 
 .x_title {
   border-bottom: 2px solid #E6E9ED;

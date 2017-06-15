@@ -355,7 +355,7 @@ class Heatmaps extends React.Component {
 
     tempMap=[]
   
-    h=_.pluck(this.props.Dev_5CCF7FEFBE9E, "temp");
+    h=_.pluck(this.props.Dev_5CCF7FA43A8B, "temp");
     tempMap.push(h)
      tempMap.forEach(function(e) {
       dev_value = e.toString()*1;
@@ -376,7 +376,7 @@ class Heatmaps extends React.Component {
 
     tempMap=[]
   
-    h=_.pluck(this.props.Dev_5CCF7FEFBE9E, "humid");
+    h=_.pluck(this.props.Dev_5CCF7FA43A8B, "humid");
     tempMap.push(h)
      tempMap.forEach(function(e) {
       dev_value = e.toString()*1;
@@ -399,7 +399,7 @@ class Heatmaps extends React.Component {
 
     tempMap=[]
   
-    h=_.pluck(this.props.Dev_5CCF7FA43A8B, "temp");
+    h=_.pluck(this.props.Dev_5CCF7FEFBE9E, "temp");
     tempMap.push(h)
      tempMap.forEach(function(e) {
       dev_value = e.toString()*1;
@@ -420,7 +420,7 @@ class Heatmaps extends React.Component {
 
     tempMap=[]
   
-    h=_.pluck(this.props.Dev_5CCF7FA43A8B, "humid");
+    h=_.pluck(this.props.Dev_5CCF7FEFBE9E, "humid");
     tempMap.push(h)
      tempMap.forEach(function(e) {
       dev_value = e.toString()*1;
