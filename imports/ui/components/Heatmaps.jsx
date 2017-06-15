@@ -474,11 +474,11 @@ class Heatmaps extends React.Component {
                   {/*  <div className='legend-title'>Temperature mapping</div>*/}
                       <div className='legend-scale'>
                         <ul className='legend-labels'>
-                          <li><span style={firsttemp}></span>20 °C</li>
-                          <li><span style={secondtemp}></span>22 °C</li>
-                          <li><span style={thirdtemp}></span>25 °C</li>
-                          <li><span style={fourthtemp}></span>27 °C</li>
-                          <li><span style={fifthtemp}></span>29 °C</li>
+                          <li><span style={firsttemp}></span>25 °C</li>
+                          <li><span style={secondtemp}></span>27 °C</li>
+                          <li><span style={thirdtemp}></span>29 °C</li>
+                          <li><span style={fourthtemp}></span>31 °C</li>
+                          <li><span style={fifthtemp}></span>35 °C</li>
                         </ul>
                       </div>
                       
