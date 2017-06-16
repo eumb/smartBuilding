@@ -276,7 +276,7 @@ if (Meteor.isServer) {
 
  
 
-Meteor.publish('PSC3_1Average',function averagePublication(){
+Meteor.publish('PSC3_1PSysAverage',function averagePublication(){
     self = this;
     console.log("subscribed to average Psys in PSC3_1");
 
@@ -310,7 +310,49 @@ Meteor.publish('PSC3_1Average',function averagePublication(){
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("PSC3_1Average", Random.id(), {
+      self.added("PSC3_1PSysAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+Meteor.publish('PSC3_1USysAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Usys in PSC3_1");
+
+    sensorAvg = PSC3_1.aggregate([
+      { $match: 
+          { 
+              
+              USys:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$USys"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("PSC3_1USysAverage", Random.id(), {
         day:sensorAvg._id,
         averagevalue:sensorAvg.averageDayValue
       });
@@ -319,9 +361,7 @@ Meteor.publish('PSC3_1Average',function averagePublication(){
  });
 
 
-
-
-Meteor.publish('PSC3_2Average',function averagePublication(){
+Meteor.publish('PSC3_2PSysAverage',function averagePublication(){
     self = this;
     console.log("subscribed to average Psys in PSC3_2");
 
@@ -356,7 +396,7 @@ Meteor.publish('PSC3_2Average',function averagePublication(){
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("PSC3_2Average", Random.id(), {
+      self.added("PSC3_2PSysAverage", Random.id(), {
         day:sensorAvg._id,  
         averagevalue:sensorAvg.averageDayValue
       });
@@ -365,7 +405,47 @@ Meteor.publish('PSC3_2Average',function averagePublication(){
  });
 
 
+Meteor.publish('PSC3_2USysAverage',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Usys in PSC3_2");
 
+    sensorAvg = PSC3_1.aggregate([
+      { $match: 
+          { 
+              
+              USys:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfMonth: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$USys"
+        }
+        
+        }
+      }
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("PSC3_2USysAverage", Random.id(), {
+        day:sensorAvg._id,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
 
 
 

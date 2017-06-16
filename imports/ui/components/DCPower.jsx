@@ -9,8 +9,10 @@ import {PSC3_2} from '../../collections/collections.js';
 import {Line} from 'react-chartjs';
 
 
-PSC3_1Average = new Mongo.Collection("PSC3_1Average");
-PSC3_2Average = new Mongo.Collection("PSC3_2Average");
+PSC3_1PSysAverage = new Mongo.Collection("PSC3_1PSysAverage");
+PSC3_1USysAverage = new Mongo.Collection("PSC3_1USysAverage");
+PSC3_2PSysAverage = new Mongo.Collection("PSC3_2PSysAverage");
+PSC3_2USysAverage = new Mongo.Collection("PSC3_2USysAverage");
 
 class DCPower extends React.Component {
 
@@ -29,43 +31,57 @@ PSC3_2(sensorval) {
       <DCValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
-generateChartData(dataset) {
-  timeScale = [];
+generateChartData(dataset1,dataset2) {
+
   PSys_kW=[];
-  PSys=_.pluck(dataset, "averagevalue");
-  xScale=_.pluck(dataset, "day");
+  PSys=_.pluck(dataset1, "averagevalue");
+  xScale=_.pluck(dataset1, "day");
   console.log(PSys)
   console.log(xScale)
+  USys_V=[];
+  USys=_.pluck(dataset2, "averagevalue");
 
 
-for (i=0; i <xScale.length ;i++){
-    timeScale.push(moment(xScale[i]).utcOffset(3).format("YY/MM/DD "));
-  }
+
   for (i=0; i <xScale.length ;i++){
     PSys_kW.push(PSys[i]/1000);
   }
 
+ 
+  for (i=0; i <xScale.length ;i++){
+    USys_V.push(USys[i]);
+  }
 
-  //console.log(PSys);
-  //console.log(timeScale);
+
+
+  console.log(USys);
+  console.log(xScale)
 
 
 }
 
-mapData(dataset){
+mapData(dataset1,dataset2){
 
-  this.generateChartData(dataset);
+  this.generateChartData(dataset1,dataset2);
    
    var data = {
     labels: xScale,
     datasets: [
         {
             label: 'System Power daily average',
-            backgroundColor: 'rgba(88,203,181,0.5)',
+            backgroundColor: 'rgba(238,0,0,0.5)',
            /* radius: 0,*/
             data:PSys_kW,
-        }
-    ],
+            yAxisID: "y-axis-1",
+        },
+      {
+         label: 'System Voltage daily average',
+            backgroundColor: 'rgba(88,203,181,0.5)',
+           /* radius: 0,*/
+            data:USys_V,
+            yAxisID: "y-axis-2"
+      }]
+
 
 };
 //console.log(data);
@@ -127,7 +143,19 @@ render() {
         show: false
       }
   
-    }]
+    },{
+       scaleLabel: {
+          display: true,
+          labelString: 'V',},
+      type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+      display: true,
+      position: "right",
+      id: "y-axis-2",
+      gridLines: {
+        display: false
+      },
+    }
+    ]
   }
 }
 
@@ -167,7 +195,7 @@ render() {
               </div>
               <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                
-                  <Line data={this.mapData(this.props.PSC3_1_chart)} options={chartOptions} width="700" height="170" />
+                  <Line data={this.mapData(this.props.PSC3_1_PSyschart,this.props.PSC3_1_USyschart)} options={chartOptions} width="700" height="300" />
              
               </div>
             <div className="clearfix"></div>
@@ -208,7 +236,7 @@ render() {
 
                     <div className="col-md-7 col-sm-6 col-xs-12 bg-white">
                       
-                        <Line data={this.mapData(this.props.PSC3_2_chart)} options={chartOptions} width="700" height="170" />
+                        <Line data={this.mapData(this.props.PSC3_2_PSyschart,this.props.PSC3_2_USyschart)} options={chartOptions} width="700" height="300" />
                       
                     </div>
                
@@ -229,9 +257,11 @@ DCPower.propTypes = {
   
   PSC3_1: PropTypes.array.isRequired,
   PSC3_2: PropTypes.array.isRequired,
-  PSC3_2_chart: PropTypes.array.isRequired,
-  PSC3_1_chart: PropTypes.array.isRequired,
- 
+  
+  PSC3_1_PSyschart: PropTypes.array.isRequired,
+  PSC3_1_USyschart: PropTypes.array.isRequired,
+  PSC3_2_PSyschart: PropTypes.array.isRequired,
+  PSC3_2_USyschart: PropTypes.array.isRequired,
 };
 
 
@@ -239,16 +269,20 @@ export default createContainer(() => {
  
   Meteor.subscribe('PSC3_1');
   Meteor.subscribe('PSC3_2');
-  Meteor.subscribe('PSC3_1Average');
-  Meteor.subscribe('PSC3_2Average');
+  Meteor.subscribe('PSC3_1PSysAverage');
+  Meteor.subscribe('PSC3_1USysAverage');
+  Meteor.subscribe('PSC3_2PSysAverage');
+  Meteor.subscribe('PSC3_2USysAverage');
 
   return { 
  
    PSC3_1: PSC3_1.find({},{limit:1}).fetch(),
    PSC3_2: PSC3_2.find({},{limit:1}).fetch(),
-   PSC3_2_chart: PSC3_2Average.find({}).fetch(),
-   PSC3_1_chart: PSC3_1Average.find({}).fetch(),
-
+ 
+   PSC3_1_PSyschart: PSC3_1PSysAverage.find({}).fetch(),
+   PSC3_1_USyschart: PSC3_1USysAverage.find({}).fetch(),
+   PSC3_2_PSyschart: PSC3_2PSysAverage.find({}).fetch(),
+   PSC3_2_USyschart: PSC3_2USysAverage.find({}).fetch(),
 
   };
 }, DCPower);
