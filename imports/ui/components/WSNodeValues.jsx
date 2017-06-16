@@ -115,7 +115,7 @@ export default class WSNodeValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square gray"></i> Ultraviolet Light </p>
+            <p><i className="fa fa-square gray"></i> UV Index  </p>
           </td>
           <td> {this.props.sensorvalue.uv} </td>
         </tr>

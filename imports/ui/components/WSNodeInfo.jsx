@@ -99,7 +99,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">Node 5CCF7FA43A8B</p>
+                            <p className="">"Node A" - <span className="gray">5CCF7FA43A8B</span></p>
                           </div>
                        
                         </th>
@@ -124,6 +124,90 @@ render() {
                 </div>
               </div> 
 
+ <div className="col-md-4 col-sm-4 col-xs-12">
+                  <div className="x_panel_small ">
+                    
+                      <div className="">
+
+
+                      <table className="" style={widthtable}>
+                       <tbody>
+                        <tr>
+                       
+                          <th>
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <p className="">"Node B" - <span className="gray">5CCF7FEFB40E</span></p>
+                            </div>
+                         
+                          </th>
+                        </tr>
+                        <tr>
+                        <td>
+                          <table className="table table-hover">
+                           <tbody>
+                            {this.nodeValues5CCF7FEFB40E('temp')}
+                            {this.nodeValues5CCF7FEFB40E('humid')}
+                            {this.nodeValues5CCF7FEFB40E('light')}
+                            {this.nodeValues5CCF7FEFB40E('dust')}
+                          </tbody>
+                          </table>
+                        </td>
+                        </tr>
+                       </tbody>
+                      </table>
+   <p className="updated">{this.nodeValues5CCF7FEFB40E('updated')} </p>
+                      </div>          
+                  </div>
+                </div> 
+
+
+                <div className="col-md-4 col-sm-4 col-xs-12">
+                  <div className="x_panel_small ">
+                    
+                      <div className="">
+
+
+                      <table className="" style={widthtable}>
+                       <tbody>
+                        <tr>
+                       
+                          <th>
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <p className="">"Node C" - <span className="gray">5CCF7FEFBE72</span></p>
+                            </div>
+                         
+                          </th>
+                        </tr>
+                        <tr>
+                        <td>
+                          <table className="table table-hover">
+                           <tbody>
+                            {this.nodeValues5CCF7FEFBE72('temp')}
+                            {this.nodeValues5CCF7FEFBE72('humid')}
+                            {this.nodeValues5CCF7FEFBE72('noise')}
+                            {this.nodeValues5CCF7FEFBE72('light')}
+                          </tbody>
+                          </table>
+                        </td>
+                        </tr>
+                       </tbody>
+                      </table>
+ <p className="updated">{this.nodeValues5CCF7FEFBE72('updated')}</p>
+                      </div>          
+                  </div>
+                </div> 
+
+
+
+
+
+
+
+              </div>
+
+
+              <div className="row">
+                
 
 
               <div className="col-md-4 col-sm-4 col-xs-12">
@@ -138,7 +222,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">Node 5CCF7FF0AA4F</p>
+                            <p className="">"Node D" - <span className="gray">5CCF7FF0AA4F</span></p>
                           </div>
                        
                         </th>
@@ -177,7 +261,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">Node 5CCF7FEFBAD3</p>
+                            <p className="">"Node E" - <span className="gray">5CCF7FEFBAD3</span></p>
                           </div>
                        
                         </th>
@@ -201,11 +285,6 @@ render() {
                 </div>
               </div> 
 
-
-              </div>
-
-
-              <div className="row">
                 <div className="col-md-4 col-sm-4 col-xs-12">
                   <div className="x_panel_small ">
                     
@@ -218,7 +297,7 @@ render() {
                        
                           <th>
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Node 5CCF7FEFB0C0</p>
+                              <p className="">"Node F" - <span className="gray">5CCF7FEFB0C0</span></p>
                             </div>
                          
                           </th>
@@ -244,78 +323,8 @@ render() {
 
 
 
-                <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel_small ">
-                    
-                      <div className="">
+               
 
-
-                      <table className="" style={widthtable}>
-                       <tbody>
-                        <tr>
-                       
-                          <th>
-                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Node 5CCF7FEFB40E</p>
-                            </div>
-                         
-                          </th>
-                        </tr>
-                        <tr>
-                        <td>
-                          <table className="table table-hover">
-                           <tbody>
-                            {this.nodeValues5CCF7FEFB40E('temp')}
-                            {this.nodeValues5CCF7FEFB40E('humid')}
-                            {this.nodeValues5CCF7FEFB40E('light')}
-                            {this.nodeValues5CCF7FEFB40E('dust')}
-                          </tbody>
-                          </table>
-                        </td>
-                        </tr>
-                       </tbody>
-                      </table>
-   <p className="updated">{this.nodeValues5CCF7FEFB40E('updated')} </p>
-                      </div>          
-                  </div>
-                </div> 
-
-
-                <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="x_panel_small ">
-                    
-                      <div className="">
-
-
-                      <table className="" style={widthtable}>
-                       <tbody>
-                        <tr>
-                       
-                          <th>
-                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Node 5CCF7FEFBE72</p>
-                            </div>
-                         
-                          </th>
-                        </tr>
-                        <tr>
-                        <td>
-                          <table className="table table-hover">
-                           <tbody>
-                            {this.nodeValues5CCF7FEFBE72('temp')}
-                            {this.nodeValues5CCF7FEFBE72('humid')}
-                            {this.nodeValues5CCF7FEFBE72('noise')}
-                            {this.nodeValues5CCF7FEFBE72('light')}
-                          </tbody>
-                          </table>
-                        </td>
-                        </tr>
-                       </tbody>
-                      </table>
- <p className="updated">{this.nodeValues5CCF7FEFBE72('updated')}</p>
-                      </div>          
-                  </div>
-                </div> 
             </div>  
 
 
@@ -335,7 +344,7 @@ render() {
                        
                           <th>
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Meeting Room 1 - Node 5CCF7FEFBE9E </p>
+                              <p className="">Meeting Room 1 "Tesla"- <span className="gray">5CCF7FEFBE9E</span> </p>
                             </div>
                          
                           </th>
@@ -371,7 +380,7 @@ render() {
                        
                           <th>
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Meeting Room 2 - Node 5CCF7FA43AB8 </p>
+                              <p className="">Meeting Room 2 "Kilo" - <span className="gray">5CCF7FA43AB8</span> </p>
                             </div>
                          
                           </th>
@@ -406,7 +415,7 @@ render() {
                        
                           <th>
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                              <p className="">Exterior - Node 5CCF7FF0A971</p>
+                              <p className="">Exterior - <span className="gray">5CCF7FF0A971</span></p>
                             </div>
                          
                           </th>

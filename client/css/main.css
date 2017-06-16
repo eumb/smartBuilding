@@ -141,11 +141,14 @@ margin-right: 5%;
 }
 .updated{
   position:absolute;
-
+  color:gray;
+  font-size: 0.8em;
   bottom: 0;
 }
 .updated_currents{
   position:relative;
+    color:gray;
+  font-size: 0.8em;
   margin-top: 5px;
   bottom: 0;
 }
@@ -158,7 +161,10 @@ margin-right: 5%;
   padding-top: 5px;
 }
 .sparkline22{
+  position: relative;
   padding-left: 20px;
+  padding-top: 10px;
+  bottom:0;
 }
 .daily_trend{
   padding-left: 15%;
@@ -167,4 +173,8 @@ margin-right: 5%;
 
 .ws_nodeInfo{
   font-size: 2rem;
+}
+.gray{
+  color: lightgray!important;
+  font-size: 0.9em;
 }

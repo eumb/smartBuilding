@@ -52,7 +52,7 @@ export default class SRNodeValues extends Component {
     //console.log(this.props.sensorvalue.created_at)
     //console.log(date)
     return (
-      <p> updated at: {this.props.sensorvalue.created_at.toString()}</p>
+      <p> Updated at: {this.props.sensorvalue.created_at.toString()}</p>
     );
   }
 

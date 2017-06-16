@@ -111,7 +111,7 @@ export default class WSSensorValue extends Component {
       return (
       <div>
       <div className="count green">{this.props.sensorvalue.dust}</div>
-      <span><strong>Normal:</strong></span><div>35 µg/m3</div> 
+      <span><strong>Normal:</strong></span><div><strong>35 µg/m3</strong></div> 
        </div>
     );
     } 

@@ -66,12 +66,7 @@ class Heatmaps extends React.Component {
       dev6_value = e.toString()*1;
 
     });
-    h7=_.pluck(this.props.Dev_5CCF7FF0A971, "temp");
-    tempMap7.push(h7)
-     tempMap7.forEach(function(e) {
-      dev7_value = e.toString()*1;
-
-    });
+ 
 
     return heatmap={
      "L01":[

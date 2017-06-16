@@ -51,12 +51,12 @@ render() {
 
 
 var style = {
-      height:'85px'
+      height:'100px'
     };  
   return (
-                  <div className="sparkline22 graph" style={style}>
+                  <div className="sparkline22" style={style}>
                  
-              <Sparklines data={this.renderTasks()} limit={5} width={150} height={45}>
+              <Sparklines data={this.renderTasks()} limit={7} width={200} height={85}>
                 <SparklinesLine color="#1ABB9C" />
                     <SparklinesSpots />
 

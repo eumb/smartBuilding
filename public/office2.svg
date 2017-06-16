@@ -14,7 +14,7 @@
    viewBox="0 0 105.83333 66.145837"
    version="1.1"
    id="svg4900"
-   inkscape:version="0.92.1 15371"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="office2.svg">
   <defs
      id="defs4894" />
@@ -25,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="274.12967"
-     inkscape:cy="193.96665"
+     inkscape:zoom="1.979899"
+     inkscape:cx="193.90019"
+     inkscape:cy="141.89703"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="998"
+     inkscape:window-width="1366"
+     inkscape:window-height="714"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      units="px"
      fit-margin-top="0"
@@ -58,6 +58,42 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-6.0135646,-2.1284629)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="22.322245"
+       y="60.961674"
+       id="text4697-35"
+       transform="scale(1.0080597,0.99200473)"><tspan
+         sodipodi:role="line"
+         id="tspan4695-62"
+         x="22.322245"
+         y="60.961674"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="48.040108"
+       y="60.961674"
+       id="text4697-9"
+       transform="scale(1.0080597,0.99200473)"><tspan
+         sodipodi:role="line"
+         id="tspan4695-1"
+         x="48.040108"
+         y="60.961674"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="72.962578"
+       y="60.961674"
+       id="text4697-2"
+       transform="scale(1.0080597,0.99200473)"><tspan
+         sodipodi:role="line"
+         id="tspan4695-7"
+         x="72.962578"
+         y="60.961674"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node D</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.5590049;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4485"
@@ -263,22 +299,22 @@
        id="rect5001-9-3"
        width="1.4532715"
        height="2.271791"
-       x="27.812637"
-       y="21.645569"
+       x="28.248619"
+       y="22.848282"
        style="fill:#1abb9c;fill-opacity:0.94117647;stroke-width:0.2759155" />
     <rect
        id="rect5001-9-7"
        width="1.4532715"
        height="2.271791"
-       x="54.26218"
-       y="21.3783"
+       x="54.698162"
+       y="22.848282"
        style="fill:#1abb9c;fill-opacity:0.94117647;stroke-width:0.2759155" />
     <rect
        id="rect5001-9-5"
        width="1.4532715"
        height="2.271791"
-       x="79.148384"
-       y="21.094818"
+       x="79.584366"
+       y="22.848282"
        style="fill:#1abb9c;fill-opacity:0.94117647;stroke-width:0.2759155" />
     <rect
        id="rect5001-9-9"
@@ -619,5 +655,65 @@
        x="91.214081"
        y="6.3345828"
        style="fill:#1abb9c;fill-opacity:0.94117647;stroke-width:0.2759155" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="72.903999"
+       y="20.009283"
+       id="text4697"
+       transform="scale(1.0080597,0.99200474)"><tspan
+         sodipodi:role="line"
+         id="tspan4695"
+         x="72.903999"
+         y="20.009283"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="49.365768"
+       y="20.009283"
+       id="text4697-3"
+       transform="scale(1.0080597,0.99200473)"><tspan
+         sodipodi:role="line"
+         id="tspan4695-6"
+         x="49.365768"
+         y="20.009283"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.48203135px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none"
+       x="22.454811"
+       y="20.009283"
+       id="text4697-7"
+       transform="scale(1.0080597,0.99200473)"><tspan
+         sodipodi:role="line"
+         id="tspan4695-5"
+         x="22.454811"
+         y="20.009283"
+         style="stroke:#000000;stroke-width:0.18700001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Node C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.00440192px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
+       x="77.143967"
+       y="11.430481"
+       id="text4751"
+       transform="scale(1.1279073,0.88659768)"><tspan
+         sodipodi:role="line"
+         id="tspan4749"
+         x="77.143967"
+         y="11.430481"
+         style="stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none">Kilo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.00440192px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+       x="84.501801"
+       y="11.43417"
+       id="text4751-3"
+       transform="scale(1.1279073,0.88659768)"><tspan
+         sodipodi:role="line"
+         id="tspan4749-6"
+         x="84.501801"
+         y="11.43417"
+         style="stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none">Tesla</tspan></text>
   </g>
 </svg>
