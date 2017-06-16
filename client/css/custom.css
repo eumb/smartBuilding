@@ -822,7 +822,7 @@ h2 {
   transition: all .2s ease;
 }
 
-.ws_x_panel_small{
+  .ws_x_panel_small {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
@@ -835,9 +835,9 @@ h2 {
   column-break-inside: avoid;
   opacity: 1;
   transition: all .2s ease;
-  min-height: 340px;
-  max-height: 340px; }
-}
+  min-height: 320px;
+  max-height: 320px; }
+
   .x_panel_small {
   position: relative;
   width: 100%;

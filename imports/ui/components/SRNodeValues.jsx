@@ -18,7 +18,7 @@ export default class SRNodeValues extends Component {
     return (
         <tr>
           <td>
-            <p><i className="fa fa-square red"></i>Temperature </p>
+            <p><i className="fa fa-square red"></i> Temperature </p>
           </td>
           <td> {this.props.sensorvalue.temp}°C</td>
         </tr>
@@ -30,7 +30,7 @@ export default class SRNodeValues extends Component {
     return (
        <tr>
           <td>
-            <p><i className="fa fa-square blue"></i>Humidity </p>
+            <p><i className="fa fa-square blue"></i> Humidity </p>
           </td>
           <td> {this.props.sensorvalue.humid}%</td>
         </tr>
@@ -61,7 +61,7 @@ export default class SRNodeValues extends Component {
     return (
      <tr>
           <td>
-            <p><i className="fa fa-square purple"></i>Noise </p>
+            <p><i className="fa fa-square purple"></i> Noise </p>
           </td>
           <td> {this.props.sensorvalue.noise}dB</td>
         </tr>
@@ -70,7 +70,7 @@ export default class SRNodeValues extends Component {
     return(
        <tr>
           <td>
-            <p><i className="fa fa-square purple"></i>Noise </p>
+            <p><i className="fa fa-square purple"></i> Noise </p>
           </td>
           <td> 0dB</td>
         </tr>
