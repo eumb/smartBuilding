@@ -92,7 +92,7 @@ var data = {
             label: 'Platform Power Usage Effectiveness (daily average)',
             backgroundColor: 'rgba(88,203,181,0.5)',
             //radius: 0,
-            lineTension:0,
+            
             data:resultedPercentPower,
         }
     ],
