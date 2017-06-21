@@ -54,7 +54,7 @@ Header a, #login-buttons a {
 .nokia_logo{
 	
      font-family: nokia!important;
-	 font-size: 2.6em!important;
+	 font-size: 2.5em!important;
 	 padding-right:5%;
 	 margin-top: 20px!important%;
 	 color: #2A3F54!important;
@@ -163,6 +163,7 @@ margin-right: 5%;
 .sparkline22{
   position: relative;
   padding-left: 20px;
+  margin-top: 5px;
   padding-top: 10px;
   bottom:0;
 }
@@ -180,4 +181,11 @@ margin-right: 5%;
 .gray{
   color: lightgray!important;
   font-size: 0.9em;
+}
+.count_top{
+  font-size: 1.2em!important; 
+  font-weight: bolder;
+}
+.unit{
+  font-size:20px!important;
 }

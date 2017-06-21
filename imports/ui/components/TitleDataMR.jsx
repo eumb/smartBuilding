@@ -14,6 +14,7 @@ import {Dev_5CCF7FA43AB8} from '../../collections/collections.js';
 class TitleDataMR extends React.Component {
 
 renderMR1(sensorval) {
+    
     return this.props.Dev_5CCF7FEFBE9E.map((sensorvalue) => (
       <MRSensorValue key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
@@ -87,8 +88,8 @@ export default createContainer(() => {
 
   return { 
   
-     Dev_5CCF7FEFBE9E:Dev_5CCF7FEFBE9E.find({}).fetch(),
-     Dev_5CCF7FA43AB8:Dev_5CCF7FA43AB8.find({}).fetch(),
+     Dev_5CCF7FEFBE9E:Dev_5CCF7FEFBE9E.find({},{limit:1}).fetch(),
+     Dev_5CCF7FA43AB8:Dev_5CCF7FA43AB8.find({},{limit:1}).fetch(),
 
 
 /*     MR1HumidAverage : MRHumidAverage.find().fetch(),
