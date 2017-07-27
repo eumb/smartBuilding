@@ -279,10 +279,10 @@ export default createContainer(() => {
    PSC3_1: PSC3_1.find({},{limit:1}).fetch(),
    PSC3_2: PSC3_2.find({},{limit:1}).fetch(),
  
-   PSC3_1_PSyschart: PSC3_1PSysAverage.find({}).fetch(),
-   PSC3_1_USyschart: PSC3_1USysAverage.find({}).fetch(),
-   PSC3_2_PSyschart: PSC3_2PSysAverage.find({}).fetch(),
-   PSC3_2_USyschart: PSC3_2USysAverage.find({}).fetch(),
+   PSC3_1_PSyschart: PSC3_1PSysAverage.find({},{sort: {'day' : -1}}).fetch(),
+   PSC3_1_USyschart: PSC3_1USysAverage.find({},{sort: {'day' : -1}}).fetch(),
+   PSC3_2_PSyschart: PSC3_2PSysAverage.find({},{sort: {'day' : -1}}).fetch(),
+   PSC3_2_USyschart: PSC3_2USysAverage.find({},{sort: {'day' : -1}}).fetch(),
 
   };
 }, DCPower);

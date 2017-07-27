@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import { createContainer } from 'meteor/react-meteor-data';
 import ACValues from '../components/ACValues.jsx';
 import {MASURA_TGV_ID1} from '../../collections/collections.js';
-import {TGD_BOROURI_ID52} from '../../collections/collections.js';
+import {TGD_BIROURI_ID52} from '../../collections/collections.js';
 import {SOSIRE_TR4_ID56} from '../../collections/collections.js';
 import {SOSIRE_TR3_ID55} from '../../collections/collections.js';
 import {SOSIRE_TR2_ID54} from '../../collections/collections.js';
@@ -26,7 +26,7 @@ class ACPower extends React.Component {
 
 
 
-// Meteor.Collection("TGD_BOROURI_ID52") //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, 
+// Meteor.Collection("TGD_BIROURI_ID52") //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, 
 //"Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, 
 //"Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
 
@@ -37,8 +37,8 @@ MASURA_TGV_ID1(sensorval) {
     ));
   }
 
-TGD_BOROURI_ID52(sensorval) {
-    return this.props.TGD_BOROURI_ID52.map((sensorvalue) => (
+TGD_BIROURI_ID52(sensorval) {
+    return this.props.TGD_BIROURI_ID52.map((sensorvalue) => (
       <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
@@ -352,16 +352,16 @@ render() {
                       <td>
                         <table className="table table-hover">
                          <tbody>
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L1')}
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L2')}
-                          {this.TGD_BOROURI_ID52('Voltage_effective_L3')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L1')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L2')}
-                          {this.TGD_BOROURI_ID52('Current_effective_L3')}
-                          {this.TGD_BOROURI_ID52('Active_Power_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Reactive_power_fundamental_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Consumed_Active_Energy_Sum_L1_L3')}
-                          {this.TGD_BOROURI_ID52('Reactive_Energy_Sum_L1_L3')}  
+                          {this.TGD_BIROURI_ID52('Voltage_effective_L1')}
+                          {this.TGD_BIROURI_ID52('Voltage_effective_L2')}
+                          {this.TGD_BIROURI_ID52('Voltage_effective_L3')}
+                          {this.TGD_BIROURI_ID52('Current_effective_L1')}
+                          {this.TGD_BIROURI_ID52('Current_effective_L2')}
+                          {this.TGD_BIROURI_ID52('Current_effective_L3')}
+                          {this.TGD_BIROURI_ID52('Active_Power_Sum_L1_L3')}
+                          {this.TGD_BIROURI_ID52('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.TGD_BIROURI_ID52('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.TGD_BIROURI_ID52('Reactive_Energy_Sum_L1_L3')}  
 
                         </tbody>
                         </table>
@@ -369,7 +369,7 @@ render() {
                       </tr>
                      </tbody>
                     </table>
-                       <p className="updated_currents">  {this.TGD_BOROURI_ID52('updated')} </p>
+                       <p className="updated_currents">  {this.TGD_BIROURI_ID52('updated')} </p>
                          </div>          
                 </div>
               </div> 
@@ -725,7 +725,7 @@ render() {
 ACPower.propTypes = {
   
   MASURA_TGV_ID1: PropTypes.array.isRequired,
-  TGD_BOROURI_ID52: PropTypes.array.isRequired,
+  TGD_BIROURI_ID52: PropTypes.array.isRequired,
    SOSIRE_TR4_ID56: PropTypes.array.isRequired,
    SOSIRE_TR3_ID55: PropTypes.array.isRequired,
    SOSIRE_TR2_ID54: PropTypes.array.isRequired,
@@ -746,7 +746,7 @@ ACPower.propTypes = {
 export default createContainer(() => {
  
   Meteor.subscribe('MASURA_TGV_ID1');
-  Meteor.subscribe('TGD_BOROURI_ID52');
+  Meteor.subscribe('TGD_BIROURI_ID52');
   Meteor.subscribe('SOSIRE_TR4_ID56');
   Meteor.subscribe('SOSIRE_TR3_ID55');
   Meteor.subscribe('SOSIRE_TR2_ID54');
@@ -762,7 +762,7 @@ export default createContainer(() => {
   return { 
  
     MASURA_TGV_ID1: MASURA_TGV_ID1.find({},{limit:1}).fetch(),
-    TGD_BOROURI_ID52: TGD_BOROURI_ID52.find({}).fetch(),
+    TGD_BIROURI_ID52: TGD_BIROURI_ID52.find({}).fetch(),
     SOSIRE_TR4_ID56: SOSIRE_TR4_ID56.find({}).fetch(),
     SOSIRE_TR3_ID55: SOSIRE_TR3_ID55.find({}).fetch(),
     SOSIRE_TR2_ID54: SOSIRE_TR2_ID54.find({}).fetch(),
