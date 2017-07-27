@@ -352,8 +352,8 @@ export default createContainer(() => {
 
   return {
     
-    platformPower : MASURA_TGV_ID1Average.find({},{sort: {'day' : -1}}).fetch(),
-    HvacPower: HVAC_CLIME_WIFI_ID73Average.find({},{sort: {'day' : -1}}).fetch(),
+    platformPower : MASURA_TGV_ID1Average.find({},{sort: {'day' : 1}}).fetch(),
+    HvacPower: HVAC_CLIME_WIFI_ID73Average.find({},{sort: {'day' : 1}}).fetch(),
 
   };
 }, Power);
