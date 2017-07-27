@@ -291,7 +291,7 @@ Meteor.publish('PSC3_1PSysAverage',function averagePublication(){
               
           }
       },
-      //{$sort : {"created_at" : -1}},
+      {$sort : {"created_at" : -1}},
       {
          $group: {
         _id: {
@@ -312,8 +312,7 @@ Meteor.publish('PSC3_1PSysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_1PSysAverage", Random.id(), {
         day:sensorAvg._id,
-        averagevalue:sensorAvg.averageDayValue,
-        sort: -1
+        averagevalue:sensorAvg.averageDayValue
       });
   });
     self.ready()
@@ -334,7 +333,7 @@ Meteor.publish('PSC3_1USysAverage',function averagePublication(){
               
           }
       },
-      //{$sort : {"created_at" : -1}},
+      {$sort : {"created_at" : -1}},
       {
          $group: {
         _id: {
@@ -355,8 +354,7 @@ Meteor.publish('PSC3_1USysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_1USysAverage", Random.id(), {
         day:sensorAvg._id,
-        averagevalue:sensorAvg.averageDayValue,
-        sort: -1
+        averagevalue:sensorAvg.averageDayValue
       });
   });
     self.ready()
