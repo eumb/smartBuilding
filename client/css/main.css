@@ -45,7 +45,7 @@ Header a, #login-buttons a {
 
 .title{
 	color: #124191!important;
-	font-size:2em!important;
+	font-size:1em!important;
 }
 .by{
 	color: #124191!important;
@@ -61,9 +61,10 @@ Header a, #login-buttons a {
 	
 	
 }
-.my-legend{
-	padding-left: 20%;
-}
+  .my-legend{
+  padding-left: 80px;
+  }
+
 .legend-title {
     text-align: left;
     margin-bottom: 6px;
@@ -173,9 +174,11 @@ margin-right: 5%;
 }
 
 .ws_nodeInfo{
-  font-size: 2rem;
+  /* font-size: 2rem; */
+   font-size: 1.3rem;
 }
 .ws_smaller_nodeInfo{
+  /* font-size: 1.3rem; */
   font-size: 1.3rem;
 }
 .gray{
@@ -183,9 +186,43 @@ margin-right: 5%;
   font-size: 0.9em;
 }
 .count_top{
-  font-size: 1.2em!important; 
+  /* font-size: 1.2em!important; */ 
+  
+  font-size: 1em!important; 
+  
+  
   font-weight: bolder;
 }
 .unit{
   font-size:20px!important;
 }
+
+.center_svg{
+
+justify-content: center;
+}
+
+@media (max-width: 1500px) {
+  .sparkline22{
+    display: none;
+  }
+}
+
+/* @media (max-width: 1500px) {
+  .my-legend{
+  padding-left: 80px;
+  }
+} */
+
+@media (max-width: 1500px) {
+  .ws_nodeInfo{
+  /* font-size: 2rem; */
+   font-size: 1rem;
+}
+}@media (max-width: 1500px) {
+  .h2{
+  /* font-size: 2rem; */
+   font-size: 0.8rem;
+}
+} 
+

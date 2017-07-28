@@ -310,11 +310,10 @@ var chartOptions1 = {
                   <div className="col-md-4 col-sm-4 col-xs-12">
                      <div className="x_panel">
                       <div className="row">
-                        <div className="align_right">
+                        
                           <h2>Platform Power Usage Effectiveness </h2>
 
 
-                        </div>
                         <div className="divider"></div>
 
                       </div>

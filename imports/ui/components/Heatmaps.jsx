@@ -434,7 +434,7 @@ class Heatmaps extends React.Component {
 
 
   render() {
-
+   
       var firsttemp = {
         background:'#ffffd4'
       };
@@ -520,20 +520,10 @@ class Heatmaps extends React.Component {
       
      <br />
 
-           <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12">
-              <div className="dashboard_graph">
+           <div className="row ">
+          
 
-              {/*    <div className="row x_title">
-                    <div className="col-md-6">
-                      <h3> "Office F" <small>floor plan heatmap</small></h3>
-                    </div>
-                    <div className="col-md-6">
-               
-                    </div>
-                  </div>*/}
-
-                  <div className="col-md-3 col-sm-4 col-xs-12 bg-white">
+                  <div className="col-md-6 col-sm-6 col-xs-12  bg-white center_svg" >
                     <div className="row">
                       <div className="align_right">
                         <h2>Temperature <small>"Office F" heatmap</small> </h2>
@@ -566,8 +556,9 @@ class Heatmaps extends React.Component {
                       
                       </div>
                   </div>
-                  </div>
-                 <div className="col-md-3 col-sm-4 col-xs-12">
+                </div>
+
+                 <div className="col-md-6 col-sm-6 col-xs-12  bg-white center_svg ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
                         <h2>Humidity  <small>"Office F" heatmap</small></h2>
@@ -600,8 +591,18 @@ class Heatmaps extends React.Component {
                       </div>
                   </div>
 
-                  </div>
-                   <div className="col-md-3 col-sm-4 col-xs-12">
+               
+
+                   </div>
+        </div>
+               
+             <br />
+
+          <div className="row">
+            <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
+         
+
+                   <div className="col-md-6 col-sm-6 col-xs-12 ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
                         <h2>Natural Light  <small>"Office F" heatmap</small></h2>
@@ -641,7 +642,7 @@ class Heatmaps extends React.Component {
 
 
                   </div>
-                   <div className="col-md-3 col-sm-4 col-xs-12">
+                   <div className="col-md-6 col-sm-6 col-xs-12 ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                           <div className="align_right">
                             <h2>Noise    <small>"Office F" heatmap</small></h2>
@@ -677,10 +678,10 @@ class Heatmaps extends React.Component {
 
 
                     </div>
-                     <div className="clearfix"></div>
-          </div>
-         </div>
-        </div>
+                    
+            </div>
+           </div>
+       
              <br />
 
        
