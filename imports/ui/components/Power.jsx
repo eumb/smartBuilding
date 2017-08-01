@@ -89,7 +89,7 @@ var data = {
     labels: xScale,
     datasets: [
         {
-            label: 'Platform Power Usage Effectiveness (daily average)',
+            label: 'Power Usage Effectiveness (daily average)',
             backgroundColor: 'rgba(88,203,181,0.5)',
             //radius: 0,
             
@@ -310,16 +310,16 @@ var chartOptions1 = {
                   <div className="col-md-4 col-sm-4 col-xs-12">
                      <div className="x_panel">
                       <div className="row">
-                        
-                          <h2>Platform Power Usage Effectiveness </h2>
+                        <div className="align_right">
+                          <h2>Power Usage Effectiveness </h2>
 
-
+                        </div>
                         <div className="divider"></div>
 
                       </div>
                       <div className="row">
                         <div className="align_left">
-                          <Line data={this.mapDataPercent()} options={chartOptions1}  width="500" height="280"/>
+                          <Line data={this.mapDataPercent()} options={chartOptions}  width="500" height="280"/>
                         </div>
                       </div>
                       </div>

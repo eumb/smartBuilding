@@ -520,89 +520,82 @@ class Heatmaps extends React.Component {
       
      <br />
 
-           <div className="row ">
+           <div className="row justify-content-md-center no-gutters">
           
 
-                  <div className="col-md-6 col-sm-6 col-xs-12  bg-white center_svg" >
-                    <div className="row">
-                      <div className="align_right">
-                        <h2>Temperature <small>"Office F" heatmap</small> </h2>
-                                  
-                      </div>  
-                      <div className="divider"></div>
-                      
-                    </div>
-                   {/*   <div className="col-md-3 col-sm-4 col-xs-12">
-                      
-                        <NodeInfo />
+              <div className="col-lg-3 col-md-6 col-xs-12  bg-white center_svg" >
+                <div className="row">
+                  <div className="align_right">
+                    <h2>Temperature <small>"Office F" heatmap</small> </h2>
+                              
+                  </div>  
+                  <div className="divider"></div>
                   
-                      </div>*/}
-                      <div className="col-md-12 col-sm-4 col-xs-12">
-                        <Heatmap data={this.heatMap()} ext={this.heatMapExtTemp()} mr1={this.heatMapMR1Temp()} mr2={this.heatMapMR2Temp()} type={"temp"}/>
-
-                      </div>
-                  <div className="row">
-                    <div className='my-legend'>
-                  {/*  <div className='legend-title'>Temperature mapping</div>*/}
-                      <div className='legend-scale'>
-                        <ul className='legend-labels'>
-                          <li><span style={firsttemp}></span>20 °C</li>
-                          <li><span style={secondtemp}></span>27 °C</li>
-                          <li><span style={thirdtemp}></span>29 °C</li>
-                          <li><span style={fourthtemp}></span>31 °C</li>
-                          <li><span style={fifthtemp}></span>35 °C</li>
-                        </ul>
-                      </div>
-                      
-                      </div>
-                  </div>
                 </div>
-
-                 <div className="col-md-6 col-sm-6 col-xs-12  bg-white center_svg ">
-                     <div className="col-md-12 col-sm-12 col-xs-12">
-                      <div className="align_right">
-                        <h2>Humidity  <small>"Office F" heatmap</small></h2>
-                                  
-                      </div>  
-                      <div className="divider"></div>
-                      
-                    </div>
-                 {/*     <div className="col-md-3 col-sm-4 col-xs-12">
-                      
-                        <NodeInfo />
+               {/*   <div className="col-md-3 col-sm-4 col-xs-12">
                   
-                      </div>*/}
-                      <div className="col-md-12 col-sm-4 col-xs-12">
-                        <Heatmap data={this.humidityMap()} ext={this.heatMapExtHumid()} mr1={this.heatMapMR1Humid()} mr2={this.heatMapMR2Humid()} type={"humid"}/>
-                      </div>
-                          <div className="row">
-                    <div className='my-legend'>
-                  {/*  <div className='legend-title'>Temperature mapping</div>*/}
-                      <div className='legend-scale'>
-                        <ul className='legend-labels'>
-                          <li><span style={firsthumid}></span>35 %</li>
-                          <li><span style={secondhumid}></span>40 %</li>
-                          <li><span style={thirdhumid}></span>45 %</li>
-                          <li><span style={fourthhumid}></span>50 %</li>
-                          <li><span style={fifthhumid}></span>55 %</li>
-                        </ul>
-                      </div>
-                      
-                      </div>
+                    <NodeInfo />
+              
+                  </div>*/}
+                  <div className="col-md-12 col-sm-4 col-xs-12">
+                    <Heatmap data={this.heatMap()} ext={this.heatMapExtTemp()} mr1={this.heatMapMR1Temp()} mr2={this.heatMapMR2Temp()} type={"temp"}/>
+
                   </div>
+              <div className="row">
+                <div className='my-legend'>
+              {/*  <div className='legend-title'>Temperature mapping</div>*/}
+                  <div className='legend-scale'>
+                    <ul className='legend-labels'>
+                      <li><span style={firsttemp}></span>20 °C</li>
+                      <li><span style={secondtemp}></span>27 °C</li>
+                      <li><span style={thirdtemp}></span>29 °C</li>
+                      <li><span style={fourthtemp}></span>31 °C</li>
+                      <li><span style={fifthtemp}></span>35 °C</li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+              </div>
+            </div>
 
-               
 
-                   </div>
-        </div>
-               
-             <br />
 
-          <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12 bg-white">
-         
-
-                   <div className="col-md-6 col-sm-6 col-xs-12 ">
+             <div className="col-lg-3 col-md-6 col-xs-12  bg-white center_svg ">
+                 <div className="col-md-12 col-sm-12 col-xs-12">
+                  <div className="align_right">
+                    <h2>Humidity  <small>"Office F" heatmap</small></h2>
+                              
+                  </div>  
+                  <div className="divider"></div>
+                  
+                </div>
+             {/*     <div className="col-md-3 col-sm-4 col-xs-12">
+                  
+                    <NodeInfo />
+              
+                  </div>*/}
+                  <div className="col-md-12 col-sm-4 col-xs-12">
+                    <Heatmap data={this.humidityMap()} ext={this.heatMapExtHumid()} mr1={this.heatMapMR1Humid()} mr2={this.heatMapMR2Humid()} type={"humid"}/>
+                  </div>
+              <div className="row">
+                <div className='my-legend'>
+              {/*  <div className='legend-title'>Temperature mapping</div>*/}
+                  <div className='legend-scale'>
+                    <ul className='legend-labels'>
+                      <li><span style={firsthumid}></span>35 %</li>
+                      <li><span style={secondhumid}></span>40 %</li>
+                      <li><span style={thirdhumid}></span>45 %</li>
+                      <li><span style={fourthhumid}></span>50 %</li>
+                      <li><span style={fifthhumid}></span>55 %</li>
+                    </ul>
+                  </div>
+                  
+                  </div>
+              </div>
+            </div>
+        
+           
+              <div className="col-lg-3 col-md-6 col-xs-12 bg-white center_svg ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
                         <h2>Natural Light  <small>"Office F" heatmap</small></h2>
@@ -620,7 +613,7 @@ class Heatmaps extends React.Component {
                         <Heatmap data={this.lightMap()} ext={this.heatMapExtLight()} mr1={this.heatMapNP()} mr2={this.heatMapNP()} type={"light"}/>
                       </div>
 
-                                 <div className="row">
+                 <div className="row">
                     <div className='my-legend'>
                   {/*  <div className='legend-title'>Temperature mapping</div>*/}
                       <div className='legend-scale'>
@@ -640,9 +633,11 @@ class Heatmaps extends React.Component {
                       </div>
                   </div>
 
+                </div>
 
-                  </div>
-                   <div className="col-md-6 col-sm-6 col-xs-12 ">
+
+
+               <div className="col-lg-3 col-md-6 col-xs-12 bg-white center_svg ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                           <div className="align_right">
                             <h2>Noise    <small>"Office F" heatmap</small></h2>
@@ -679,8 +674,7 @@ class Heatmaps extends React.Component {
 
                     </div>
                     
-            </div>
-           </div>
+      </div>
        
              <br />
 

@@ -190,7 +190,7 @@ el.appendChild(xml.documentElement);
  	render() {
 		
 		return (
-				<div ref="svgmap" className="chart" width={300} height={200}>
+				<div ref="svgmap" className="chart" >
   				<canvas id="canv1" ref="canvas1" width={5} height={2}/>
   				<canvas id="canv2" ref="canvas2" width={400} height={300}/>
 
