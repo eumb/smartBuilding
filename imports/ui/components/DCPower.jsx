@@ -35,7 +35,7 @@ generateChartData(dataset1,dataset2) {
 
   PSys_kW=[];
   PSys=_.pluck(dataset1, "averagevalue");
-  xScale=_.pluck(dataset1, "day");
+  xScale=_.pluck(dataset1, "date");
   console.log(PSys)
   console.log(xScale)
   USys_V=[];
@@ -113,7 +113,7 @@ render() {
   },
   scales: {
     xAxes: [{
-
+      type: 'time',
       display: true,
         scaleLabel: {
           display: true,
@@ -124,6 +124,12 @@ render() {
       },
       labels: {
         show: false
+      },
+      time: {
+        displayFormats: {
+          day: 'l'
+        },
+        unit: 'day'
       }
      
     }],

@@ -296,13 +296,14 @@ Meteor.publish('PSC3_1PSysAverage',function averagePublication(){
          $group: {
         _id: {
            
-               $dayOfMonth: "$created_at"
+               $dayOfYear: "$created_at"
            
            },
 
           averageDayValue: {
           $avg: "$PSys"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       }
@@ -312,6 +313,7 @@ Meteor.publish('PSC3_1PSysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_1PSysAverage", Random.id(), {
         day:sensorAvg._id,
+        date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
       });
   });
@@ -338,13 +340,14 @@ Meteor.publish('PSC3_1USysAverage',function averagePublication(){
          $group: {
         _id: {
            
-               $dayOfMonth: "$created_at"
+               $dayOfYear: "$created_at"
            
            },
 
           averageDayValue: {
           $avg: "$USys"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       }
@@ -354,6 +357,7 @@ Meteor.publish('PSC3_1USysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_1USysAverage", Random.id(), {
         day:sensorAvg._id,
+        date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
       });
   });
@@ -381,13 +385,14 @@ Meteor.publish('PSC3_2PSysAverage',function averagePublication(){
          $group: {
         _id: {
            
-               $dayOfMonth: "$created_at"
+               $dayOfYear: "$created_at"
            
            },
 
           averageDayValue: {
           $avg: "$PSys"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       },
@@ -398,6 +403,7 @@ Meteor.publish('PSC3_2PSysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_2PSysAverage", Random.id(), {
         day:sensorAvg._id,  
+        date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
       });
   });
@@ -425,13 +431,14 @@ Meteor.publish('PSC3_2USysAverage',function averagePublication(){
          $group: {
         _id: {
            
-               $dayOfMonth: "$created_at"
+               $dayOfYear: "$created_at"
            
            },
 
           averageDayValue: {
           $avg: "$USys"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       }
@@ -441,6 +448,7 @@ Meteor.publish('PSC3_2USysAverage',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("PSC3_2USysAverage", Random.id(), {
         day:sensorAvg._id,
+        date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
       });
   });
@@ -467,21 +475,35 @@ Meteor.publish('HVAC_CLIME_WIFI_ID73Average',function averagePublication(){
               
           }
       },
-      {$sort : {"created_at" : -1}},
+      //{$sort : {"created_at" : 1}},
+      
+/*      {$project:
+        {
+          Active_Power_Sum_L1_L3:1,
+          created_at:1
+        }
+
+
+      },*/
+
       {
          $group: {
         _id: {
-           
-               $dayOfMonth: "$created_at"
+              
+               $dayOfYear: "$created_at"
            
            },
+         
+           
 
           averageDayValue: {
           $avg: "$Active_Power_Sum_L1_L3"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       },
+      //{$sort : {"_id" : 1}},
 
     ]);
 
@@ -489,6 +511,8 @@ Meteor.publish('HVAC_CLIME_WIFI_ID73Average',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("HVAC_CLIME_WIFI_ID73Average", Random.id(), {
         day:sensorAvg._id,
+        date: sensorAvg.date,
+         
         averagevalue:sensorAvg.averageDayValue
       });
   });
@@ -516,13 +540,14 @@ Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
          $group: {
         _id: {
            
-               $dayOfMonth: "$created_at"
+               $dayOfYear: "$created_at"
            
            },
 
           averageDayValue: {
           $avg: "$Active_Power_Sum_L1_L3"
-        }
+        },
+        date: {$first:"$created_at"}
         
         }
       },
@@ -533,6 +558,7 @@ Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
     _(sensorAvg).each(function(sensorAvg) {
       self.added("MASURA_TGV_ID1Average", Random.id(), {
         day:sensorAvg._id,
+        date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
       });
   });

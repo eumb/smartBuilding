@@ -17,7 +17,7 @@ generateChartData() {
   Active_Power_Sum_L1_L3_kW=[];
   dataset=this.props.platformPower;
   Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
-  xScale=_.pluck(dataset, "day");
+  xScale=_.pluck(dataset, "date");
 
 
 
@@ -40,8 +40,9 @@ generateChartDataHVAC() {
   timeScale = [];
   Active_Power_Sum_L1_L3_kW=[];
   dataset=this.props.HvacPower;
+  console.log(dataset);
   Active_Power_Sum_L1_L3=_.pluck(dataset, "averagevalue");
-  xScale=_.pluck(dataset, "day");
+  xScale=_.pluck(dataset, "date");
 
 
 
@@ -162,7 +163,7 @@ render() {
   },
   scales: {
     xAxes: [{
-
+      type: 'time',
       display: true,
       scaleLabel: {
           display: true,
@@ -174,7 +175,13 @@ render() {
       labels: {
         show: true
       },
-    
+      time: {
+        displayFormats: {
+          day: 'l'
+        },
+        unit: 'day'
+      }
+  
     }],
     yAxes: [{
       type: 'linear',
