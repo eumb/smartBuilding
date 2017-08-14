@@ -7,6 +7,8 @@ export const MeetingRoom = new Meteor.Collection("MR");
 export const ServerRoom = new Meteor.Collection("SR");
 export const Exterior = new Meteor.Collection("EXT");
 
+
+
 //WS
 //1
 export const Dev_5CCF7FA43A8B = new Meteor.Collection("5CCF7FA43A8B");//{ "_id" : ObjectId("593922c6e95f2f2008a77d2d"), "temp" : 29.5, "humid" : 30.1, "noise" : 82.39, "noise_p" : 87.99, "light" : 4, "co2" : 0, "created_at" : ISODate("2017-06-08T10:11:18.476Z") }
@@ -40,6 +42,15 @@ export const Dev_5CCF7FF0B704 = new Meteor.Collection("5CCF7FF0B704");//{ "_id" 
 export const Dev_5CCF7FF0B17A = new Meteor.Collection("5CCF7FF0B17A");//{ "_id" : ObjectId("593922a9e95f2f2008a77cd1"), "temp" : 32.4, "humid" : 22.2, "noise" : 35.2, "noise_p" : 47.17, "created_at" : ISODate("2017-06-08T10:10:49.341Z") }
 export const Dev_5CCF7FF0B544 = new Meteor.Collection("5CCF7FF0B544");//{ "_id" : ObjectId("593922b8e95f2f2008a77d0d"), "temp" : 32.2, "humid" : 25, "dust" : 0, "created_at" : ISODate("2017-06-08T10:11:04.307Z") }
 
+
+
+
+export const BIROURI_TD_ZONA_E_ID68 = new Meteor.Collection("BIROURI_TD_ZONA_E_ID68"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
+export const BIROURI_TD_ZONA_F_ID69 = new Meteor.Collection("BIROURI_TD_ZONA_F_ID69"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
+export const BIROURI_TD_ZONA_G_ID70 = new Meteor.Collection("BIROURI_TD_ZONA_G_ID70"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
+export const BIROURI_TD_ZONA_H_ID71 = new Meteor.Collection("BIROURI_TD_ZONA_H_ID71"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
+export const Iluminat_C_labs_ID80 = new Meteor.Collection("Iluminat_C_labs_ID80"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
+export const Iluminat_D_labs_ID81 = new Meteor.Collection("Iluminat_D_labs_ID81"); //{ "_id" : ObjectId("5938206be95f2f2008a45cea"), "Voltage_effective_L1" : 234.78, "Voltage_effective_L2" : 235.13, "Voltage_effective_L3" : 233.3, "Current_effective_L1" : 299.06, "Current_effective_L2" : 308.02, "Current_effective_L3" : 287.18, "Active_Power_Sum_L1_L3" : 203025.98, "Reactive_power_fundamental_Sum_L1_L3" : 45724.18, "Consumed_Active_Energy_Sum_L1_L3" : 1624076800, "Reactive_Energy_Sum_L1_L3" : -37404824, "created_at" : ISODate("2017-06-07T15:48:59.459Z") }
 
 
 
@@ -137,6 +148,49 @@ if (Meteor.isServer) {
       console.log("subscribed to TGD_BIROURI_ID52 data");
       return TGD_BIROURI_ID52.find({} ,{ sort: { created_at: -1 },limit:1});
   });
+
+
+
+
+
+  Meteor.publish('BIROURI_TD_ZONA_E_ID68', function eventsPublication() {
+      console.log("subscribed to BIROURI_TD_ZONA_E_ID68 data");
+      return BIROURI_TD_ZONA_E_ID68.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+ Meteor.publish('BIROURI_TD_ZONA_F_ID69', function eventsPublication() {
+      console.log("subscribed to BIROURI_TD_ZONA_F_ID69 data");
+      return BIROURI_TD_ZONA_F_ID69.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+
+  Meteor.publish('BIROURI_TD_ZONA_G_ID70', function eventsPublication() {
+      console.log("subscribed to BIROURI_TD_ZONA_G_ID70 data");
+      return BIROURI_TD_ZONA_G_ID70.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+
+  Meteor.publish('BIROURI_TD_ZONA_H_ID71', function eventsPublication() {
+      console.log("subscribed to BIROURI_TD_ZONA_H_ID71 data");
+      return BIROURI_TD_ZONA_H_ID71.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+  Meteor.publish('Iluminat_C_labs_ID80', function eventsPublication() {
+      console.log("subscribed to Iluminat_C_labs_ID80 data");
+      return Iluminat_C_labs_ID80.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+   Meteor.publish('Iluminat_D_labs_ID81', function eventsPublication() {
+      console.log("subscribed to Iluminat_D_labs_ID81 data");
+      return Iluminat_D_labs_ID81.find({} ,{ sort: { created_at: -1 },limit:1});
+  });
+
+
+
+
+
+
+
 
  Meteor.publish('MASURA_TGV_ID1', function eventsPublication() {
       console.log("subscribed to MASURA_TGV_ID1");
@@ -458,6 +512,99 @@ Meteor.publish('PSC3_2USysAverage',function averagePublication(){
 
 
 
+Meteor.publish('SOSIRE_TR4_ID56_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in SOSIRE_TR4_ID56");
+
+    sensorAvg = SOSIRE_TR4_ID56.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("SOSIRE_TR4_ID56_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+Meteor.publish('FN_NORMALI_ID8_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in FN_NORMALI_ID8");
+
+    sensorAvg = FN_NORMALI_ID8.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("FN_NORMALI_ID8_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
 
 
 Meteor.publish('HVAC_CLIME_WIFI_ID73Average',function averagePublication(){
@@ -520,7 +667,7 @@ Meteor.publish('HVAC_CLIME_WIFI_ID73Average',function averagePublication(){
  });
 
 
-Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
+Meteor.publish('MASURA_TGV_ID1_Average',function averagePublication(){
     self = this;
     console.log("subscribed to average Active_Power_Sum_L1_L3 in MASURA_TGV_ID1");
 
@@ -556,7 +703,7 @@ Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
 
     console.log(sensorAvg)
     _(sensorAvg).each(function(sensorAvg) {
-      self.added("MASURA_TGV_ID1Average", Random.id(), {
+      self.added("MASURA_TGV_ID1_Average", Random.id(), {
         day:sensorAvg._id,
         date: sensorAvg.date,
         averagevalue:sensorAvg.averageDayValue
@@ -564,6 +711,294 @@ Meteor.publish('MASURA_TGV_ID1Average',function averagePublication(){
   });
     self.ready()
  });
+
+// contoare noi
+
+
+Meteor.publish('BIROURI_TD_ZONA_E_ID68_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in BIROURI_TD_ZONA_E_ID68");
+
+    sensorAvg = BIROURI_TD_ZONA_E_ID68.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("BIROURI_TD_ZONA_E_ID68_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+
+Meteor.publish('BIROURI_TD_ZONA_F_ID69_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in BIROURI_TD_ZONA_F_ID69");
+
+    sensorAvg = BIROURI_TD_ZONA_F_ID69.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("BIROURI_TD_ZONA_F_ID69_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+Meteor.publish('BIROURI_TD_ZONA_G_ID70_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in BIROURI_TD_ZONA_G_ID70");
+
+    sensorAvg = BIROURI_TD_ZONA_G_ID70.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("BIROURI_TD_ZONA_G_ID70_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+Meteor.publish('BIROURI_TD_ZONA_H_ID71_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in BIROURI_TD_ZONA_H_ID71");
+
+    sensorAvg = BIROURI_TD_ZONA_H_ID71.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("BIROURI_TD_ZONA_H_ID71_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+
+
+Meteor.publish('Iluminat_C_labs_ID80_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in Iluminat_C_labs_ID80");
+
+    sensorAvg = Iluminat_C_labs_ID80.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("Iluminat_C_labs_ID80_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+
+
+Meteor.publish('Iluminat_D_labs_ID81_Average',function averagePublication(){
+    self = this;
+    console.log("subscribed to average Active_Power_Sum_L1_L3 in Iluminat_D_labs_ID81");
+
+    sensorAvg = Iluminat_D_labs_ID81.aggregate([
+      { $match: 
+          { 
+              
+              Active_Power_Sum_L1_L3:{$exists: true},
+              created_at:{$exists:true}
+              /*,
+            created_at : { $gte : new Date("2017-05-27T21:00:00Z") }*/ 
+              
+          }
+      },
+      {$sort : {"created_at" : -1}},
+      {
+         $group: {
+        _id: {
+           
+               $dayOfYear: "$created_at"
+           
+           },
+
+          averageDayValue: {
+          $avg: "$Active_Power_Sum_L1_L3"
+        },
+        date: {$first:"$created_at"}
+        
+        }
+      },
+
+    ]);
+
+    console.log(sensorAvg)
+    _(sensorAvg).each(function(sensorAvg) {
+      self.added("Iluminat_D_labs_ID81_Average", Random.id(), {
+        day:sensorAvg._id,
+        date: sensorAvg.date,
+        averagevalue:sensorAvg.averageDayValue
+      });
+  });
+    self.ready()
+ });
+///
+
+
 
 
   

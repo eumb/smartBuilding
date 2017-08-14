@@ -19,6 +19,14 @@ import {MN_ZONA_3_ID6} from '../../collections/collections.js';
 import {FN_VITALI_ID7} from '../../collections/collections.js';
 import {FN_NORMALI_ID8} from '../../collections/collections.js';
 
+import {BIROURI_TD_ZONA_E_ID68} from '../../collections/collections.js';
+import {BIROURI_TD_ZONA_F_ID69} from '../../collections/collections.js';
+import {BIROURI_TD_ZONA_G_ID70} from '../../collections/collections.js';
+import {BIROURI_TD_ZONA_H_ID71} from '../../collections/collections.js';
+import {Iluminat_C_labs_ID80} from '../../collections/collections.js';
+import {Iluminat_D_labs_ID81} from '../../collections/collections.js';
+
+
 class ACPower extends React.Component {
 // Meteor.Collection("MASURA_TGV_ID1"); // { "_id" : ObjectId("59382093e95f2f2008a45d5a"), "Voltage_effective_L1" : 234.04, "Voltage_effective_L2" : 234.64, "Voltage_effective_L3" : 233.15, "Current_effective_L1" : 701.55, 
 //"Current_effective_L2" : 726.48, "Current_effective_L3" : 685.7, "Active_Power_Sum_L1_L3" : 494108.7, "Reactive_power_fundamental_Sum_L1_L3" : 3971.04, 
@@ -36,6 +44,49 @@ MASURA_TGV_ID1(sensorval) {
       <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
     ));
   }
+
+
+BIROURI_TD_ZONA_E_ID68(sensorval) {
+    return this.props.BIROURI_TD_ZONA_E_ID68.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+  BIROURI_TD_ZONA_F_ID69(sensorval) {
+    return this.props.BIROURI_TD_ZONA_F_ID69.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+
+  BIROURI_TD_ZONA_G_ID70(sensorval) {
+    return this.props.BIROURI_TD_ZONA_G_ID70.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+
+  BIROURI_TD_ZONA_H_ID71(sensorval) {
+    return this.props.BIROURI_TD_ZONA_H_ID71.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+
+  Iluminat_C_labs_ID80(sensorval) {
+    return this.props.Iluminat_C_labs_ID80.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+    Iluminat_D_labs_ID81(sensorval) {
+    return this.props.Iluminat_D_labs_ID81.map((sensorvalue) => (
+      <ACValues key={sensorvalue._id} sensorvalue={sensorvalue} sensor={sensorval} />
+    ));
+  }
+
+
+
 
 TGD_BIROURI_ID52(sensorval) {
     return this.props.TGD_BIROURI_ID52.map((sensorvalue) => (
@@ -693,10 +744,261 @@ render() {
 
 
 
+              <div className="row">
+              <div className="col-md-3 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">BIROURI_TD_ZONA_E_ID68</p>
+                          </div>
+                        
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.BIROURI_TD_ZONA_E_ID68('Voltage_effective_L1')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Voltage_effective_L2')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Voltage_effective_L3')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Current_effective_L1')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Current_effective_L2')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Current_effective_L3')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Active_Power_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_E_ID68('Reactive_Energy_Sum_L1_L3')}
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                          <p className="updated_currents">  {this.BIROURI_TD_ZONA_E_ID68('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+                        <div className="col-md-3 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">BIROURI_TD_ZONA_F_ID69</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.BIROURI_TD_ZONA_F_ID69('Voltage_effective_L1')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Voltage_effective_L2')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Voltage_effective_L3')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Current_effective_L1')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Current_effective_L2')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Current_effective_L3')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Active_Power_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_F_ID69('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                            <p className="updated_currents">  {this.BIROURI_TD_ZONA_F_ID69('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+                              <div className="col-md-3 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">BIROURI_TD_ZONA_G_ID70</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.BIROURI_TD_ZONA_G_ID70('Voltage_effective_L1')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Voltage_effective_L2')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Voltage_effective_L3')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Current_effective_L1')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Current_effective_L2')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Current_effective_L3')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Active_Power_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_G_ID70('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                          <p className="updated_currents">  {this.BIROURI_TD_ZONA_G_ID70('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+
+
+               <div className="col-md-3 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">BIROURI_TD_ZONA_H_ID71</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.BIROURI_TD_ZONA_H_ID71('Voltage_effective_L1')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Voltage_effective_L2')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Voltage_effective_L3')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Current_effective_L1')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Current_effective_L2')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Current_effective_L3')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Active_Power_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.BIROURI_TD_ZONA_H_ID71('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                          <p className="updated_currents">  {this.BIROURI_TD_ZONA_H_ID71('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+
+                                   
+          </div> 
 
 
 
 
+              <div className="row">
+              <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Iluminat_C_labs_ID80</p>
+                          </div>
+                        
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.Iluminat_C_labs_ID80('Voltage_effective_L1')}
+                          {this.Iluminat_C_labs_ID80('Voltage_effective_L2')}
+                          {this.Iluminat_C_labs_ID80('Voltage_effective_L3')}
+                          {this.Iluminat_C_labs_ID80('Current_effective_L1')}
+                          {this.Iluminat_C_labs_ID80('Current_effective_L2')}
+                          {this.Iluminat_C_labs_ID80('Current_effective_L3')}
+                          {this.Iluminat_C_labs_ID80('Active_Power_Sum_L1_L3')}
+                          {this.Iluminat_C_labs_ID80('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.Iluminat_C_labs_ID80('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.Iluminat_C_labs_ID80('Reactive_Energy_Sum_L1_L3')}
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                          <p className="updated_currents">  {this.Iluminat_C_labs_ID80('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+                        <div className="col-md-6 col-sm-6 col-xs-12">
+                <div className="x_panel">
+                  
+                    <div className="">
+                      <table className="" style={widthtable}>
+                     <tbody>
+                      <tr>
+                     
+                        <th>
+                          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p className="power_title">Iluminat_D_labs_ID81</p>
+                          </div>
+                      
+                        </th>
+                      </tr>
+                      <tr>
+                      <td>
+                        <table className="table table-hover">
+                         <tbody>
+                          {this.Iluminat_D_labs_ID81('Voltage_effective_L1')}
+                          {this.Iluminat_D_labs_ID81('Voltage_effective_L2')}
+                          {this.Iluminat_D_labs_ID81('Voltage_effective_L3')}
+                          {this.Iluminat_D_labs_ID81('Current_effective_L1')}
+                          {this.Iluminat_D_labs_ID81('Current_effective_L2')}
+                          {this.Iluminat_D_labs_ID81('Current_effective_L3')}
+                          {this.Iluminat_D_labs_ID81('Active_Power_Sum_L1_L3')}
+                          {this.Iluminat_D_labs_ID81('Reactive_power_fundamental_Sum_L1_L3')}
+                          {this.Iluminat_D_labs_ID81('Consumed_Active_Energy_Sum_L1_L3')}
+                          {this.Iluminat_D_labs_ID81('Reactive_Energy_Sum_L1_L3')}  
+
+                        </tbody>
+                        </table>
+                      </td>
+                      </tr>
+                     </tbody>
+                    </table>
+                            <p className="updated_currents">  {this.Iluminat_D_labs_ID81('updated')} </p>
+                         </div>          
+                </div>
+              </div> 
+ 
+
+                                   
+          </div> 
 
 
 
@@ -737,7 +1039,12 @@ ACPower.propTypes = {
    MN_ZONA_1_ID2: PropTypes.array.isRequired,
    FN_NORMALI_ID8: PropTypes.array.isRequired,
    FN_VITALI_ID7: PropTypes.array.isRequired,
-
+   BIROURI_TD_ZONA_E_ID68: PropTypes.array.isRequired,
+   BIROURI_TD_ZONA_F_ID69: PropTypes.array.isRequired,
+   BIROURI_TD_ZONA_G_ID70: PropTypes.array.isRequired,
+   BIROURI_TD_ZONA_H_ID71: PropTypes.array.isRequired,
+   Iluminat_C_labs_ID80: PropTypes.array.isRequired,
+   Iluminat_D_labs_ID81: PropTypes.array.isRequired,
 
 
 };
@@ -758,6 +1065,13 @@ export default createContainer(() => {
   Meteor.subscribe('MN_ZONA_3_ID6');
   Meteor.subscribe('FN_VITALI_ID7');
   Meteor.subscribe('FN_NORMALI_ID8');
+  Meteor.subscribe('BIROURI_TD_ZONA_E_ID68');
+  Meteor.subscribe('BIROURI_TD_ZONA_F_ID69');
+  Meteor.subscribe('BIROURI_TD_ZONA_G_ID70');
+  Meteor.subscribe('BIROURI_TD_ZONA_H_ID71');
+  Meteor.subscribe('Iluminat_C_labs_ID80');
+  Meteor.subscribe('Iluminat_D_labs_ID81');
+
 
   return { 
  
@@ -774,6 +1088,13 @@ export default createContainer(() => {
     MN_ZONA_1_ID2:MN_ZONA_1_ID2.find({},{limit:1}).fetch(),
     FN_VITALI_ID7:MN_ZONA_2_ID3.find({},{limit:1}).fetch(),
     FN_NORMALI_ID8:MN_ZONA_1_ID2.find({},{limit:1}).fetch(),
+    BIROURI_TD_ZONA_E_ID68:BIROURI_TD_ZONA_E_ID68.find({},{limit:1}).fetch(),
+    BIROURI_TD_ZONA_F_ID69:BIROURI_TD_ZONA_F_ID69.find({},{limit:1}).fetch(),
+    BIROURI_TD_ZONA_G_ID70:BIROURI_TD_ZONA_G_ID70.find({},{limit:1}).fetch(),
+    BIROURI_TD_ZONA_H_ID71:BIROURI_TD_ZONA_H_ID71.find({},{limit:1}).fetch(),
+    Iluminat_C_labs_ID80:Iluminat_C_labs_ID80.find({},{limit:1}).fetch(),
+    Iluminat_D_labs_ID81:Iluminat_D_labs_ID81.find({},{limit:1}).fetch(),
+
 
   };
 }, ACPower);
