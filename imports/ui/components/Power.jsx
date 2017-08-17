@@ -264,7 +264,7 @@ render() {
   scales: {
     xAxes: [{
       type: 'time',
-      display: false,
+      display:true,
       scaleLabel: {
           display: true,
           labelString: 'Date',
@@ -281,9 +281,11 @@ render() {
             'second': 'MMM DD',
             'minute': 'MMM DD',
             'hour': 'MMM DD',
+              'day': 'MMM DD',
+            'week':'MMM DD',
        
           
-          }
+          },unit:'day'
       }
   
     }],
@@ -323,7 +325,7 @@ var chartOptions1 = {
   scales: {
     xAxes: [{
       type: 'time',
-      display: false,
+      display: true,
       scaleLabel: {
           display: true,
           labelString: 'Date',
@@ -340,9 +342,10 @@ var chartOptions1 = {
             'second': 'MMM DD',
             'minute': 'MMM DD',
             'hour': 'MMM DD',
-       
+            'day': 'MMM DD',
+            'week':'MMM DD',
           
-          }
+          },unit:'day',
       }
   
     }],
