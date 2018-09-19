@@ -16,18 +16,18 @@ export default class Sidebar extends React.Component {
                     <li><a><i className="fa fa-edit"></i> Senzor Areas <span className="fa fa-chevron-down"></span></a>
                       <ul className="nav child_menu">
                        
-                        <li><Link to='/wsnodeinfo'>Office area</Link></li>
+                        <li><Link to='/wsnodeinfo'>Garage area</Link></li>
                        {/* <li><Link to='/usernodeinfo'>Lab user area</Link></li>*/}
-                        <li><Link to='/srnodeinfo'>Server area</Link></li>
-                      </ul>
+                        <li><Link to='/srnodeinfo'>Adjacent areas</Link></li>
+                  </ul>
                     </li>
                     
-                    <li><a><i className="fa fa-desktop"></i>Power measurements<span className="fa fa-chevron-down"></span></a>
+               {/*     <li><a><i className="fa fa-desktop"></i>Power measurements<span className="fa fa-chevron-down"></span></a>
                       <ul className="nav child_menu">
                         <li><Link to='/accurrent'>AC Currents</Link></li>
                         <li><Link to='/dccurrent'>DC Currents</Link></li>
                       </ul>
-                    </li>
+                    </li>*/}
                     
                    {/* <li><Link to='/administration'><i className="fa fa-table"></i>Administration</Link></li>*/}
 

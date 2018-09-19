@@ -48,7 +48,7 @@ render() {
     return (
        <div className="ws_nodeInfo"> 
            <div className="row">
-              <div className="col-md-4 col-sm-6 col-xs-12">
+     {/*         <div className="col-md- col-sm-6 col-xs-12">
                 <div className="x_panel_small">
                   
                     <div className="">
@@ -81,8 +81,8 @@ render() {
                     <p className="updated">{this.Dev_5CCF7FF0B17A('updated')}</p>
                          </div>          
                 </div>
-              </div> 
-                        <div className="col-md-4 col-sm-6 col-xs-12">
+              </div> */}
+                        <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel_small">
                   
                     <div className="">
@@ -116,7 +116,7 @@ render() {
                 </div>
               </div> 
 
-                        <div className="col-md-4 col-sm-6 col-xs-12">
+                       {/* <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="x_panel_small">
                   
                     <div className="">
@@ -150,12 +150,10 @@ render() {
                 </div>
               </div> 
 
-
+*/}
                        
-          </div> 
 
-          <div className="row">
-              <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="col-md-6 col-sm-6 col-xs-12">
                 <div className="x_panel_small">
                   
                     <div className="">
@@ -165,7 +163,7 @@ render() {
                      
                         <th>
                           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <p className="">User Area - Node 5CCF7FD5CB47</p>
+                            <p className="">Kitchen Area - Node 5CCF7FD5CB47</p>
                           </div>
                         
                         </th>

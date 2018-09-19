@@ -523,10 +523,10 @@ class Heatmaps extends React.Component {
            <div className="row justify-content-md-center no-gutters">
           
 
-              <div className="col-lg-3 col-md-6 col-xs-12  bg-white center_svg" >
+              <div className="col-lg-6 col-md-6 col-xs-12  bg-white center_svg" >
                 <div className="row">
                   <div className="align_right">
-                    <h2>Temperature <small>"Office F" heatmap</small> </h2>
+                    <h2>Temperature <small>Garage heatmap</small> </h2>
                               
                   </div>  
                   <div className="divider"></div>
@@ -560,10 +560,10 @@ class Heatmaps extends React.Component {
 
 
 
-             <div className="col-lg-3 col-md-6 col-xs-12  bg-white center_svg ">
+             <div className="col-lg-6 col-md-6 col-xs-12  bg-white center_svg ">
                  <div className="col-md-12 col-sm-12 col-xs-12">
                   <div className="align_right">
-                    <h2>Humidity  <small>"Office F" heatmap</small></h2>
+                    <h2>Humidity  <small>Garage heatmap</small></h2>
                               
                   </div>  
                   <div className="divider"></div>
@@ -594,11 +594,13 @@ class Heatmaps extends React.Component {
               </div>
             </div>
         
-           
-              <div className="col-lg-3 col-md-6 col-xs-12 bg-white center_svg ">
+           </div>
+        <div className="row justify-content-md-center no-gutters">
+
+              <div className="col-lg-6 col-md-6 col-xs-12 bg-white center_svg ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                       <div className="align_right">
-                        <h2>Natural Light  <small>"Office F" heatmap</small></h2>
+                        <h2>Natural Light  <small>Garage heatmap</small></h2>
                                   
                       </div>  
                       <div className="divider"></div>
@@ -637,10 +639,10 @@ class Heatmaps extends React.Component {
 
 
 
-               <div className="col-lg-3 col-md-6 col-xs-12 bg-white center_svg ">
+               <div className="col-lg-6 col-md-6 col-xs-12 bg-white center_svg ">
                      <div className="col-md-12 col-sm-12 col-xs-12">
                           <div className="align_right">
-                            <h2>Noise    <small>"Office F" heatmap</small></h2>
+                            <h2>Noise    <small>Garage heatmap</small></h2>
                                       
                           </div>  
                           <div className="divider"></div>
@@ -673,6 +675,7 @@ class Heatmaps extends React.Component {
 
 
                     </div>
+                
                     
       </div>
        

@@ -369,7 +369,7 @@ render() {
 
 
                      <div className="col-md-4 col-sm-4 col-xs-12">
-                  <div className="ws_x_panel_small ">
+                 {/* <div className="ws_x_panel_small ">
                     
                       <div className="">
 
@@ -400,7 +400,7 @@ render() {
                       </table>
                        <p className="updated"> {this.nodeValues5CCF7FA43AB8('updated')} </p>
                       </div>          
-                  </div>
+                  </div>*/}
                 </div> 
 
                 <div className="col-md-4 col-sm-4 col-xs-12">

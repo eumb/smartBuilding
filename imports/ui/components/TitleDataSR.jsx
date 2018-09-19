@@ -12,8 +12,8 @@ import SensorValue from '../components/SensorValue.jsx';
 
 SRHumidAverage = new Mongo.Collection("SRHumidAverage");
 SRTempAverage = new Mongo.Collection("SRTempAverage");
-SRNoiseAverage = new Mongo.Collection("SRNoiseAverage");
-SRDustAverage = new Mongo.Collection("SRDustAverage");
+/*SRNoiseAverage = new Mongo.Collection("SRNoiseAverage");
+*/SRDustAverage = new Mongo.Collection("SRDustAverage");
 
 
 class TitleDataSR extends React.Component {
@@ -36,7 +36,7 @@ render() {
        
        <div className="row tile_count">
             <div className="row tile_count">
-              <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <div className="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-user"></i> Temperature (°C)</span>
                {this.renderTasks('temp')}
@@ -49,7 +49,7 @@ render() {
                  </div>
             </div>
          
-            <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+            <div className="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
                  <div className="col-md-6 col-sm-6 col-xs-6">
                     <span className="count_top"><i className="wi  wi-humidity"></i> Humidity (%)</span>
                     {this.renderTasks('humid')}
@@ -64,7 +64,7 @@ render() {
             </div>  
        
 
-          <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+{/*          <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="fa fa-bullhorn"></i> Noise level (dB) </span>
              {this.renderTasks('noise')}
@@ -72,10 +72,10 @@ render() {
                   <div className="col-md-6 col-sm-6 col-xs-6">
                      <SmallGraphsSR sensoraverage={this.props.srNoiseAverage} type={"noise"} />
                  </div>
-            </div>
+            </div>*/}
      
 
-             <div className="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+             <div className="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
               <span className="count_top"><i className="wi wi-dust"></i> Dust level  (ppm) </span>
              {this.renderDust('dust')}
@@ -98,8 +98,8 @@ render() {
   sr_dust: PropTypes.array.isRequired,
    srHumidAverage: PropTypes.array.isRequired,
   srTempAverage: PropTypes.array.isRequired,
-  srNoiseAverage: PropTypes.array.isRequired,
-  srDustAverage:PropTypes.array.isRequired,
+/*  srNoiseAverage: PropTypes.array.isRequired,
+*/  srDustAverage:PropTypes.array.isRequired,
 };
 
 
@@ -108,16 +108,16 @@ export default createContainer(() => {
 
     Meteor.subscribe('SRHumidAverage');
      Meteor.subscribe('SRTempAverage');
-      Meteor.subscribe('SRNoiseAverage');
-      Meteor.subscribe('SRDustAverage');
+/*      Meteor.subscribe('SRNoiseAverage');
+*/      Meteor.subscribe('SRDustAverage');
 
   return { 
-    sr : ServerRoom.find({DeviceID:"5CCF7FF0B17A"},{limit:1}).fetch(),
+    sr : ServerRoom.find({DeviceID:"5CCF7FF0B544"},{limit:1}).fetch(),
      sr_dust:ServerRoom.find({DeviceID:"5CCF7FF0B544"},{limit:1}).fetch(),
      srHumidAverage : SRHumidAverage.find().fetch(),
      srTempAverage : SRTempAverage.find().fetch(),
-     srNoiseAverage : SRNoiseAverage.find().fetch(),
-      srDustAverage:SRDustAverage.find().fetch(),
+/*     srNoiseAverage : SRNoiseAverage.find().fetch(),
+*/      srDustAverage:SRDustAverage.find().fetch(),
    
   };
 }, TitleDataSR);

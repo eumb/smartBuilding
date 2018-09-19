@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
             <div className="powered">
                  {/*   <span className="title">Smartbuilding </span>
                      <span className="by">by </span>*/}
-                  <h5>Powered by Nokia © 2017</h5>
+                  <h5>Powered by Nokia © 2018</h5>
               
             </div>
           </div>  

@@ -1,1 +1,1 @@
-MONGO_URL=mongodb://135.243.47.10:27001/smrtbldng meteor --port 3000 run
+MONGO_URL=mongodb://92.87.91.3:27017/smrtbldng meteor --port 3000 run

@@ -49,7 +49,7 @@ render() {
             <div className="row tile_count">
               <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
-                  <span className="count_top"><i className="wi wi-thermometer"></i> "Office F" Temperature (°C)</span>
+                  <span className="count_top"><i className="wi wi-thermometer"></i> Garage Temperature (°C)</span>
                    {this.renderTasks('temp')}
                </div>
                <div className="col-md-6 col-sm-6 col-xs-6">
@@ -63,7 +63,7 @@ render() {
          
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                  <div className="col-md-6 col-sm-6 col-xs-6">
-                    <span className="count_top"><i className="wi  wi-humidity"></i> "Office F" Humidity (%)</span>
+                    <span className="count_top"><i className="wi  wi-humidity"></i> Garage Humidity (%)</span>
                     {this.renderTasks('humid')}
                  </div>
                     
@@ -74,7 +74,7 @@ render() {
             </div>  
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-horizon-alt"></i> "Office F" Light (lx)</span>
+              <span className="count_top"><i className="wi wi-horizon-alt"></i> Garage Light (lx)</span>
               {this.renderTasks('light')}
            </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -84,7 +84,7 @@ render() {
 
           <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="fa fa-bullhorn"></i> "Office F" Noise (dB) </span>
+              <span className="count_top"><i className="fa fa-bullhorn"></i> Garage Noise (dB) </span>
              {this.renderTasks('noise')}
               </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -93,7 +93,7 @@ render() {
             </div>
             <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-smog"></i> "Office F" CO2  (ppm)</span>
+              <span className="count_top"><i className="wi wi-smog"></i> Garage CO2  (ppm)</span>
              {this.renderSensorsCO2('co2')}
             </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">
@@ -103,7 +103,7 @@ render() {
 
              <div className="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <div className="col-md-6 col-sm-6 col-xs-6">
-              <span className="count_top"><i className="wi wi-dust"></i> "Office F" Dust (µg/m3) </span>
+              <span className="count_top"><i className="wi wi-dust"></i> Garage Dust (µg/m3) </span>
               {this.renderSensorsDust('dust')}
                </div>
                   <div className="col-md-6 col-sm-6 col-xs-6">

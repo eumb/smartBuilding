@@ -33,18 +33,18 @@ render() {
        <div className="row tile_count">
             <div className="row tile_count">
 
-                <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count ">
+                <div className="col-md-12 col-sm-12 col-xs-12 tile_stats_count ">
                    {this.renderMR1('pres')}
                     <div className="col-md-6 col-sm-6 col-xs-6 centered">
-                     <span className="count_top"><i className="wi wi-thermometer"></i> Temperature MR "Nikola Tesla"</span>
+                     <span className="count_top"><i className="wi wi-thermometer"></i> Temperature Meeting Room</span>
                      <div>  {this.renderMR1('temp')} <span className="count">°C</span></div>
                     </div>
                     <div className="col-md-6 col-sm-6 col-xs-6 centered">
-                        <span className="count_top"><i className="wi  wi-humidity"></i> Humidity MR "Nikola Tesla"</span>
+                        <span className="count_top"><i className="wi  wi-humidity"></i> Humidity Meeting Room</span>
                         <div>  {this.renderMR1('humid')} <span className="count">%</span></div>
                     </div>
                 </div>  
-                <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count ">
+               {/* <div className="col-md-6 col-sm-4 col-xs-6 tile_stats_count ">
                  {this.renderMR2('pres')}
                     <div className="col-md-6 col-sm-6 col-xs-6 centered">
                       <span className="count_top"><i className="wi wi-thermometer"></i> Temperature MR "Kilo"</span>
@@ -54,7 +54,7 @@ render() {
                      <span className="count_top"><i className="wi  wi-humidity"></i> Humidity MR "Kilo"</span>
                     <div>  {this.renderMR2('humid')} <span className="count">%</span></div>
                    </div>
-                </div>
+                </div>*/}
           </div>
       </div>
 
